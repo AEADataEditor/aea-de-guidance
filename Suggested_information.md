@@ -44,7 +44,7 @@ describe
 codebook
 ```
 ### Data access description
--  The description of data access should provide enough information that an uninformed user to access the data.
+-  The description of data access should provide enough information so that an uninformed user could theoretically access the data.
 -  This can be as simple as a download URL.
 -  It might be a pointer to a directory in the replication archive.
 -  This might also be the URL for a description of the application procedure (e.g. NCHS, https://www.cdc.gov/rdc/leftbrch/userestricdt.htm), and an estimate of the monetary and time cost of the application process.
