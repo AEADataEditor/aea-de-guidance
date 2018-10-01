@@ -19,12 +19,12 @@ use my_input_data
 describe
 codebook
 ```
-See [code/01_codebook.md](an example).
+See [code/01_codebook_fancy.md](code/01_codebook_fancy.md) for a fancier example, and [code/02_codebook_plaintext.md](code/02_codebook_plaintext.md) for the code and output from the simpler example.
 
 #### R
 
 In R, the [dataMaid](https://cran.r-project.org/web/packages/dataMaid/index.html) [[1](http://sandsynligvis.dk/2017/08/21/datamaid-your-personal-assistant-for-cleaning-up-the-data-cleaning-process/)], [[2](http://sandsynligvis.dk/articles/18/codebook.html)] can accomplish a similar task:
-```
+```{r}
 # use the    dataMaid   package
 library(dataMaid)
 makeCodebook(my_input_data)

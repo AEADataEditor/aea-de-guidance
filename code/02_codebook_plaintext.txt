@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /mnt/local/slow_home/vilhuber/Workspace-non-encrypted/git/AEA/aea-de-guidance/code/01_codebook_plaintext.txt
+       log:  /mnt/local/slow_home/vilhuber/Workspace-non-encrypted/git/AEA/aea-de-guidance/code/02_codebook_plaintext.txt
   log type:  text
- opened on:   1 Oct 2018, 17:13:43
+ opened on:   1 Oct 2018, 17:33:59
 
 . // not run: use my_input_data
 . di
