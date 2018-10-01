@@ -7,7 +7,7 @@ The source code for this file is [here](01_codebook_fancy.do).
 This is a bit more involved example, but illustrates the core code.
 
 ## Requirements
-This fancier example leverages the `[markdown](http://haghish.com/statistics/stata-blog/reproducible-research/markdoc.php)` package as of 2018-10-01.
+This fancier example leverages the [`markdown`](http://haghish.com/statistics/stata-blog/reproducible-research/markdoc.php) package as of 2018-10-01.
 Here we install it locally to this project.
 ***/
 set more 1

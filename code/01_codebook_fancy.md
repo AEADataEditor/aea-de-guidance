@@ -12,7 +12,7 @@ Requirements
 ------------
 
 This fancier example leverages the
-`[markdown](http://haghish.com/statistics/stata-blog/reproducible-research/markdoc.php)`
+[`markdown`](http://haghish.com/statistics/stata-blog/reproducible-research/markdoc.php)
 package as of 2018-10-01. Here we install it locally to this project.
 
           . set more 1
