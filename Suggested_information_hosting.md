@@ -9,7 +9,7 @@ Journals and institutions have assessed a number of trusted repositories:
   -  [Dryad Digital Repository](http://datadryad.org/)
   -  [figshare](http://figshare.com/)
   -  [Harvard Dataverse Network](http://thedata.harvard.edu/dvn/)
-  -  [ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
+  -  [ICPSR](https://www.icpsr.umich.edu/icpsrweb/) and [OPENICPSR](https://www.openicpsr.org/openicpsr/)
   -  [Open Science Framework](http://osf.io/)
   -  [Zenodo](http://zenodo.org/)
 - Many universities have formal document repositories that may be able to assume such a role; talk to your (data) librarian
@@ -18,6 +18,12 @@ Journals and institutions have assessed a number of trusted repositories:
   - e.g. [Cornell Restricted Access Data Center (CRADC)](https://ciser.cornell.edu/data/secure-data-services/cradc/) for an example of a campus-wide secure data center and archive
   - e.g. [Centre d’accès sécurisé aux données (CASD)](https://www.casd.eu/) for an example of a European equivalent of the FSRDCs
   - e.g. [Health Care Cost Institute](https://www.healthcostinstitute.org/about-hcci/) for an example of an industry-based data center for research
+- Note that some data archives can also handle restrictions on data dissemination for various reasons
+  - [ICPSR](https://www.icpsr.umich.edu/icpsrweb/content/datamanagement/confidentiality/) can handle certain types of confidential data
+  - [Zenodo](http://about.zenodo.org/policies/) can handle license-based restricted access
+- We note that acceptable access restrictions are limited to concerns of confidentiality or third-party licensing. We do not accept (permanent) access restrictions where
+  - the author is the sole arbitrar of access
+  - sharing is not allowed because of personal interests (future publications, patents, etc.)
 
 ### NOT ACCEPTABLE
 A variety of (unfortunately) commonly used web-accessible locations are not acceptable as data repositories for the purpose of an article's supplementary materials:
