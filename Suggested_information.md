@@ -82,4 +82,4 @@ A code and data repository (or "archive") should satisfy a few criteria:
 
 Not every web-based location is a code or data repository; on the other hand, numerous non-web based archives are legitimate locations for data to be found (e.g., National Archives).
 
-For details, see [Suggested_information_hosting](Suggested_information_hosting.md).
+For further details, see [Suggested_information_hosting](Suggested_information_hosting.md).

@@ -31,6 +31,7 @@ library(dataMaid)
 makeCodebook(my_input_data)
 ```
 
+#### More elaborate methods
 However, if you have the ability to do a more robust data description, you should. See a [self-citing example](https://www2.ncrn.cornell.edu/ced2ar-web/codebooks/synlbd/v/v2).
 
 ### Data access description
@@ -44,13 +45,20 @@ The description of data access should provide enough information so that an unin
   - Does the researcher need to provide information (project proposal, computer security plan, etc.)? (Example: PSID https://simba.isr.umich.edu/U/CondUse.aspx)
   - Is there perhaps a residency or citizen requirement?
 
+#### Practical guidance: data access
+While non-academic data providers may not always consider reproducibility when you sign a contract with them, we have found numerous such providers which are open to at least the idea of "reproducibility checking" or replication. Examples of agreements which allow third-parties to access confidential data for the purpose of replication, see f.i. [supplementary materials](https://www.aeaweb.org/aer/data/oct2013/20110834_data.zip) to [Barseghyan et al (2013)](https://doi.org/10.1257/aer.103.6.2499).
+
 ### Data persistence
--  Data should remain available for a sufficiently long time.
+Data should remain available for a sufficiently long time.
 -  By depositing in the **AEA Data and Code Repository**, the data (and code) will remain available indefinitely.
--  This is also true if the data is in various other repositories (list of acceptable repositories forthcoming).
--  This may also be true if the data cannot be shared (restricted access data). Ask your data provider what the archival duration or retention period is.
+-  This is also true if the data is in various other repositories
+-  This may also be true if the data cannot be shared (restricted access data).
 -  A good minimum benchmark is 10 years, but this may not always be feasible with data the author does not control.
+You should describe the data persistence, or point to a data archive's policy in that matter. See [Suggested_information_hosting](Suggested_information_hosting.md) for more details on data repositories.
 
 ### What is a data provider
 A "data provider" in this sense can be a public repository where the data can be found ([ICPSR](https://www.icpsr.umich.edu/icpsrweb/)), a website that provided the data ([IPUMS](https://usa.ipums.org/usa/)), a statistical agency or private company that granted access to the data ([U.S. Census Bureau](https://www.census.gov/fsrdc), Twitter, Acme Inc.).
-The author may also be the data provider, for instance, because the author conducted the survey used in the article.
+The author may also be the data provider, for instance, because the author conducted the survey used in the article. However, in many cases, the data provider may not be a data archive (see  [Suggested_information_hosting](Suggested_information_hosting.md)).
+
+#### Practical guidance: data provider and data archives
+If the data provider is not an archive (i.e., the data persistence is insufficient, and might go away), you should investigate depositing the data at a data archive.
