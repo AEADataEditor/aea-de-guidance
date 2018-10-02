@@ -1,8 +1,9 @@
-% BibTeX standard bibliography style `aea' (one of the harvard family)
+% BibTeX standard bibliography style `aea-mod' (one of the harvard family)
 	% version 0.99a for BibTeX versions 0.99a or later, LaTeX version 2.09.
 	% Copyright (C) 2008, all rights reserved.
     % Melissa Rice (melissa@fmtek.net), Full Moon Technical Solutions, LLC (dba FMTek)
     % last revised: 20 May 2009 
+    % revised Lars Vilhuber 2 Oct 2018
 
 ENTRY
   { address
@@ -26,7 +27,9 @@ ENTRY
     series
     title
     type
-    URL
+    url
+    urldate
+    doi
     volume
     year
   }
@@ -278,6 +281,24 @@ FUNCTION {format.address.only}
     { "" }
 	{ address }
 	if$
+}
+
+FUNCTION {format.doi}
+{ doi empty$
+    { "" }
+    { "\url{https://doi.org/"  doi * "} " * }
+    if$
+}
+
+FUNCTION {format.url}
+{ url empty$
+    { "" }
+    { urldate empty$
+       { "\url{"  url * "}" * }
+       { "\url{"  url * "} (accessed " * urldate * ")" * }
+       if$
+    }
+    if$
 }
 
 FUNCTION {format.journal}
@@ -736,6 +757,8 @@ FUNCTION {article} % writ
   format.journal ", " 
 %  format.month join ", " 
   format.vol.num.pages join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join 
   output.entry
 }
@@ -753,6 +776,8 @@ FUNCTION {book}
 %  format.book.vol.series.ed join ", "
   format.book.vol.series.ed ", "
   format.address.publisher join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -792,6 +817,8 @@ FUNCTION {inbook}
   format.book.vol.series.ed join ", "
   format.chapter.pages join ". "
   format.address.publisher join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -811,6 +838,8 @@ FUNCTION {incollection}
   format.editors.secondary join ", "
   format.chapter.pages join ". " 
   format.address.publisher join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -828,6 +857,8 @@ FUNCTION {inproceedings}
   format.pages join ", "
   format.organization.presented join ". "
   format.address.publisher join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -850,6 +881,8 @@ FUNCTION {manual}
   format.address.only join ", "
   format.organization join ", "
 %  format.month join ", "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -867,6 +900,8 @@ FUNCTION {mastersthesis}
   format.school join ", "
   format.address.only join ", "
 %  format.month join ", "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -881,6 +916,8 @@ FUNCTION {misc}
 	if$
   format.howpublished ", "
 %  format.month join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -898,6 +935,8 @@ FUNCTION {phdthesis}
   format.school join ", "
   format.address.only  join ", "
 %  format.month join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -917,6 +956,8 @@ FUNCTION {proceedings}
     { format.organization  ", " }
 	if$
   format.address.publisher join ", "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
@@ -934,10 +975,16 @@ FUNCTION {techreport}
   format.type join " "
   format.number join ", "
 %  format.month join ", "
-  format.address.publisher join ". "
+%  format.address.publisher join ". "
+  format.doi join ". "
+  format.url join ". "
   format.note join
   output.entry
 }
+
+FUNCTION {data} { techreport }
+
+FUNCTION {online} { techreport }
 
 FUNCTION {unpublished}
 { output.bibitem
@@ -1245,7 +1292,7 @@ ITERATE {second.presort}
 SORT
 
 FUNCTION {begin.bib}
-{ newline$ newline$ "% Bibstyle aea.bst version 2009.05.20" write$ newline$ newline$
+{ newline$ newline$ "% Bibstyle aea-mod.bst version 2018.10.02" write$ newline$ newline$
   preamble$ empty$
     'skip$
     { "\harvardpreambledefs{%" write$ newline$
