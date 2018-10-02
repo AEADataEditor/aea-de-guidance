@@ -48,6 +48,8 @@ We encourage you
 - to consider splitting out independent components of your data creation (for instance, the auxiliary data described above) as a separately (useful) data deposit
 - to also make programs that create the analysis data ("cleaning programs") available
 
+## Citing Data and Code
+For a discussion with some suggestions, see [some draft guidance](citations/guidance_data_citations.pdf).
 
 ## Data
 Regarding the data, enough information should be provided
