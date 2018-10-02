@@ -1,2 +1,5 @@
 */ado/*
 */weaver*/*
+*.RData
+*.Rhistory
+

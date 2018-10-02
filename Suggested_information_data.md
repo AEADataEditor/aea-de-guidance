@@ -32,6 +32,7 @@ In R, the [dataMaid](https://cran.r-project.org/web/packages/dataMaid/index.html
 library(dataMaid)
 makeCodebook(my_input_data)
 ```
+See [code/03_codebook_dataMaid.md](code/03_codebook_dataMaid.md) for an example.
 
 #### More elaborate methods
 However, if you have the ability to do a more robust data description, you should. See a [self-citing example](https://www2.ncrn.cornell.edu/ced2ar-web/codebooks/synlbd/v/v2).
