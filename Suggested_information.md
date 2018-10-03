@@ -49,7 +49,7 @@ We encourage you
 - to also make programs that create the analysis data ("cleaning programs") available
 
 ## Citing Data and Code
-For a discussion with some suggestions, see [some draft guidance](citations/guidance_data_citations.pdf).
+For a discussion with some suggestions, see [Data_citation_guidance](Data_citation_guidance.md).
 
 ## Data
 Regarding the data, enough information should be provided
