@@ -1,0 +1,3165 @@
+% $Id: chicago-authordate.bbx,v 0.8.2.9 2016/03/21 18:06:54 dfussner Exp $
+% This is a biblatex style file, adapted mainly from Lehman's
+% standard.bbx and from chicago-notes.bbx.  It provides the
+% reference list formatting for the Chicago author-date style.
+
+\ProvidesFile{chicago-authordate.bbx}[2016/03/21 v 2.9a biblatex
+bibliography style]
+
+%%%% Initialize and format bibliography and los %%%%
+
+\DeclareFieldFormat{shorthandwidth}{#1}
+
+\newlength{\lositemsep}
+
+\defbibenvironment{bibliography}% New for 0.9a
+  {\list
+     {}
+     {\setlength{\leftmargin}{\bibhang}%
+      \setlength{\itemindent}{-\leftmargin}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
+
+\defbibenvironment{shorthands}% biblatex < 2.9
+  {\list
+     {\printfield[shorthandwidth]{shorthand}}%
+     {\setlength{\labelwidth}{\shorthandwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\lositemsep}%
+      \setlength{\parsep}{\bibparsep}%
+      \renewcommand*{\makelabel}[1]{##1\hss}}}
+  {\endlist}
+  {\item}
+
+\defbibenvironment{shorthand}
+  {\list
+     {\printfield[shorthandwidth]{shorthand}}%
+     {\setlength{\labelwidth}{\shorthandwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\lositemsep}%
+      \setlength{\parsep}{\bibparsep}%
+      \renewcommand*{\makelabel}[1]{##1\hss}}}
+  {\endlist}
+  {\item}
+
+\defbibenvironment{losnotes}
+  {\list
+     {\printfield[shorthandwidth]{shorthand}}%
+     {\footnotesize%
+      \setlength{\labelwidth}{\shorthandwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{.3\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\lositemsep}%
+      \setlength{\parsep}{\bibparsep}%
+      \renewcommand*{\makelabel}[1]{##1\hss}}}
+  {\endlist}
+  {\item}
+
+\defbibenvironment{losendnotes}
+  {\list
+     {\printfield[shorthandwidth]{shorthand}}%
+     {\enotesize%
+      \setlength{\labelwidth}{\shorthandwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{.3\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\lositemsep}%
+      \setlength{\parsep}{\bibparsep}%
+      \renewcommand*{\makelabel}[1]{##1\hss}}}
+  {\endlist\nopunct\vspace{-\baselineskip}}% Kludges for endnotes
+  {\item}
+
+\AtBeginBibliography{%
+  \togglefalse{cms@headlessnote}}%
+
+\AtEveryBibitem{%
+  \iffieldequalstr{pubstate}{reprint}%
+  {\toggletrue{cms@reprint}}%
+  {\togglefalse{cms@reprint}}}%
+
+\AtEveryLositem{%
+  \iffieldequalstr{pubstate}{reprint}%
+  {\toggletrue{cms@reprint}}%
+  {\togglefalse{cms@reprint}}}%
+
+\InitializeBibliographyStyle{%
+  \let\bbx@lasthash\undefined}%
+
+%%%% Bibliography-specific bibstrings %%%%
+
+%% Now in *.lbx %%
+
+%%%% Author, Editor, Translator, and Compiler  Macros %%%%
+
+\renewbibmacro*{name:last-first}[4]{%
+  \ifuseprefix
+  {\usebibmacro{name:delim}{#3#1}%
+    \usebibmacro{name:hook}{#3#1}%
+    \ifblank{#3}{}{%
+      \ifcapital
+      {\mkbibnameprefix{\MakeCapital{#3}}\isdot}
+      {\mkbibnameprefix{#3}\isdot}%
+      \ifpunctmark{'}{}{\addhighpenspace}}%
+    \mkbibnamelast{#1}\isdot
+    \ifblank{#2}{}{\addcomma\addlowpenspace\mkbibnamefirst{#2}\isdot}%
+    \ifblank{#4}{}{\addcomma\addlowpenspace\mkbibnameaffix{#4}\isdot}}
+  {\usebibmacro{name:delim}{#1}%
+    \usebibmacro{name:hook}{#1}%
+    \mkbibnamelast{#1}\isdot%
+    \ifblank{#2#3#4}{}{\addcomma}%
+    \ifblank{#2}{}{\addlowpenspace\mkbibnamefirst{#2}\isdot}%
+    \ifblank{#3}{}{\addlowpenspace\mkbibnameprefix{#3}\isdot}%
+    \ifblank{#4}{}{\addcomma\addlowpenspace\mkbibnameaffix{#4}\isdot}}}
+
+\renewbibmacro*{name:first-last}[4]{%
+  \usebibmacro{name:delim}{#2#3#1}%
+  \usebibmacro{name:hook}{#2#3#1}%
+  \ifblank{#2}{}{\mkbibnamefirst{#2}\isdot\addlowpenspace}%
+  \ifblank{#3}{}{%
+    \mkbibnameprefix{#3}\isdot
+    \ifpunctmark{'}
+    {}
+    {\ifuseprefix{\addhighpenspace}{\addlowpenspace}}}%
+  \mkbibnamelast{#1}\isdot
+  \ifblank{#4}{}{%
+    \iftoggle{cms@jrcomma}%
+    {\ifnumeral{#4}%
+      {\addlowpenspace\mkbibnameaffix{#4}\isdot}%
+      {\addcomma\addlowpenspace\mkbibnameaffix{#4}\isdot%
+        \ifboolexpr{
+          test{\ifnumless{\value{listcount}}{\value{listtotal}}}%
+          and
+          test{\ifnumless{\value{listcount}}{\value{maxnames}}}%
+        }
+        {\addcomma}%
+        {}}}%
+    {\addlowpenspace\mkbibnameaffix{#4}\isdot}}}
+
+\@ifpackagelater{biblatex}{2016/03/01}% For biblatex 3.3
+{\renewbibmacro*{name:family-given}[4]{%
+  \ifuseprefix%
+    {\usebibmacro{name:delim}{#3#1}%
+     \usebibmacro{name:hook}{#3#1}%
+     \ifdefvoid{#3}{}{%
+       \ifcapital%
+         {\mkbibnameprefix{\MakeCapital{#3}}\isdot}
+         {\mkbibnameprefix{#3}\isdot}%
+       \ifprefchar{}{\bibnamedelimc}}%
+     \mkbibnamefamily{#1}\isdot%
+     \ifdefvoid{#2}{}{\revsdnamepunct\bibnamedelimd\mkbibnamegiven{#2}\isdot}%
+     \ifdefvoid{#4}{}{\revsdnamepunct\bibnamedelimd\mkbibnamesuffix{#4}\isdot}}%
+    {\usebibmacro{name:delim}{#1}%
+     \usebibmacro{name:hook}{#1}%
+     \mkbibnamefamily{#1}\isdot%
+     \ifboolexpr{%
+       test {\ifdefvoid{#2}}%
+       and
+       test {\ifdefvoid{#3}}%
+     }%
+     {}{\revsdnamepunct}%
+     \ifdefvoid{#2}{}{\bibnamedelimd\mkbibnamegiven{#2}\isdot}%
+     \ifdefvoid{#3}{}{\bibnamedelimd\mkbibnameprefix{#3}\isdot}%
+     \ifdefvoid{#4}{}{\revsdnamepunct\bibnamedelimd\mkbibnamesuffix{#4}\isdot}}}%
+
+\renewbibmacro*{name:given-family}[4]{%
+  \usebibmacro{name:delim}{#2#3#1}%
+  \usebibmacro{name:hook}{#2#3#1}%
+  \ifdefvoid{#2}{}{\mkbibnamegiven{#2}\isdot\bibnamedelimd}%
+  \ifdefvoid{#3}{}{%
+    \mkbibnameprefix{#3}\isdot%
+    \ifprefchar%
+      {}%
+      {\ifuseprefix{\bibnamedelimc}{\bibnamedelimd}}}%
+  \mkbibnamefamily{#1}\isdot%
+  \ifdefvoid{#4}{}{%
+    \iftoggle{cms@jrcomma}%
+    {\ifnumeral{#4}%
+      {\bibnamedelimd\mkbibnamesuffix{#4}\isdot}%
+      {\revsdnamepunct\bibnamedelimd\mkbibnamesuffix{#4}\isdot%
+        \ifboolexpr{% Test needed?
+          test{\ifnumless{\value{listcount}}{\value{listtotal}}}%
+          and
+          test{\ifnumless{\value{listcount}}{\value{maxnames}}}%
+        }
+        {\revsdnamepunct}%
+        {}}}%
+    {\bibnamedelimd\mkbibnamesuffix{#4}\isdot}}}}{}%
+
+\newbibmacro*{author/editors/translators}{%
+  \ifthenelse{\ifuseauthor\AND\NOT\ifnameundef{author}}%
+    {\usebibmacro{author}}%
+    {\ifthenelse{\ifuseeditor\AND\NOT\ifnameundef{namea}}%
+       {\usebibmacro{parteditor}}%
+       {\ifthenelse{\ifuseeditor\AND\NOT\ifnameundef{editor}}%
+         {\usebibmacro{editor}}%
+         {\ifthenelse{\ifusetranslator\AND\NOT\ifnameundef{nameb}}%
+           {\usebibmacro{parttranslator}}%
+           {\ifthenelse{\ifusetranslator\AND\NOT\ifnameundef{translator}}%
+             {\usebibmacro{translator}}%
+             {\ifnameundef{namec}%
+               {\let\bbx@lasthash\undefined}%
+               {\usebibmacro{compiler}}}}}}}}
+
+\renewbibmacro*{author/editor}{%
+  \ifuseauthor%
+    {\usebibmacro{author}}%
+    {\ifuseeditor%
+      {\ifnameundef{namea}%
+        {\usebibmacro{moreeditor}}%
+        {\usebibmacro{parteditor}}}%
+      {\ifusetranslator%
+        {\ifnameundef{nameb}%
+          {\usebibmacro{moretranslator}}%
+          {\usebibmacro{parttranslator}}}%
+        {\iftoggle{cms@usecompiler}%
+          {\usebibmacro{compiler}}%
+          {\let\bbx@lasthash\undefined%
+            \settoggle{cms@usecompiler}{true}}}}}}
+
+\renewbibmacro*{author}{%
+  \iftoggle{cms@headlessnote}%
+  {\usebibmacro{justauthor}}%
+  {\usebibmacro{moreauthor}}}
+
+\newbibmacro*{allauthor}{%
+  \ifnameundef{author}%
+  {\ifnameundef{editor}%
+    {\ifnameundef{translator}%
+      {\ifnameundef{namec}%
+        {\let\bbx@lasthash\undefined}%
+        {\ifthenelse{\iffieldequals{namehash}{\bbx@lasthash}\AND\NOT
+            \iffirstonpage}
+               {\bibnamedash\addcomma\space}
+               {\printnames[sortname]{namec}\addcomma\space
+                 \savefield{namehash}{\bbx@lasthash}}%
+               \usebibmacro{compilestrg}}}%
+           {\ifthenelse{\iffieldequals{namehash}{\bbx@lasthash}\AND\NOT
+               \iffirstonpage}
+             {\bibnamedash\addcomma\space}
+             {\printnames[sortname]{translator}\addcomma\space
+               \savefield{namehash}{\bbx@lasthash}}%
+             \usebibmacro{transstrg}}}%
+         {\ifthenelse{\iffieldequals{namehash}{\bbx@lasthash}\AND\NOT
+             \iffirstonpage}
+           {\bibnamedash\addcomma\space}
+           {\printnames{editor}\addcomma\space
+             \savefield{namehash}{\bbx@lasthash}}%
+           \usebibmacro{editstrg}}}%
+       {\ifthenelse{\iffieldequals{namehash}{\bbx@lasthash}\AND\NOT
+           \iffirstonpage}
+         {\iffieldundef{nameaddon}%
+           {\bibnamedash\addperiod\addspace}
+           {\bibnamedash\addspace}}%
+         {\iffieldequalstr{authortype}{anon}%
+           {\bibleftbracket\printnames{author}\bibrightbracket%
+             \savefield{namehash}{\bbx@lasthash}}%
+           {\iffieldequalstr{authortype}{anon?}%
+             {\bibleftbracket\printnames{author}\addquestion\bibrightbracket%
+               \savefield{namehash}{\bbx@lasthash}}%
+             {\printnames{author}%
+             \savefield{namehash}{\bbx@lasthash}}}}}}
+
+\newbibmacro*{justauthor}{%
+  \ifnameundef{author}
+  {\let\bbx@lasthash\undefined}
+  {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+      \iffirstonpage}
+    {\iffieldundef{nameaddon}%
+      {\bibnamedash\addperiod\addspace}
+      {\bibnamedash\addspace}}
+    {\iffieldequalstr{authortype}{anon}%
+      {\bibleftbracket\printnames{author}\bibrightbracket%
+        \savefield{fullhash}{\bbx@lasthash}}%
+      {\iffieldequalstr{authortype}{anon?}%
+        {\bibleftbracket\printnames{author}\addquestion\bibrightbracket%
+          \savefield{fullhash}{\bbx@lasthash}}%
+        {\printnames{author}%
+          \savefield{fullhash}{\bbx@lasthash}}}}}}
+
+\newbibmacro*{moreauthor}{%
+  \ifnameundef{author}%
+  {\usebibmacro{pickeditor}}%
+  {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT%
+      \iffirstonpage}%
+    {\iffieldundef{nameaddon}%
+      {\bibnamedash\addperiod\addspace}%
+      {\bibnamedash\addspace}}%
+    {\iffieldequalstr{authortype}{anon}%
+      {\bibleftbracket\printnames{author}\bibrightbracket%
+        \savefield{fullhash}{\bbx@lasthash}}%
+      {\iffieldequalstr{authortype}{anon?}%
+        {\bibleftbracket\printnames{author}\addquestion\bibrightbracket%
+          \savefield{fullhash}{\bbx@lasthash}}%
+        {\iftoggle{cms@authorparens}%
+          {\bibopenparen\printnames{author}\bibcloseparen}%
+          {\printnames{author}}%
+          \savefield{fullhash}{\bbx@lasthash}}}}}}
+
+\newbibmacro*{pickeditor}{%
+  \ifnameundef{namea}
+  {\usebibmacro{moreeditor}}%
+  {\usebibmacro{parteditor}}}
+
+\newbibmacro*{moreeditor}{%
+  \ifnameundef{editor}
+    {\usebibmacro{picktranslator}}
+    {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+                 \iffirstonpage}
+       {\bibnamedash\editordelim}%
+       {\iftoggle{cms@authorparens}%
+         {\bibopenparen\printnames{editor}%
+           \bibcloseparen\editordelim}%
+         {\printnames{editor}\editordelim}%
+        \savefield{fullhash}{\bbx@lasthash}}%
+     \usebibmacro{editstrg}}}
+
+\renewbibmacro*{editor}{%
+  \ifnameundef{editor}
+    {\let\bbx@lasthash\undefined}
+    {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+                 \iffirstonpage}
+       {\bibnamedash\editordelim}
+       {\iftoggle{cms@authorparens}%
+         {\bibopenparen\printnames{editor}%
+           \bibcloseparen\editordelim}%
+         {\printnames{editor}\editordelim}%
+        \savefield{fullhash}{\bbx@lasthash}}%
+     \usebibmacro{editstrg}}}
+
+\newbibmacro*{parteditor}{%
+  \ifnameundef{namea}
+    {\let\bbx@lasthash\undefined}
+    {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+                 \iffirstonpage}
+       {\bibnamedash\addcomma\addspace}
+       {\iftoggle{cms@authorparens}%
+         {\bibopenparen\printnames[sortname]{namea}%
+           \bibcloseparen\addcomma\space}%
+         {\printnames[sortname]{namea}\addcomma\space}%
+        \savefield{fullhash}{\bbx@lasthash}}%
+     \usebibmacro{parteditstrg}}}
+
+\newbibmacro*{picktranslator}{%
+  \ifnameundef{nameb}
+  {\usebibmacro{moretranslator}}%
+  {\usebibmacro{parttranslator}}}
+
+\newbibmacro*{moretranslator}{%
+  \ifnameundef{translator}
+    {\usebibmacro{compiler}}
+    {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+                 \iffirstonpage}
+       {\bibnamedash\addcomma\addspace}
+       {\iftoggle{cms@authorparens}%
+         {\bibopenparen\printnames[sortname]{translator}%
+           \bibcloseparen\addcomma\space}%
+         {\printnames[sortname]{translator}\addcomma\space}%
+        \savefield{fullhash}{\bbx@lasthash}}%
+     \usebibmacro{transstrg}}}
+
+\newbibmacro*{parttranslator}{%
+  \ifnameundef{nameb}
+    {\let\bbx@lasthash\undefined}
+    {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+                 \iffirstonpage}
+       {\bibnamedash\addcomma\addspace}
+       {\iftoggle{cms@authorparens}%
+         {\bibopenparen\printnames[sortname]{nameb}%
+           \bibcloseparen\addcomma\space}%
+         {\printnames[sortname]{nameb}\addcomma\space}%
+        \savefield{fullhash}{\bbx@lasthash}}%
+     \usebibmacro{parttransstrg}}}
+
+\newbibmacro*{compiler}{%
+  \ifnameundef{namec}
+    {\let\bbx@lasthash\undefined}
+    {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+                 \iffirstonpage}
+       {\bibnamedash\addcomma\addspace}
+       {\iftoggle{cms@authorparens}%
+         {\bibopenparen\printnames[sortname]{namec}%
+           \bibcloseparen\addcomma\space}%
+         {\printnames[sortname]{namec}\addcomma\space}%
+        \savefield{fullhash}{\bbx@lasthash}}%
+     \usebibmacro{compilestrg}}}
+
+\renewcommand*{\revsdnamedelim}{\addcomma}
+
+\DeclareNameAlias{author}{sortname}% Needed in 0.9
+\DeclareNameAlias{editor}{sortname}
+\DeclareNameAlias{translator}{sortname}
+
+%%%% Drivers for Bibliography entries and Shorthands %%%%
+
+\DeclareBibliographyDriver{shorthand}{%
+  \iftoggle{cms@los}%
+  {\ifnameundef{labelname}
+    {\mkbibemph{\bibstring{see}}%
+      \addspace%
+      \usebibmacro{shorthand:label}}%
+    {\mkbibemph{\bibstring{see}}%
+      \addspace%
+      \usebibmacro{author/editor}}%
+    \finentry}%
+  {\iftoggle{cms@fullshhand}%
+    {\usedriver{\frenchspacing}%
+      {\thefield{entrytype}}%
+      \finentry}%
+    {\ifnameundef{labelname}
+      {\ifthenelse{\iffieldequalstr{entrysubtype}{magazine}\AND\NOT%
+          \ifentrytype{periodical}}%
+        {\printtext[bibhyperref]{\printfield[journaltitle]{journaltitle}%
+            \newcunit}}%
+        {\ifentrytype{manual}%
+          {\printtext[bibhyperref]{\printlist{organization}\newcunit}}%
+          {}}}
+      {\usebibmacro{author/editor}%
+        \setunit{\addcomma\space}}%
+      \printfield[lostitle]{title}%
+      \finentry}}}
+
+\DeclareBibliographyDriver{shorthands}{% biblatex < 2.9
+  \iftoggle{cms@los}%
+  {\ifnameundef{labelname}
+    {\mkbibemph{\bibstring{see}}%
+      \addspace%
+      \usebibmacro{shorthand:label}}%
+    {\mkbibemph{\bibstring{see}}%
+      \addspace%
+      \usebibmacro{author/editor}}%
+    \finentry}%
+  {\iftoggle{cms@fullshhand}%
+    {\usedriver{\frenchspacing}%
+      {\thefield{entrytype}}%
+      \finentry}%
+    {\ifnameundef{labelname}
+      {\ifthenelse{\iffieldequalstr{entrysubtype}{magazine}\AND\NOT%
+          \ifentrytype{periodical}}%
+        {\printtext[bibhyperref]{\printfield[journaltitle]{journaltitle}%
+            \newcunit}}%
+        {\ifentrytype{manual}%
+          {\printtext[bibhyperref]{\printlist{organization}\newcunit}}%
+          {}}}
+      {\usebibmacro{author/editor}%
+        \setunit{\addcomma\space}}%
+      \printfield[lostitle]{title}%
+      \finentry}}}
+
+\DeclareBibliographyDriver{article}{%
+  \iffieldequalstr{entrysubtype}{magazine}%
+  {\usebibmacro{bibindex}%
+  \usebibmacro{mag+news+author}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \usebibmacro{mag+news+title}%
+  \setunit{\addspace}%
+  \usebibmacro{language+transtitle}%
+  \newunit\newblock%
+  \usebibmacro{part+editor+translator}%
+  \newunit\newblock%
+  \usebibmacro{bibreprint}%
+  \usebibmacro{issuetitle}%
+  \setunit*{\addcomma\addspace}%
+  \usebibmacro{byeditor+others}%
+  \usebibmacro{editorpunct}%\newunit\newblock
+  \printfield{note}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{mag+news+date}%
+  \newcunit\newblock
+  \usebibmacro{chap+pag}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{issn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+  {\usebibmacro{bibindex}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef{\bbx@lasthash}{\usebibmacro{mag+news+title}\newunit}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef{\bbx@lasthash}{}{\usebibmacro{mag+news+title}}%
+  \setunit{\addspace}%
+  \usebibmacro{language+transtitle}%
+  \setunit*{\addperiod\addspace}\newblock% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{part+editor+translator}%
+  \newunit\newblock%
+  \usebibmacro{bibreprint}%
+  \usebibmacro{issuetitle}%
+  \setunit*{\addcomma\addspace}%
+  \usebibmacro{byeditor+others}%
+  \usebibmacro{editorpunct}%\newunit\newblock
+  \printfield{note}%
+  \setunit*{\addcomma\addspace}\newblock% (changed for 0.7)??
+  \usebibmacro{journal+issue+year+pages}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{issn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{artwork}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newcunit\newblock
+  \usebibmacro{date}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \printfield{howpublished}%
+  \newunit\newblock
+  \printfield{type}%
+  \newcunit\newblock
+  \printfield{version}%
+  \newcunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{institution+organization}%
+  \setunit*{\addcomma\addspace}\newblock
+  \printlist{location}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{audio}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit\newblock% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{part+editor+translator}%
+  \newcunit%\setunit{\addperiod\addspace}%
+  \usebibmacro{chapinscore}%
+  \usebibmacro{btitle+bstitle}%
+  \iffieldundef{booktitle}
+  {\setunit{\addperiod\addspace}}% Fix customc?
+  {\setunit{\addcomma\addspace}}%
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newunit% unit, not cunit?
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{byeditor+others}%
+  \newunit% ??? Editorpunct maybe not right here?
+  \iffieldundef{maintitle}
+  {}
+  {\ifthenelse{\iffieldundef{volume}\AND\iffieldundef{part}}%
+    {\usebibmacro{cms-in:}%
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}
+    {\printfield{volume}%
+      \printfield{part}%
+      \setunit{\addspace}
+      \bibstring{ofseries}%
+      \setunit{\addspace}
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}}
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}% Reversed with bibreprint 16th ed. (?)
+  \newunit\newblock
+  \usebibmacro{bibreprint}%\printorigdate%
+  \usebibmacro{publ+loc+year}%
+  \newunit
+  \printfield{type}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isan}%
+    \setunit*{\addcomma\addspace}\newblock%
+    \printfield{ismn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+
+\DeclareBibliographyDriver{book}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit\newblock
+  \iffieldundef{maintitle}%
+  {\iffieldundef{edition}%
+    {}%
+    {\usebibmacro{edition}}}%
+  {}%
+  \newunit\newblock% 16th ed.
+  \usebibmacro{byauthor}
+  \newunit\newblock
+  \usebibmacro{part+editor+translator}%
+  \newunit\newblock
+  \ifboolexpr{%
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@bookcrossref}%
+  }%
+  {\ifboolexpr{%
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@bookcrossref}%
+    }%
+  {\usebibmacro{mtitle+mstitle+vol+part+title+stitle}%
+  \newcunit
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{byeditor+others}%
+  \usebibmacro{editorpunct}%
+  \iftoggle{cms@bookpages}%
+  {}%
+  {\clearfield{pages}}%
+  \printfield{chapter}%
+  \setunit*{\addcomma\addspace}%
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newcunit\newblock
+  \printlist[][-\value{listtotal}]{lista}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{bookinbook}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit\newblock
+  \ifthenelse{\iffieldundef{maintitle}\AND\iffieldundef{booktitle}}%
+  {\iffieldundef{edition}%
+    {}%
+    {\usebibmacro{edition}}}%
+  {}%
+  \newunit\newblock% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{part+editor+translator}%
+  \setunit*{\addperiod\addspace}%
+  \ifboolexpr{%
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@bookcrossref}%
+  }%
+  {\ifboolexpr{%
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@bookcrossref}%
+    }%
+  {\usebibmacro{mtitle+mstitle+vol+part+btitle+bstitle}%
+  \newcunit
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newcunit
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{editorpunct}
+  \usebibmacro{byeditor+others}%
+  \newcunit\newblock
+  \printfield{chapter}%
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{booklet}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit\newblock% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{howpubl+loc+year}%
+  \newunit\newblock
+  \usebibmacro{chap+pag}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{collection}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit\newblock
+  \ifboolexpr{%
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@bookcrossref}%
+  }%
+  {\ifboolexpr{%
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@bookcrossref}%
+    }%
+  {\usebibmacro{mtitle+mstitle+vol+part+title+stitle}%
+  \usebibmacro{editorpunct}%
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{bytranslator+others}%
+  \newunit
+  \usebibmacro{volume+or+volumes}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{customc}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{author/editor}%
+  \newunit\newblock
+  \printfield{nameaddon}%
+  \setunit*{\addspace}%
+  \usebibmacro{italtitle+stitle}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{image}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \setunit*{\addcomma\addspace}% 16th ed. added * (?)
+  \usebibmacro{date}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \printfield{howpublished}%
+  \newunit\newblock
+  \printfield{type}%
+  \newcunit\newblock
+  \printfield{version}%
+  \newcunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{institution+organization}%
+  \setunit*{\addcomma\addspace}\newblock
+  \printlist{location}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{inbook}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \setunit{\addperiod\addspace}% 16th ed.
+  \usebibmacro{byauthor}%
+  \setunit{\addperiod\addspace}%
+  \usebibmacro{part+editor+translator}%
+  \ifboolexpr{
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@crossref}%
+  }
+  {\ifboolexpr{
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@crossref}%
+    }
+  {\setunit{\addperiod\addspace}%
+  \usebibmacro{chapincoll}%
+  \usebibmacro{mtitle+mstitle+vol+part+btitle+bstitle}%
+  \newcunit
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newcunit
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{byeditor+others}%
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{incollection}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \setunit{\addperiod\addspace}% 16th ed.
+  \usebibmacro{byauthor}%
+  \setunit{\addperiod\addspace}%
+  \usebibmacro{part+editor+translator}%
+  \ifboolexpr{
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@crossref}%
+  }
+  {\ifboolexpr{
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@crossref}%
+    }
+  {\setunit{\addperiod\addspace}% Moved here.
+  \usebibmacro{chapincoll}%
+  \usebibmacro{mtitle+mstitle+vol+part+btitle+bstitle}%
+  \newcunit
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newcunit
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{byeditor+others}%
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{inproceedings}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \setunit{\addperiod\addspace}% 16th ed.
+  \usebibmacro{byauthor}%
+  \setunit{\addperiod\addspace}%
+  \usebibmacro{part+editor+translator}%
+  \ifboolexpr{
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@crossref}%
+  }
+  {\ifboolexpr{
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@crossref}%
+    }
+  {\setunit{\addperiod\addspace}%
+    \usebibmacro{chapincoll}%
+  \usebibmacro{mtitle+mstitle+vol+part+btitle+bstitle}%
+  \newcunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{org+publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{inreference}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{reference+title}%{italtitle+stitle}
+  \newunit\newblock
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifthenelse{\iffieldundef{maintitle}\AND\iffieldundef{booktitle}}%
+  {\iffieldundef{edition}%
+    {}%
+    {\usebibmacro{edition}}}%
+  {}%
+  \newunit\newblock
+  \usebibmacro{part+editor+translator}%
+  \setunit*{\addperiod\addspace}% need asterisk?
+  \usebibmacro{mtitle+mstitle+vol+part+btitle+bstitle}%
+  \newcunit
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newcunit
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{editorpunct}
+  \usebibmacro{byeditor+others}%
+  \newcunit\newblock
+  \printfield{chapter}%
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newcunit\newblock
+  \printlist[][-\value{listtotal}]{lista}%
+  \newcunit\newblock% \setunit{\addspace}% 16th ed.
+  \ifnameundef{author}%
+  {}%
+  {\printtext{% 16th ed.
+      \bibstring{by}%
+      \addspace%
+      \printnames[byauthor]{author}}}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{letter}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \printtext[title]{%
+    \printfield[noformat]{title}}%
+  \newcunit\newblock%
+  \printfield{titleaddon}%
+  \setunit*{\addcomma\addspace}%
+  \usebibmacro{letter+date}%
+  \setunit{\addspace}%
+  \usebibmacro{language+transtitle}%
+  \newunit\newblock%\bibsentence
+  \usebibmacro{part+editor+translator}%
+  \setunit*{\addperiod\addspace}%
+  \ifboolexpr{
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@crossref}%
+  }
+  {\ifboolexpr{
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@crossref}%
+    }
+  {\usebibmacro{chapincoll}%
+  \usebibmacro{mtitle+mstitle+vol+part+btitle+bstitle}%
+  \newcunit
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newcunit
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{byeditor+others}%
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\newunit}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\newunit}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{manual}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author+org}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit\newblock
+  \usebibmacro{edition}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \printfield{type}%
+  \newunit
+  \printfield{note}%
+  \newunit\newblock%
+  \usebibmacro{bibreprint}%
+  \usebibmacro{org+publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{misc}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \iffieldundef{entrysubtype}%
+  {\ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}}%
+  {}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \iffieldundef{entrysubtype}%
+  {\ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}}%
+  {\printfield{title}%
+    \setunit{\addcolon\addspace}%
+    \printfield[noformat]{subtitle}%
+    \newcunit\newblock%
+    \printfield{titleaddon}%
+    \setunit{\addspace}%
+    \usebibmacro{language+transtitle}%
+    \newcunit\newblock%
+    \usebibmacro{unpubl+letter+date}}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \printfield{howpublished}%
+  \newunit\newblock
+  \printfield{type}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{institution+organization}%
+  \setunit*{\addcomma\addspace}\newblock
+  \printlist{location}%
+  \iffieldundef{entrysubtype}%
+  {\newcunit\newblock%
+    \usebibmacro{date}}%
+  {}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{music}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{part+editor+translator}%
+  \newunit\newblock
+  \usebibmacro{music+eventdate}%\printeventdate
+  \newunit\newblock
+  \usebibmacro{chapinscore}%
+  \usebibmacro{btitle+bstitle}%
+  \iffieldundef{booktitle}
+  {\newunit}% Fix customc?
+  {\newcunit}%
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newunit% unit, not cunit?
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{byeditor+others}%
+  \newunit% ??? Editorpunct maybe not right here?
+  \iffieldundef{maintitle}
+  {}
+  {\ifthenelse{\iffieldundef{volume}\AND\iffieldundef{part}}%
+    {\usebibmacro{cms-in:}%
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}
+    {\printfield{volume}%
+      \printfield{part}%
+      \setunit{\addspace}
+      \bibstring{ofseries}%
+      \setunit{\addspace}
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}}
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{music+origdate}%\printtext[eventdate]{\printeventdate}%
+  \newunit\newblock
+  \printlist{publisher}%
+  \setunit*{\addcomma\addspace}\newblock
+  \printfield{series}%
+  \setunit{\addspace}%
+  \printfield{number}%
+  \newcunit\newblock
+  \usebibmacro{date}%
+  \newunit
+  \usebibmacro{institution+organization}%
+  \setunit*{\addcomma\addspace}\newblock
+  \printlist{location}%
+  \newcunit\newblock
+  \printfield{type}%
+  \newunit\newblock
+  \usebibmacro{pubstate}% 16th ed -- origdate instead, as above?
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{iswc}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyAlias{mvbook}{book}
+
+\DeclareBibliographyAlias{mvcollection}{collection}
+
+\DeclareBibliographyAlias{mvproceedings}{proceedings}
+
+\DeclareBibliographyAlias{mvreference}{reference}
+
+\DeclareBibliographyDriver{online}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \printlist{organization}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{date}%
+  \newunit\newblock
+  \ifthenelse{\iffieldundef{urlyear}\AND\iffieldundef{urlmonth}}%
+  {}%
+  {\printurldate}% Date fix
+  \newunit\newblock
+  \iftoggle{cms@doionly}%
+  {\iffieldundef{doi}%
+    {}%
+    {\printfield{doi}%
+      \clearfield{url}}}%
+  {\printfield{doi}}%
+  \newunit\newblock%
+  \usebibmacro{eprint}%
+  \newunit\newblock
+  \printfield{url}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{patent}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{author+holder}% + holder?
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmscitesortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \setunit{\addperiod\addspace}%
+  \printfield{note}%
+  \setunit{\addperiod\addspace}%
+  \usebibmacro{bibreprint}%
+  \printfield{type}%
+  \setunit{\addspace}%
+  \printfield{number}%
+  \iflistundef{location}
+    {}
+    {\setunit*{\addspace}%
+     \printtext[parens]{%
+       \printlist[][-\value{listtotal}]{location}}}%
+  \newcunit\newblock
+  \printfield{version}%
+  \newcunit\newblock
+  \iftoggle{cms@switchdates}%
+  {\bibstring{patentfiled}%
+    \setunit{\addspace}%
+    \printdate%
+    \setunit{\addcomma\addspace}%
+    \bibstring{and}%
+    \addspace\bibstring{patentissued}\addspace%
+    \printorigdate}%
+  {\iffieldundef{origyear}%
+    {\iffieldundef{year}%
+      {}%
+      {\bibstring{patentfiled}\setunit{\addspace}%
+        \printdate}}%
+    {\bibstring{patentfiled}\setunit{\addspace}%
+      \printorigdate%\usebibmacro{date}%
+      \setunit{\addcomma\addspace\bibstring{and}%
+        \addspace\bibstring{patentissued}\addspace}%
+      \usebibmacro{date}}}%
+  \newcunit\newblock
+  \printfield{addendum}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{periodical}{%
+  \iffieldequalstr{entrysubtype}{magazine}%
+  {\usebibmacro{bibindex}%
+  \usebibmacro{editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{%
+  \printtext[title]{% magazine subtype
+    \printfield[noformat]{title}%
+    \setunit{\addcolon\addspace}%
+    \printfield[noformat]{subtitle}}%
+  \setunit*{\addspace}%
+  \printlist[periodplace]{location}%
+  \clearlist{location}%
+  \clearfield{title}%
+  \clearfield{subtitle}%
+  \newunit\newblock}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \usebibmacro{issuetitle}%
+  \setunit{\addspace}%
+  \usebibmacro{language+transtitle}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \printfield{note}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{periodical+date+issue}%
+  \newcunit\newblock
+  \usebibmacro{chap+pag}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{issn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+  {\usebibmacro{bibindex}%
+  \usebibmacro{editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{%
+  \printtext[title]{% magazine subtype
+    \printfield[noformat]{title}%
+    \setunit{\addcolon\addspace}%
+    \printfield[noformat]{subtitle}}%
+  \setunit*{\addspace}%
+  \printlist[periodplace]{location}%
+  \clearlist{location}%
+  \clearfield{title}%
+  \clearfield{subtitle}%
+  \newunit\newblock}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \usebibmacro{issuetitle}%
+  \setunit{\addspace}%
+  \usebibmacro{language+transtitle}%
+  \setunit*{\addperiod\addspace}\newblock% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \printfield{note}%
+  \setunit*{\addcomma\addspace}\newblock% (changed for 0.7)??
+  \usebibmacro{periodical+issue+year+pages}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{issn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{proceedings}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit\newblock
+  \ifboolexpr{%
+    test {\iffieldundef{crossref}}%
+    or
+    togl {cms@bookcrossref}%
+  }%
+  {\ifboolexpr{%
+      test {\iffieldundef{xref}}%
+      or
+      togl {cms@bookcrossref}%
+    }%
+  {\usebibmacro{mtitle+mstitle+vol+part+title+stitle}%
+  \newunit\newblock
+  \usebibmacro{volume+or+volumes}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{org+publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{xref}}
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}%
+{\ifboolexpr{% Changed for 16th ed.
+    test {\ifterm}%
+    or
+    test {\ifpunctmark{*}}%
+  }
+  {\setunit{\addspace\bibsentence}}%
+  {\setunit{\addperiod\addspace}}%
+  \usebibmacro{bibprexref}%
+  \bibxrefcite{\thefield{crossref}}%
+  \usebibmacro{bibpostxref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}}
+
+\DeclareBibliographyDriver{reference}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{reference+title}%{italtitle+stitle}
+  \newunit\newblock
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifthenelse{\iffieldundef{maintitle}\AND\iffieldundef{booktitle}}%
+  {\iffieldundef{edition}%
+    {}%
+    {\usebibmacro{edition}}}%
+  {}%
+  \newunit\newblock
+  \usebibmacro{part+editor+translator}%
+  \setunit*{\addperiod\addspace}% need asterisk?
+  \usebibmacro{mtitle+mstitle+vol+part+btitle+bstitle}%
+  \newcunit
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newcunit
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{editorpunct}
+  \usebibmacro{byeditor+others}%
+  \newcunit\newblock
+  \printfield{chapter}%
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{report}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \printfield{type}%
+  \newcunit
+  \printfield{series}%
+  \setunit{\addnbspace}%
+  \printfield{number}%
+  \newunit
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{inst+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isrn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{review}{%
+  \usebibmacro{bibindex}%
+  \iffieldequalstr{entrysubtype}{magazine}%
+  {\usebibmacro{mag+news+author}}%
+  {\usebibmacro{author/editor}}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef{\bbx@lasthash}%
+  {\printfield{title}%
+  \setunit{\addcolon\addspace}%
+  \printfield[noformat]{subtitle}%
+  \newunit}%
+  {}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef{\bbx@lasthash}%
+  {}%
+  {\printfield{title}%
+  \setunit{\addcolon\addspace}%
+  \printfield[noformat]{subtitle}}%
+  \setunit{\addspace}%
+  \printfield{titleaddon}%
+  \newcunit\newblock
+  \usebibmacro{music+eventdate}% 16th ed.
+  \setunit{\addspace}%
+  \usebibmacro{language+transtitle}%
+  \newunit\newblock%
+  \usebibmacro{part+editor+translator}%
+  \newunit\newblock%
+  \usebibmacro{bibreprint}%
+  \usebibmacro{issuetitle}%
+  \setunit*{\addcomma\addspace}%
+  \usebibmacro{byeditor+others}%
+  \usebibmacro{editorpunct}%\newunit\newblock
+  \printfield{note}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iffieldequalstr{entrysubtype}{magazine}
+  {\usebibmacro{mag+news+date}%
+  \newcunit\newblock
+  \usebibmacro{chap+pag}}%
+  {\usebibmacro{journal+issue+year+pages}}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{issn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{suppbook}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{%
+  \usebibmacro{inforaft}%
+  \setunit{\addspace}\newblock
+  \usebibmacro{italtitle+stitle}%
+  \newcunit\newblock
+  \usebibmacro{bybookauthor}%
+  \clearname{bookauthor}
+  \newunit\newblock}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{%
+  \usebibmacro{inforaft}%
+  \setunit{\addspace}\newblock
+  \usebibmacro{italtitle+stitle}}%
+  \newunit
+  \iffieldundef{maintitle}%
+  {\iffieldundef{edition}%
+    {}%
+    {\usebibmacro{edition}}}%
+  {}%
+  \newcunit
+  \usebibmacro{bybookauthor}%
+  \newcunit\newblock
+  \usebibmacro{chap+pag}%
+  \newunit\newblock
+  \usebibmacro{mtitle+mstitle+vol+part+title+stitle}%
+  \newcunit%
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{byeditor+others}%
+  \newunit
+  \usebibmacro{volume+or+volumes}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isbn}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyAlias{suppcollection}{suppbook}
+
+\DeclareBibliographyAlias{suppperiodical}{review}
+
+\DeclareBibliographyDriver{thesis}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit% 16th ed.
+  \usebibmacro{byauthor}%
+  \setunit{\addperiod\addspace}%
+  \printfield{note}%
+  \setunit{\addperiod\addspace}\newblock%
+  \usebibmacro{bibreprint}%
+  \usebibmacro{type+inst+year}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{unpublished}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{\usebibmacro{italtitle+stitle}}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{\usebibmacro{italtitle+stitle}}%
+  \newunit%usebibmacro{byauthorpunct}% Why does this work?  No idea.
+  \usebibmacro{byauthor}% Same in thesis type, as well. 16th ed.
+  \setunit{\addperiod\addspace}%
+  \usebibmacro{byeditor+others}% Fix bug ???
+  \newunit\newblock
+  \usebibmacro{bibreprint}%
+  \printfield{howpublished}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \printfield{note}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \printlist{location}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{date}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{video}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{shorthand:author}%
+  \usebibmacro{author/editor}%
+  \setunit{\addspace}%
+  \printfield{nameaddon}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{%
+  \usebibmacro{video+title}% Simplifies trad style
+  \iffieldundef{booktitle}% Comma after italics, period after quotes
+  {\newcunit}
+  {\newunit}%\setunit{\addspace}\newblock%
+  \printfield{titleaddon}%\usebibmacro{title+stitle}%
+  \setunit{\addspace}\newblock%\bibsentence
+  \usebibmacro{language+transtitle}
+  \newunit\newblock}{}%
+  \usebibmacro{cmsbibsortdate}%
+  \newunit\newblock
+  \ifundef\bbx@lasthash{}{%
+  \usebibmacro{video+title}% Simplifies trad style
+  \iffieldundef{booktitle}% Comma after italics, period after quotes
+  {\newcunit}
+  {\newunit}%\setunit{\addspace}\newblock%
+  \printfield{titleaddon}%\usebibmacro{title+stitle}%
+  \setunit{\addspace}\newblock%\bibsentence
+  \usebibmacro{language+transtitle}}%
+  \setunit{\addperiod\addspace}% 16th ed.
+  \usebibmacro{byauthor}%
+  \setunit{\addperiod\addspace}%
+  \usebibmacro{part+editor+translator}%
+  \setunit{\addperiod\addspace}%
+  \usebibmacro{chapinscore}%
+  \usebibmacro{btitle+bstitle}%
+  \iffieldundef{booktitle}
+  {\setunit{\addperiod\addspace}}% Fix customc?
+  {\setunit{\addcomma\addspace}}%
+  \iffieldundef{edition}%
+  {}%
+  {\usebibmacro{edition}}%
+  \newunit% unit, not cunit?
+  \usebibmacro{bybookauthor}%
+  \usebibmacro{byeditor+others}%
+  \newunit% ??? Editorpunct maybe not right here?
+  \iffieldundef{maintitle}
+  {}
+  {\ifthenelse{\iffieldundef{volume}\AND\iffieldundef{part}}%
+    {\usebibmacro{cms-in:}%
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}
+    {\printfield{volume}%
+      \printfield{part}%
+      \setunit{\addspace}
+      \bibstring{ofseries}%
+      \setunit{\addspace}
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}}
+  \newcunit\newblock
+  \usebibmacro{volume+pages}%
+  \newunit\newblock
+  \usebibmacro{ser+num}%
+  \newunit\newblock
+  \usebibmacro{music+eventdate}%
+  \newunit\newblock
+  \usebibmacro{origpubl+loc+year}% 16th ed.
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{publ+loc+year}%
+  \newunit\newblock
+  \printfield{type}%
+  \newunit\newblock
+  \usebibmacro{pubstate}%
+  \newunit\newblock
+  \printfield{addendum}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \iftoggle{cms@isbn}%
+  {\printfield{isan}}%
+  {}%
+  \setunit*{\addcomma\addspace}\newblock%
+  \usebibmacro{bib+doi+url}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{originally+published+as}%
+  \usebibmacro{finentry}}%
+
+%%%% Other Formatting Macros %%%%
+
+\newbibmacro*{bib+doi+url}{% 16th ed.
+  \ifthenelse{\iffieldundef{urlyear}\AND\iffieldundef{urlmonth}}%
+  {}%
+  {\printurldate}% Date fix
+  \iffieldundef{addendum}%
+  {\newunit\newblock}%
+  {\newcunit\newblock}%
+  \iftoggle{cms@doionly}%
+  {\iffieldundef{doi}%
+    {}%
+    {\printfield{doi}%
+      \setunit*{\addperiod\addspace}\newblock%
+      \clearfield{url}}}%
+  {\iftoggle{cms@doi}%
+    {\printfield{doi}%
+      \setunit*{\addperiod\addspace}\newblock}%
+    {}}%
+  \iftoggle{cms@eprint}%
+  {\usebibmacro{eprint}%
+    \setunit*{\addperiod\addspace}\newblock}%
+  {}%
+  \iftoggle{cms@url}%
+  {\printfield{url}}%
+  {}}%
+
+\newbibmacro*{shorthand:author}{%
+  \ifboolexpr{
+    test {\iffieldundef{shorthand}}%
+    or
+    not togl {cms@los}%
+  }%
+  {\togglefalse{cms@authorparens}}%
+  {\ifthenelse{\iffieldequals{fullhash}{\bbx@lasthash}\AND\NOT
+      \iffirstonpage}%
+    {\togglefalse{cms@authorparens}}%
+    {\toggletrue{cms@authorparens}%
+      \printfield{shorthand}\addspace}}}
+
+\newbibmacro*{shorthand:label}{% Test this
+  \ifthenelse{\iffieldequalstr{entrysubtype}{magazine}\AND\NOT%
+    \ifentrytype{periodical}}% Simplifies .bib creation
+    {\printtext[bibhyperref]{\printfield[journaltitle]{journaltitle}}}%
+    {\ifentrytype{manual}%
+      {\printtext[bibhyperref]{\printlist{organization}}}%
+      {\printtext[bibhyperref]{\printfield[citetitle]{labeltitle}}}}}%
+
+\newbibmacro*{labelyear+extrayear}{%
+  \ifboolexpr{ (
+    test {\ifentrytype{music}}%
+    or
+    test {\ifentrytype{review}}%
+    or
+    test {\ifentrytype{video}}%
+    )
+    and
+    togl {cms@avdate}%
+  }%
+  {\usebibmacro{av+labelyear+extrayear}}%
+  {\iftoggle{cms@ordate}%
+    {\usebibmacro{origfirst+labelyear+extrayear}}%
+    {\usebibmacro{standard+labelyear+extrayear}}}}
+
+\newbibmacro*{standard+labelyear+extrayear}{%
+  \ifthenelse{\iffieldundef{labelyear}\OR%
+    \iffieldequalstr{labelyear}{nodate}}% or new declaration ???
+    {\ifboolexpr{
+        test {\ifentrytype{misc}}%
+        or
+        test {\ifentrytype{inreference}}%
+        or
+        test {\ifentrytype{reference}}%
+        or
+        test {\ifentrytype{mvreference}}%
+        or
+        not togl {cms@nodates}}%
+      {}%
+      {\bibstring{nodate}}}%
+    {\iffieldundef{year}%
+      {\iffieldundef{eventyear}
+        {\iffieldundef{origyear}%
+          {\printfield{labelyear}%
+            \iffieldundef{extrayear}%
+            {}%
+            {\setunit*{}%
+              \printfield{extrayear}}%
+            \iffieldundef{urlendyear}%
+            {\clearfield{urlyear}}%
+            {\ifboolexpr{
+                test {\iffieldequalstr{urlendyear}{}}%
+                and
+                not togl {cms@datedash}%
+              }
+              {\mbox{\bibdatedash}%
+                \clearfield{urlyear}}%
+              {\iffieldundef{urlmonth}%
+                {\clearfield{urlyear}}%
+                {\iffieldsequal{urlyear}{urlendyear}%
+                  {\clearfield{urlyear}\clearfield{urlendyear}}%
+                  {}}}}}%
+          {\printfield{labelyear}%
+            \iffieldundef{extrayear}%
+            {}%
+            {\setunit*{}%
+              \printfield{extrayear}}%
+            \iffieldundef{origendyear}%
+            {\clearfield{origyear}}%
+            {\ifboolexpr{
+                test {\iffieldequalstr{origendyear}{}}%
+                and
+                not togl {cms@datedash}%
+              }
+              {\mbox{\bibdatedash}%
+                \clearfield{origyear}}%
+              {\iffieldundef{origmonth}%
+                {\clearfield{origyear}}%
+                {\iffieldsequal{origyear}{origendyear}%
+                  {\clearfield{origyear}\clearfield{origendyear}}%
+                  {}}}}}}%
+        {\printfield{labelyear}%
+          \iffieldundef{extrayear}%
+          {}%
+          {\setunit*{}%
+            \printfield{extrayear}}%
+          \iffieldundef{eventendyear}%
+          {\clearfield{eventyear}}%
+          {\ifboolexpr{
+              test {\iffieldequalstr{eventendyear}{}}%
+              and
+              not togl {cms@datedash}%
+            }
+            {\mbox{\bibdatedash}%
+              \clearfield{eventyear}}%
+            {\iffieldundef{eventmonth}%
+              {\clearfield{eventyear}}%
+              {\iffieldsequal{eventyear}{eventendyear}%
+                {\clearfield{eventyear}\clearfield{eventendyear}}%
+                {}}}}}}%
+      {\printfield{labelyear}%
+        \iffieldundef{extrayear}%
+        {}%
+        {\setunit*{}%
+          \printfield{extrayear}}%
+        \iffieldundef{endyear}% DATE FIX
+        {\clearfield{year}}%
+        {\ifboolexpr{
+            test {\iffieldequalstr{endyear}{}}%
+            and
+            not togl {cms@datedash}%
+          }
+          {\mbox{\bibdatedash}%
+            \clearfield{year}}%
+          {\iffieldundef{month}%
+            {\clearfield{year}}%
+            {\iffieldsequal{year}{endyear}%
+              {\clearfield{year}\clearfield{endyear}}%
+              {}}}}}}}
+
+\newbibmacro*{origfirst+labelyear+extrayear}{%
+  \ifthenelse{\iffieldundef{labelyear}\OR%
+    \iffieldequalstr{labelyear}{nodate}}%
+    {\ifboolexpr{
+        test {\ifentrytype{misc}}%
+        or
+        test {\ifentrytype{inreference}}%
+        or
+        test {\ifentrytype{reference}}%
+        or
+        test {\ifentrytype{mvreference}}%
+        or
+        not togl {cms@nodates}}%
+      {}%
+      {\bibstring{nodate}}}%
+    {\iffieldundef{origyear}%
+      {\iffieldundef{year}
+        {\iffieldundef{eventyear}%
+          {\printfield{labelyear}%
+            \iffieldundef{extrayear}%
+            {}%
+            {\setunit*{}%
+              \printfield{extrayear}}%
+            \iffieldundef{urlendyear}%
+            {\clearfield{urlyear}}%
+            {\ifboolexpr{
+                test {\iffieldequalstr{urlendyear}{}}%
+                and
+                not togl {cms@datedash}%
+              }
+              {\mbox{\bibdatedash}%
+                \clearfield{urlyear}}%
+              {\iffieldundef{urlmonth}%
+                {\clearfield{urlyear}}%
+                {\iffieldsequal{urlyear}{urlendyear}%
+                  {\clearfield{urlyear}\clearfield{urlendyear}}%
+                  {}}}}}%
+          {\printfield{labelyear}%
+            \iffieldundef{extrayear}%
+            {}%
+            {\setunit*{}%
+              \printfield{extrayear}}%
+            \iffieldundef{eventendyear}%
+            {\clearfield{eventyear}}%
+            {\ifboolexpr{
+                test {\iffieldequalstr{eventendyear}{}}%
+                and
+                not togl {cms@datedash}%
+              }
+              {\mbox{\bibdatedash}%
+                \clearfield{eventyear}}%
+              {\iffieldundef{eventmonth}%
+                {\clearfield{eventyear}}%
+                {\iffieldsequal{eventyear}{eventendyear}%
+                  {\clearfield{eventyear}\clearfield{eventendyear}}%
+                  {}}}}}}%
+        {\printfield{labelyear}%
+          \iffieldundef{extrayear}%
+          {}%
+          {\setunit*{}%
+            \printfield{extrayear}}%
+          \iffieldundef{endyear}%
+          {\clearfield{year}}%
+          {\ifboolexpr{
+              test {\iffieldequalstr{endyear}{}}%
+              and
+              not togl {cms@datedash}%
+            }
+            {\mbox{\bibdatedash}%
+              \clearfield{year}}%
+            {\iffieldundef{month}%
+              {\clearfield{year}}%
+              {\iffieldsequal{year}{endyear}%
+                {\clearfield{year}\clearfield{endyear}}%
+                {}}}}}}%
+      {\printfield{labelyear}%
+        \iffieldundef{extrayear}%
+        {}%
+        {\setunit*{}%
+          \printfield{extrayear}}%
+        \iffieldundef{origendyear}% DATE FIX
+        {\clearfield{origyear}}%
+        {\ifboolexpr{
+            test {\iffieldequalstr{origendyear}{}}%
+            and
+            not togl {cms@datedash}%
+          }
+          {\mbox{\bibdatedash}%
+            \clearfield{origyear}}%
+          {\iffieldundef{origmonth}%
+            {\clearfield{origyear}}%
+            {\iffieldsequal{origyear}{origendyear}%
+              {\clearfield{origyear}\clearfield{origendyear}}%
+              {}}}}}}}
+
+\newbibmacro*{av+labelyear+extrayear}{%
+  \ifthenelse{\iffieldundef{labelyear}\OR%
+    \iffieldequalstr{labelyear}{nodate}}%
+    {\ifboolexpr{
+        test {\ifentrytype{misc}}%
+        or
+        test {\ifentrytype{inreference}}%
+        or
+        test {\ifentrytype{reference}}%
+        or
+        test {\ifentrytype{mvreference}}%
+        or
+        not togl {cms@nodates}}%
+      {}%
+      {\bibstring{nodate}}}%
+    {\iffieldundef{eventyear}%
+      {\iffieldundef{origyear}
+        {\iffieldundef{year}%
+          {\printfield{labelyear}%
+            \iffieldundef{extrayear}%
+            {}%
+            {\setunit*{}%
+              \printfield{extrayear}}%
+            \iffieldundef{urlendyear}%
+            {\clearfield{urlyear}}%
+            {\ifboolexpr{
+                test {\iffieldequalstr{urlendyear}{}}%
+                and
+                not togl {cms@datedash}%
+              }
+              {\mbox{\bibdatedash}%
+                \clearfield{urlyear}}%
+              {\iffieldundef{urlmonth}%
+                {\clearfield{urlyear}}%
+                {\iffieldsequal{urlyear}{urlendyear}%
+                  {\clearfield{urlyear}\clearfield{urlendyear}}%
+                  {}}}}}%
+          {\printfield{labelyear}%
+            \iffieldundef{extrayear}%
+            {}%
+            {\setunit*{}%
+              \printfield{extrayear}}%
+            \iffieldundef{endyear}%
+            {\clearfield{year}}%
+            {\ifboolexpr{
+                test {\iffieldequalstr{endyear}{}}%
+                and
+                not togl {cms@datedash}%
+              }
+              {\mbox{\bibdatedash}%
+                \clearfield{year}}%
+              {\iffieldundef{month}%
+                {\clearfield{year}}%
+                {\iffieldsequal{year}{endyear}%
+                  {\clearfield{year}\clearfield{endyear}}%
+                  {}}}}}}%
+        {\printfield{labelyear}%
+          \iffieldundef{extrayear}%
+          {}%
+          {\setunit*{}%
+            \printfield{extrayear}}%
+          \iffieldundef{origendyear}%
+          {\clearfield{origyear}}%
+          {\ifboolexpr{
+              test {\iffieldequalstr{origendyear}{}}%
+              and
+              not togl {cms@datedash}%
+            }
+            {\mbox{\bibdatedash}%
+              \clearfield{origyear}}%
+            {\iffieldundef{origmonth}%
+              {\clearfield{origyear}}%
+              {\iffieldsequal{origyear}{origendyear}%
+                {\clearfield{origyear}\clearfield{origendyear}}%
+                {}}}}}}%
+      {\printfield{labelyear}%
+        \iffieldundef{extrayear}%
+        {}%
+        {\setunit*{}%
+          \printfield{extrayear}}%
+        \iffieldundef{eventendyear}% DATE FIX
+        {\clearfield{eventyear}}%
+        {\ifboolexpr{
+            test {\iffieldequalstr{eventendyear}{}}%
+            and
+            not togl {cms@datedash}%
+          }
+          {\mbox{\bibdatedash}%
+            \clearfield{eventyear}}%
+          {\iffieldundef{eventmonth}%
+            {\clearfield{eventyear}}%
+            {\iffieldsequal{eventyear}{eventendyear}%
+              {\clearfield{eventyear}\clearfield{eventendyear}}%
+              {}}}}}}}
+
+\newbibmacro*{origyear+endyear}{%
+  \printfield{origyear}%
+  \ifthenelse{\iffieldundef{origendyear}\OR%
+    \iffieldsequal{origyear}{origendyear}}% Same fix as in .lbx
+  {}%
+  {\iffieldequalstr{origendyear}{}%
+    {\mbox{\bibdatedash}}%
+    {\bibdatedash\csuse{mkbibdatelong}{origendyear}{}{}}}}% ???
+
+% \printfield{origendyear}}}} Peculiar bug with this after \bibnamedash
+
+\newbibmacro*{year+endyear}{%
+  \printfield{year}%
+  \ifthenelse{\iffieldundef{endyear}\OR%
+    \iffieldsequal{year}{endyear}}% Same fix as in .lbx
+  {}%
+  {\iffieldequalstr{endyear}{}%
+    {\mbox{\bibdatedash}}%
+    {\bibdatedash\printfield{endyear}}}}
+
+\newbibmacro*{cmsbibsortdate}{% Attempt to solve date-related problems
+  \ifboolexpr{%
+    test {\iffieldundef{origyear}}%
+    or
+    not test {\iffieldint{origyear}}%
+  }%
+  {\usebibmacro{cmsbibyear}}%
+  {\iffieldint{year}%
+    {\ifboolexpr{% Needed for date ranges - video type, esp.
+        test {\iffieldundef{endyear}}%
+        or
+        not test {\iffieldnum{endyear}}%
+      }%
+      {\ifthenelse{\thefield{origyear}>\thefield{year}}%
+        {\toggletrue{cms@switchdates}%
+          \usebibmacro{cmsbibyear}}%
+        {\usebibmacro{cmsbibyear}}}%
+      {\ifthenelse{\thefield{origyear}>\thefield{endyear}}%
+        {\toggletrue{cms@switchdates}%
+          \usebibmacro{cmsbibyear}}%
+        {\usebibmacro{cmsbibyear}}}}%
+    {\usebibmacro{cmsbibyear}}}}%
+
+\newbibmacro*{cmsbibyear}{%
+  \iftoggle{cms@origlabel}%
+  {\usebibmacro{origyear+labelyear}}%
+  {\iftoggle{cms@bothlabelnew}%
+    {\usebibmacro{bothyear+oldstyle}}%
+    {\iftoggle{cms@bothlabelold}%
+      {\usebibmacro{bothyear+oldstyle}}%
+      {\usebibmacro{labelyear+extrayear}}}}%
+  \ifcsdef{@cms@tempdate}%
+  {\toggletrue{\@cms@tempdate}}%
+  {}}
+
+\newbibmacro*{origyear+labelyear}{%
+  \ifboolexpr{ (
+    test {\ifentrytype{music}}%
+    or
+    test {\ifentrytype{review}}%
+    or
+    test {\ifentrytype{video}}%
+    )
+    and
+    togl {cms@avdate}%
+  }
+  {\usebibmacro{av+labelyear+extrayear}}%
+  {\iftoggle{cms@switchdates}%
+    {\usebibmacro{labelyear+extrayear}}%
+    {\iffieldundef{origyear}%
+      {\iftoggle{cms@ordate}% ???
+        {}%
+        {\clearfield{extrayear}}%
+        \usebibmacro{standard+labelyear+extrayear}}%
+      {\iftoggle{cms@ordate}%
+        {\usebibmacro{origfirst+labelyear+extrayear}}%
+        {\usebibmacro{origyear+endyear}%
+          \clearfield{origyear}}}}}}
+
+\newbibmacro*{bothyear+oldstyle}{%
+  \ifboolexpr{ (
+    test {\ifentrytype{music}}%
+    or
+    test {\ifentrytype{review}}%
+    or
+    test {\ifentrytype{video}}%
+    )
+    and
+    togl {cms@avdate}%
+  }
+  {\usebibmacro{av+labelyear+extrayear}}% \clearfield local to \printtext
+  {\iftoggle{cms@switchdates}%
+    {\printtext{%
+        \bibopenparen%
+        \usebibmacro{labelyear+extrayear}%
+        \bibcloseparen%
+        \setunit{\addspace}\usebibmacro{origyear+endyear}}%
+      \clearfield{year}%
+      \clearfield{origyear}}%
+    {\iffieldundef{origyear}
+      {\iftoggle{cms@ordate}%
+        {}%
+        {\clearfield{extrayear}}%
+        \usebibmacro{standard+labelyear+extrayear}}%
+      {\iftoggle{cms@ordate}% ???
+        {\iffieldundef{year}%
+          {\usebibmacro{origfirst+labelyear+extrayear}}%
+          {\printtext{%
+              \bibopenparen%
+              \usebibmacro{origfirst+labelyear+extrayear}%
+              \bibcloseparen%
+              \setunit*{\addspace}%
+              \usebibmacro{year+endyear}}}}%
+        {\printtext{%
+            \bibopenparen%
+            \usebibmacro{origyear+endyear}%
+            \bibcloseparen%
+            \clearfield{extrayear}\setunit*{\addspace}%
+            \usebibmacro{standard+labelyear+extrayear}}}%
+        \clearfield{origyear}%
+        \clearfield{year}}}}}
+
+\newbibmacro*{pubstate}{%
+  \iftoggle{cms@reprint}%
+  {\iftoggle{cms@switchdates}%
+    {\iffieldundef{year}% Fix for consistency???
+      {}%
+      {\printtext{% 16th ed.
+          \usebibmacro{choosepubstring}%
+          \printdate\addperiod}\nopunct}}
+    {\iffieldundef{origyear}%
+      {}%
+      {\printtext{% 16th ed.
+          \usebibmacro{choosepubstring}%
+          \printorigdate\addperiod}\nopunct}}}%
+  {\printfield{pubstate}}}
+
+\newbibmacro*{choosepubstring}{%
+  \ifthenelse{\ifentrytype{video}\OR%
+    \ifentrytype{music}}%
+  {\bibstring{origreleaseyear}}%
+  {\bibstring{origpubyearalt}}}%
+
+\newbibmacro*{bibreprint}{%
+  \iftoggle{cms@reprint}%
+  {\iffieldundef{origyear}%
+    {\bibstring{reprint}\newcunit}% 16th ed.
+    {\iftoggle{cms@switchdates}%
+      {\bibstring{reprint}\newcunit}% 16th ed.
+      {}}}%
+  {}}
+
+\newbibmacro*{volume+pages}{% Volume fix (modified)
+  \ifboolexpr{
+    test {\iffieldundef{maintitle}}%
+    or
+    togl {cms@vol}%
+  }
+  {\global\togglefalse{cms@vol}%
+    \ifthenelse{\iffieldundef{volume}\AND\iffieldundef{part}}%
+    {\printfield{pages}%
+      \newunit%
+      \printfield{volumes}}%
+    {\iffieldundef{part}%
+      {\iffieldundef{pages}%
+        {\printfield{volume}}% Still print this w/o part or pages???
+        {\ifthenelse{\iffieldnums{pages}%
+            \AND\iffieldundef{bookpagination}\AND\iffieldnums{volume}}%
+          {\printfield[default]{volume}%
+            \postvolpunct%
+            \printfield{pages}}%
+          {\printfield{volume}%
+            \addcomma\addspace%
+            \printfield{pages}}}}%
+      {\printfield{volume}%
+        \printfield{part}%
+        \newcunit%
+        \printfield{pages}}}}%
+  {\ifboolexpr{
+      togl {cms@hidevolumes}%
+      and
+      (
+      not test {\iffieldundef{volume}}%
+      or
+      not test {\iffieldundef{part}}%
+      )
+    }%
+    {\printfield{pages}}%
+    {\printfield{pages}%
+      \newunit%
+      \printfield{volumes}}}}%
+
+\newbibmacro*{bibprexref}{% For back references
+  \iflistundef{pageref}{}{\savelist{pageref}{\cbx@incollpgref}}}%
+
+\newbibmacro*{bibpostxref}{% Volume fix
+  \iffieldundef{chapter}%
+  {\iffieldundef{pages}%
+    {\iffieldundef{volume}%
+      {\iffieldundef{part}%
+        {}%
+        {\newcunit\printfield{part}}}%
+      {\ifboolexpr{
+          test {\ifcsdef{cbx@incollvol}}%
+          and
+          test {\iffieldequalcs{volume}{cbx@incollvol}}%
+        }%
+        {\iffieldundef{part}%
+          {}%
+          {\ifboolexpr{
+              test {\ifcsdef{cbx@incollpart}}%
+              and
+              test {\iffieldequalcs{part}{cbx@incollpart}}%
+            }%
+            {}%
+            {\newcunit\printfield{part}}}}%
+        {\iffieldundef{part}%
+          {\newcunit\printfield{volume}}%
+          {\newcunit\printfield{volume}\printfield{part}}}}}%
+    {\iffieldundef{volume}%
+      {\iffieldundef{part}%
+        {\newcunit\printfield{pages}}%
+        {\newcunit\printfield{part}\newcunit\printfield{pages}}}%
+      {\ifboolexpr{
+          test {\ifcsdef{cbx@incollvol}}%
+          and
+          test {\iffieldequalcs{volume}{cbx@incollvol}}%
+        }%
+        {\iffieldundef{part}%
+          {\newcunit\printfield{pages}}%
+          {\ifboolexpr{
+              test {\ifcsdef{cbx@incollpart}}%
+              and
+              test {\iffieldequalcs{part}{cbx@incollpart}}%
+            }%
+            {\newcunit\printfield{pages}}%
+            {\newcunit\printfield{part}\newcunit\printfield{pages}}}}%
+        {\iffieldundef{part}%
+          {\ifthenelse{\iffieldnums{pages}%
+              \AND\iffieldundef{bookpagination}\AND\iffieldnums{volume}}%
+            {\newcunit\printfield[default]{volume}%
+              \postvolpunct%
+              \printfield{pages}}%
+            {\newcunit\printfield{volume}%
+              \addcomma\addspace%
+              \printfield{pages}}}%
+          {\newcunit\printfield{volume}%
+            \printfield{part}%
+            \newcunit%
+            \printfield{pages}}}}}}%
+  {\newcunit\printfield{chapter}}%
+  \ifcsdef{cbx@incollpgref}% Here we print and clear the child's
+  {\restorelist{pageref}{\cbx@incollpgref}% backrefs
+    \newunit%
+    \usebibmacro{pageref}%
+    \global\let\cbx@incollpgref\undefined}%
+  {}}
+
+\newbibmacro*{volume+or+volumes}{% Volume fix (modified)
+  \iffieldundef{maintitle}%
+  {\ifthenelse{\iffieldundef{volume}\AND\iffieldundef{part}}%
+    {\printfield{volumes}}%
+    {\printfield{volume}%
+      \printfield{part}}}%
+  {\ifboolexpr{
+      togl {cms@hidevolumes}%
+      and
+      (
+      not test {\iffieldundef{volume}}%
+      or
+      not test {\iffieldundef{part}}%
+      )
+    }%
+    {}%
+    {\printfield{volumes}}}}
+
+\newbibmacro*{mtitle+mstitle+vol+part+title+stitle}{%
+  \iffieldundef{maintitle}
+  {}
+  {\ifthenelse{\iffieldundef{volume}\AND\iffieldundef{part}}% Test ???
+    {\usebibmacro{cms-in:}% Volume-less treatment?
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}
+    {\printfield{volume}%
+      \printfield{part}%
+      \setunit{\addspace}
+      \bibstring{ofseries}%
+      \setunit{\addspace}
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}}}
+
+\newbibmacro*{btitle+bstitle}{% InIn fix from N&B
+  \iffieldundef{booktitle}
+  {}
+  {\ifthenelse{\ifentrytype{audio}\OR\ifentrytype{music}\OR%
+      \ifentrytype{video}}%
+    {}%
+    {\usebibmacro{cms-in:}}%
+    \printtext{%
+      \printfield{booktitle}%
+      \setunit{\addcolon\addspace}%
+      \printfield[booktitle]{booksubtitle}}%
+    \newcunit
+    \printfield{booktitleaddon}%
+    \setunit*{\addcomma\addspace}}}
+
+\newbibmacro*{mtitle+mstitle+vol+part+btitle+bstitle}{%
+  \usebibmacro{btitle+bstitle}%
+  \iffieldundef{maintitle}
+  {}
+  {\ifthenelse{\(\iffieldundef{volume}\AND\iffieldundef{part}\)\OR%
+    \(\iffieldundef{booktitle}\AND\NOT\ifentrytype{bookinbook}\)}%
+    {\usebibmacro{cms-in:}% Volume-less treatment?
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}%
+      \toggletrue{cms@vol}}
+    {\printfield{volume}%
+      \printfield{part}%
+      \setunit{\addspace}
+      \bibstring{ofseries}%
+      \setunit{\addspace}
+      \printtext{%
+        \printfield{maintitle}%
+        \setunit{\addcolon\addspace}%
+        \printfield[maintitle]{mainsubtitle}}%
+      \newcunit
+      \printfield{maintitleaddon}}}}
+
+\newbibmacro*{cjournal+ser+vol+num}{% Moved to bbx
+  \usebibmacro{journal+sub}%
+  \setunit*{\addspace}%
+  \printlist[periodplace]{location}%
+  \setunit*{\addspace}%
+  \iffieldundef{series}
+    {}
+    {\newcunit
+      \printfield[jourser]{series}%
+      \newcunit}%\setunit*{\addspace}?
+  \ifthenelse{\iffieldundef{year}\AND\iffieldundef{month}}%
+  {\iffieldundef{volume}%
+    {\newcunit%
+      \printfield[journum]{number}%
+      \clearfield{number}%
+      \setunit{\addcomma\addspace}}
+    {\printfield[jourvol]{volume}%
+      \setunit{\addcomma\addspace}}}%
+  {\printfield[jourvol]{volume}%
+    \newcunit%
+    \printfield[journum]{number}%
+    \clearfield{number}%
+    \setunit{\addcomma\addspace}}% need * here?
+  \printfield{eid}%
+  \newunit}
+
+\newbibmacro*{journal+issue+year+pages}{%
+  \iftoggle{cms@numbermonth}{}{\clearfield{month}}%
+  \usebibmacro{cjournal+ser+vol+num}%
+  \setunit{\addspace}%
+  \ifthenelse{\iffieldundef{issue}\AND\iffieldundef{month}
+    \AND\iffieldundef{number}}%
+  {\ifthenelse{\iffieldundef{bookpagination}\AND\NOT%
+      \iffieldundef{volume}}% Removed kludge for French colon spacing?
+    {\setunit{\postvolpunct}}%
+    {\setunit{\addcolon\addspace}}}% This may not be universally correct.
+  {\printtext[parens]{%  Perhaps if it's wrong use magazine subtype?
+      \iffieldundef{issue}
+      {\usebibmacro{date}%
+        \printfield{number}}%
+      {\printfield{issue}%
+        \setunit{\addspace}%
+        \usebibmacro{cmsyear}}}%
+    \setunit{\addcolon\addspace}}
+  \printfield{pages}}
+
+\newbibmacro*{periodical+issue+year+pages}{%
+  \iftoggle{cms@numbermonth}{}{\clearfield{month}}%
+  \usebibmacro{cperiodical+ser+vol+num}%
+  \setunit{\addspace}%
+  \ifthenelse{\iffieldundef{issue}\AND\iffieldundef{month}
+    \AND\iffieldundef{number}}%
+  {\ifthenelse{\iffieldundef{bookpagination}\AND\NOT%
+      \iffieldundef{volume}}% Removed kludge for French ???
+    {\setunit{\postvolpunct}}%
+    {\setunit{\addcolon\addspace}}}%
+  {\printtext[parens]{%
+      \iffieldundef{issue}
+      {\usebibmacro{date}%
+        \printfield{number}}%
+      {\printfield{issue}%
+        \setunit{\addspace}%
+        \usebibmacro{cmsyear}}}%
+    \setunit{\addcolon\addspace}}
+  \printfield{pages}}
+
+\newbibmacro*{bycompiler}{%
+  \ifnameundef{namec}
+    {}
+    {\bibstring{bycompiler}\addspace
+     \printnames[bycompiler]{namec}}}
+
+\renewbibmacro*{byeditor}{%
+  \ifnameundef{editor}
+    {}
+    {\usebibmacro{cbytypestrg}{editor}{editor}%
+     \setunit{\addspace}%
+     \printnames[byeditor]{editor}%
+     \usebibmacro{editorpunct}}%
+  \usebibmacro{byeditorx}}
+
+\renewbibmacro*{byeditorx}{%
+  \ifnameundef{editora}
+    {}
+    {\usebibmacro{cbytypestrg}{editora}{editor}%
+     \setunit{\addspace}%
+     \printnames[byeditora]{editora}%
+     \usebibmacro{editorpunct}}%
+  \ifnameundef{editorb}
+    {}
+    {\usebibmacro{cbytypestrg}{editorb}{editor}%
+     \setunit{\addspace}%
+     \printnames[byeditorb]{editorb}%
+     \usebibmacro{editorpunct}}%
+  \ifnameundef{editorc}
+    {}
+    {\usebibmacro{cbytypestrg}{editorc}{editor}%
+     \setunit{\addspace}%
+     \printnames[byeditorc]{editorc}%
+     \usebibmacro{editorpunct}}}
+
+\renewbibmacro*{byeditor+others}{%
+  \ifthenelse{\NOT\ifnameundef{editor}\AND
+    \(\iffieldundef{editortype}\OR
+    \iffieldequalstr{editortype}{editor}\)}
+    {\def\@tempa{byeditor}%
+     \ifnamesequal{editor}{translator}
+       {\edef\@tempa{\@tempa tr}%
+        \clearname{translator}}
+       {}%
+       \ifnamesequal{editor}{namec}
+       {\edef\@tempa{\@tempa cp}%
+         \clearname{namec}}
+       {}%
+     \ifnamesequal{editor}{commentator}
+       {\edef\@tempa{\@tempa co}%
+        \clearname{commentator}}
+       {\ifnamesequal{editor}{annotator}
+          {\edef\@tempa{\@tempa an}%
+           \clearname{annotator}}
+          {}}%
+     \ifnamesequal{editor}{introduction}
+       {\edef\@tempa{\@tempa in}%
+        \clearname{introduction}}
+       {\ifnamesequal{editor}{foreword}
+          {\edef\@tempa{\@tempa fo}%
+           \clearname{foreword}}
+          {\ifnamesequal{editor}{afterword}
+             {\edef\@tempa{\@tempa af}%
+              \clearname{afterword}}
+             {}}}%
+     \bibstring{\@tempa}%
+     \setunit{\addspace}%
+     \printnames[byeditor]{editor}%
+     \clearname{editor}%
+     \usebibmacro{editorpunct}%
+     \usebibmacro{byeditorx}}%
+   {\usebibmacro{byeditor}}%
+  \usebibmacro{bytranslator+others}}
+
+\renewbibmacro*{bytranslator+others}{%
+  \ifnameundef{translator}
+    {}
+    {\def\@tempa{bytranslator}%
+      \ifnamesequal{translator}{namec}
+      {\edef\@tempa{\@tempa cp}%
+        \clearname{namec}}
+      {}%
+     \ifnamesequal{translator}{commentator}
+       {\edef\@tempa{\@tempa co}%
+        \clearname{commentator}}
+       {\ifnamesequal{translator}{annotator}
+          {\edef\@tempa{\@tempa an}%
+           \clearname{annotator}}
+          {}}%
+     \ifnamesequal{translator}{introduction}
+       {\edef\@tempa{\@tempa in}%
+        \clearname{introduction}}
+       {\ifnamesequal{translator}{foreword}
+          {\edef\@tempa{\@tempa fo}%
+           \clearname{foreword}}
+          {\ifnamesequal{translator}{afterword}
+             {\edef\@tempa{\@tempa af}%
+              \clearname{afterword}}
+             {}}}%
+     \bibstring{\@tempa}\space
+     \printnames[bytranslator]{translator}%
+     \clearname{translator}%
+     \usebibmacro{editorpunct}}%
+  \usebibmacro{bycompiler+others}}
+
+\newbibmacro*{bycompiler+others}{%
+  \ifnameundef{namec}
+    {}
+    {\def\@tempa{bycompiler}%
+     \ifnamesequal{namec}{commentator}
+       {\edef\@tempa{\@tempa co}%
+        \clearname{commentator}}
+       {\ifnamesequal{namec}{annotator}
+          {\edef\@tempa{\@tempa an}%
+           \clearname{annotator}}
+          {}}%
+     \ifnamesequal{namec}{introduction}
+       {\edef\@tempa{\@tempa in}%
+        \clearname{introduction}}
+       {\ifnamesequal{namec}{foreword}
+          {\edef\@tempa{\@tempa fo}%
+           \clearname{foreword}}
+          {\ifnamesequal{namec}{afterword}
+             {\edef\@tempa{\@tempa af}%
+              \clearname{afterword}}
+             {}}}%
+     \bibstring{\@tempa}\space
+     \printnames[bycompiler]{namec}%
+     \clearname{namec}%
+     \usebibmacro{editorpunct}}%
+  \usebibmacro{byothers}}
+
+\newbibmacro*{byothers}{% Changed for 0.9
+  \usebibmacro{cbytranslator}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{bycompiler}%
+  \usebibmacro{editorpunct}%
+%  \usebibmacro{byredactor}%
+%  \usebibmacro{editorpunct}%
+  \usebibmacro{withcommentator}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{withannotator}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{withintroduction}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{withforeword}%
+  \usebibmacro{editorpunct}%
+  \usebibmacro{withafterword}}
+
+\endinput
