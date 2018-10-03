@@ -1,5 +1,5 @@
 % AEJ-Article.tex for AEA last revised 22 June 2011
-%%%%%!TeX TXS-program:bibliography = txs:///biber
+%!TeX TXS-program:bibliography = txs:///biber
 \documentclass[AEJ]{AEA}
 
 %%%%%% NOTE FROM OVERLEAF: The mathtime package is no longer publicly available nor distributed. We recommend using a different font package e.g. mathptmx if you'd like to use a Times font.
@@ -18,10 +18,14 @@
 % variety of citation commands than latex supports natively. See below.
 
 % Uncomment the next line to use the natbib package with bibtex 
-\usepackage{natbib}
-%\usepackage[style=chicago-authordate,sorting=ydnt,maxnames=10,backend=biber,natbib=true]{biblatex}
-%\addbibresource{paper.bib}
-%\addbibresource{references.bib}
+%\usepackage{natbib}
+%\usepackage[style=chicago-authordate,sorting=nyt,maxnames=3,doi=true,backend=biber,natbib=true]{biblatex}
+\usepackage[authordate,backend=biber]{biblatex-chicago}
+\newcommand{\citep}{\parencite}
+\newcommand{\citet}{\textcite}
+\input{chicago-authordate-aea.tex}
+\addbibresource{paper.bib}
+\addbibresource{references.bib}
 
 \usepackage{hyperref}
 \usepackage{listings}
@@ -46,10 +50,10 @@
 \hypersetup{colorlinks,breaklinks,citecolor=darkblue,linkcolor=darkblue,urlcolor=darkblue}
 \begin{document}
 
-\title{Formatting Data Citations - BibTeX Version}
-\shortTitle{BibTeX Data Citations}
+\title{Formatting Data Citations - BibLaTeX Version}
+\shortTitle{BibLaTeX Data Citations}
 \author{Lars Vilhuber\thanks{%
-Vilhuber: Cornell University, lars.vilhuber@cornell.edu.}}
+		Vilhuber: Cornell University, lars.vilhuber@cornell.edu.}}
 \date{\today}
 \pubMonth{Month}
 \pubYear{Year}
@@ -59,7 +63,7 @@ Vilhuber: Cornell University, lars.vilhuber@cornell.edu.}}
 \Keywords{}
 
 \begin{abstract}
-We illustrate how to create data citations with \LaTeX and BibTeX.
+	We illustrate how to create data citations with \LaTeX and BibTeX.
 \end{abstract}
 
 \maketitle
@@ -67,7 +71,7 @@ The purpose of scientific publishing is the dissemination of robust research fin
 
 
 \section{Data Citations}
-Properly referencing data goes beyond just reproducibility - it is also proper scientific writing style. In the same way that we use bibliographic references to ``printed'' resources, we should also be using such references for data resources, to give and receive credit where credit is due. Not referencing an article or book is at best an oversight, and at worst plagiarism - and the same should apply to data objects. Numerous guides and tutorials exist (ICPSR, Force11, \cite{dataone-l09}).
+Properly referencing data goes beyond just reproducibility - it is also proper scientific writing style. In the same way that we use bibliographic references to ``printed'' resources, we should also be using such references for data resources, to give and receive credit where credit is due. Not referencing an article or book is at best an oversight, and at worst plagiarism - and the same should apply to data objects. Numerous guides and tutorials exist (ICPSR, Force11, \citet{dataone-l09}).
 
 \subsection{What to cite}
 
@@ -78,7 +82,7 @@ In a nutshell, every dataset is to be cited. This is true for the main article a
 The AEA uses the Chicago style for citations and bibliographies \citep{aeadatarefs}. However, the Chicago Style Manual \citep{citation-machine,ChicagoManualofStyleChicagoManualStyle2018} does not provide examples for data citations, and neither does the Citation Style Language\footnote{\url{https://citationstyles.org/}} used by applications like Zotero\footnote{\url{https://www.zotero.org/}} and Mendeley Desktop\footnote{\url{https://www.mendeley.com/download-desktop/}}.
 
 
-DataONE \citep{dataone-cite} suggests content and style that resemble the generic working paper or article citation style (adapted to Chicago style):
+\citet{dataone-cite} suggests content and style that resemble the generic working paper or article citation style (adapted to Chicago style):
 \begin{quote}\tt
     Westbrook JW, Kitajima K, Burleigh JG, Kress WJ, Erickson DL, Wright SJ (2011) Data from: What makes a leaf tough? Patterns of correlated evolution between leaf toughness traits and demographic rates among 197 shade-tolerant woody species in a neotropical forest. Dryad Digital Repository. http://dx.doi.org/10.5061/dryad.8525
 \end{quote}
@@ -105,30 +109,70 @@ Finally, the AEA style guide \citep{aeadatarefs} suggests
 
 As part of our activities, the AEA prepress department has started the process of updating AEA templates available through such software.\footnote{For the technically inclined, this process involves updating an existing style or creating a new style on \url{https://citationstyles.org/} and \url{https://github.com/citation-style-language/styles}, from where it propagates to a large number of software packages.}  
 
-\paragraph{BibLaTeX}
-Users of BibLaTeX should consult the companion document.
-
 \paragraph{BibTeX}
-For users of BibTeX, a generic database entry might look like
+Users of BibTeX should consult the companion document.
+
+\paragraph{BibLaTeX}
+\lstset{basicstyle=\small\ttfamily}
+For users of BibLaTeX, both the \texttt{biblatex} package with option \texttt{style=chicago-authordate} 
+\begin{lstlisting}[language=TeX]
+\usepackage[style=chicago-authordate,doi=true,backend=biber,natbib=true]{biblatex}
+\end{lstlisting}
+as well as the \texttt{biblatex-chicago} package with option \texttt{authordate} 
+\begin{lstlisting}[language=TeX]
+\usepackage[authordate,backend=biber]{biblatex-chicago}
+% to achieve natbib compatibility, optionally define these aliases
+\newcommand{\citep}{\parencite}
+\newcommand{\citet}{\textcite}
+\end{lstlisting}
+will yield satisfactory results, with one exception: \ac{DOI} should be formatted as the full URL. We achieve this with a minor modification:
+\lstinputlisting[numbers=left,language=TeX]{chicago-authordate-aea.tex}
+
+A generic BibLaTeX database entry might look like
 \lstset{language=}
 \lstinputlisting[basicstyle=\small\ttfamily,firstline=30,lastline=38]{paper.bib}
 %
 or
 \lstinputlisting[basicstyle=\small\ttfamily,firstline=40,lastline=49]{paper.bib}
 %
-and thus generate ``\citet{duflopande2006}'' and ``\citet{leiss1999}'' and the bibliographic entry in the References when using the pre-2018 \texttt{aea.bst} provided by the \ac{AEA}. Note the use of the note field to encapsulate the information.
+and thus generate ``\citet{duflopande2006}'' and ``\citet{leiss1999}'' as well as
+%
+\begin{quote}
+	\fullcite{duflopande2006}
+\end{quote}
+%
+and
+%
+\begin{quote}
+	\fullcite{leiss1999}
+\end{quote}
+%
+when using standard ``\texttt{chicago-author-date}'' options to \texttt{biblatex}. Note the use of the note field to encapsulate the information.
 
-A modification to the \texttt{aea.bst} file, tentatively named \href{aea-mod.bst}{\texttt{aea-mod.bst}}, might allow for a cleaner implementation: 
+A cleaner implementation: 
 \lstinputlisting[basicstyle=\small\ttfamily,firstline=54,lastline=62]{paper.bib}
 and
 \lstinputlisting[basicstyle=\small\ttfamily,firstline=64,lastline=74]{paper.bib}
-which will generate ``\citet{duflopande2006-new}'' and ``\citet{leiss1999-new}''
-
+which will generate ``\citet{duflopande2006-new}'' and ``\citet{leiss1999-new}'' as well as
+%
+\begin{quote}
+	\fullcite{duflopande2006-new}
+\end{quote}
+%
+and
+%
+\begin{quote}
+	\fullcite{leiss1999-new}
+\end{quote}
+%
+\newpage
 % Remove or comment out the next two lines if you are not using bibtex.
-\bibliographystyle{aea-mod}
-\bibliography{paper,references}
+%\bibliographystyle{aea-mod}
+%\bibliography{paper,references}
 
-
+\printbibliography[title={References}]
+% The appendix command is issued once, prior to all appendices, if any.
+%\appendix
 
 \end{document}
 
