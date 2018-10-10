@@ -57,7 +57,7 @@ Regarding the data, enough information should be provided
 - to be able to acquire the data (whether by download, by contract, by application process, etc.) (ACCESSIBILITY);
 - to assure the reader (and the AEA Data Editor) that the data is available for a sufficiently long period of time (PERSISTENCE).
 
-For details, see [Suggested_information_data](Suggested_information_data.md).
+For details, see [Requested_information_data](Requested_information_data.md).
 
 
 ## Programs
@@ -67,7 +67,7 @@ We strongly suggest
 - identification of all pre-requisites (data, code, programs, software, possibly operating system)
 - (optionally, but useful) a log file - it will help potential replicators to know how to long to expect the programs to run
 
-For details, see [Suggested_information_code](Suggested_information_code.md).
+For details, see [Requested_information_code](Requested_information_code.md).
 
 ## Data and Code Hosting
 The American Economic Association has made supplementary materials available on
@@ -84,4 +84,4 @@ A code and data repository (or "archive") should satisfy a few criteria:
 
 Not every web-based location is a code or data repository; on the other hand, numerous non-web based archives are legitimate locations for data to be found (e.g., National Archives).
 
-For further details, see [Suggested_information_hosting](Suggested_information_hosting.md).
+For further details, see [Requested_information_hosting](Requested_information_hosting.md).

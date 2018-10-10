@@ -80,11 +80,11 @@ Data should remain available for a sufficiently long time.
 -  This may also be true if the data cannot be shared (restricted access data).
 - Again, this may already have been defined in your DMP.
 -  A good minimum benchmark is 10 years, but this may not always be feasible with data the author does not control.
-You should describe the data persistence, or point to a data archive's policy in that matter. See [Suggested_information_hosting](Suggested_information_hosting.md) for more details on data repositories.
+You should describe the data persistence, or point to a data archive's policy in that matter. See [Requested_information_hosting](Requested_information_hosting.md) for more details on data repositories.
 
 ### What is a data provider
 A "data provider" in this sense can be a public repository where the data can be found ([ICPSR](https://www.icpsr.umich.edu/icpsrweb/)), a website that provided the data ([IPUMS](https://usa.ipums.org/usa/)), a statistical agency or private company that granted access to the data ([U.S. Census Bureau](https://www.census.gov/fsrdc), Twitter, Acme Inc.).
-The author may also be the data provider, for instance, because the author conducted the survey used in the article. However, in many cases, the data provider may not be a data archive (see  [Suggested_information_hosting](Suggested_information_hosting.md)).
+The author may also be the data provider, for instance, because the author conducted the survey used in the article. However, in many cases, the data provider may not be a data archive (see  [Requested_information_hosting](Requested_information_hosting.md)).
 
 #### Practical guidance: data provider and data archives
 If the data provider is not an archive (i.e., the data persistence is insufficient, and might go away), you should investigate depositing the data at a data archive.
