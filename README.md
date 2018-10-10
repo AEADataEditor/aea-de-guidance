@@ -3,7 +3,7 @@
 ## Guidance on creating replicable data and program archives
 This guidance is for the author wanting to create a replication archive. 
 
-See [Suggested information](Suggested_information.md).
+See [Suggested information](Requested_information.md).
 
 ## Guidance on testing replicability of code
 This guidance has two audiences:
