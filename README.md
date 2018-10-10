@@ -1,9 +1,9 @@
 # Guidance on various topics by the AEA Data Editor
 
 ## Guidance on creating replicable data and program archives
-This guidance is for the author wanting to create a replication archive. 
+This guidance is for the author wanting to create a replication archive.
 
-See [Suggested information](Requested_information.md).
+See [Requested information](Requested_information.md).
 
 ## Guidance on testing replicability of code
 This guidance has two audiences:

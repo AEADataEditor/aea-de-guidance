@@ -46,6 +46,11 @@ Use the outreg55 package
   library(devtools)
   install_github("myrepo/superols")
   ```
+### Some facts
+Most economists in the late 2000s (through 2018) use either Stata or Matlab. Assume that replicators have not (yet) learned your preferred software if you are using something else, and provide some guidance how to use it.
+
+![software usage AER](https://raw.githubusercontent.com/pbaylis/econ-program-usage-data/master/aer_programs_by_year.png)
+Figure: Software usage in the AER, 2000-2018 (Source: [Baylis and Schrimpf, 2018](http://doi.org/10.5281/zenodo.1453556))
 
 ### Readings
 Some economists have put together excellent guidance and tutorials. See

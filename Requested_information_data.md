@@ -1,7 +1,7 @@
 ## Suggested Information for Data
 ### Data description
 -  Please describe all data, including input data.
-- This is often called "metadata"
+- This description of data is often called "metadata"
   - At a minimum, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics) through a codebook.
   - If confidentiality protection is a concern, talk to your data provider. You may be able to apply simple count and fraction rounding rules (see [code in this Github repository](https://github.com/simsong/drb_rounder)), or remove some summary statistics (e.g., max/min or specific quantiles).
 -  Where multiple versions of the data exist, describe the version of the data used by the author.

@@ -1,8 +1,8 @@
-# Suggested information for data and code replication package
+# Requested information for data and code replication package
 This is a draft document. Please provide comments through issues in this Github project.
 
 ## Readings
-The following readings might be useful. The earlier in a project these are the consulted, the less pain there will be at the end.
+The following readings might be useful for structuring project, code, and data. It is useful to consult these at an early stage of the project, as subsequent adjustments will be small and incremental, rather than large and disruptive.
 
 - Project Tier https://www.projecttier.org/
 - Wilson G. et al (2016) "Good enough practices for scientific computing" https://arxiv.org/pdf/1609.00037.pdf
@@ -25,7 +25,7 @@ We will refer to a (simplified) data structure as described below. Real-life dat
 
 ## General Rules and Guidelines
 ### Requirements
-We require that
+We **require** that
 - you cite the data
   - you should cite the data in your main manuscript
   - you should cite data separately in your online appendix
@@ -34,16 +34,17 @@ We require that
 - you make every effort to transparently describe the creation of your analysis data
 
 ### Suggestions
-We strongly suggest using some best-practices as suggested by the literature cited above:
-- separation of code and data
+We **strongly suggest** using some best-practices as suggested by the literature cited above:
+- separation of code and data in directory structure and archive locations
 - separation of read-only input data and modified "analysis" data
 - a clearly defined sequence of processing (possibly through a script)
 - citation of released code
-- citation of data in the README
+- citation of data in the README (in addition to citing it in the article itself)
 This document provides some practical guidance.
 
 ### Encourage
-We encourage you
+We **encourage** you
+- to deposit data early in the research process, as soon as data is collected/ cleaned/ etc. This does not mean that the data becomes public at that time, only that the data has been "locked" in a specific state. See below for data hosting.
 - to create a data publication, going into more depth about the data creation (if you created or collected your data)
 - to consider splitting out independent components of your data creation (for instance, the auxiliary data described above) as a separately (useful) data deposit
 - to also make programs that create the analysis data ("cleaning programs") available
@@ -53,26 +54,26 @@ For a discussion with some suggestions, see [Data_citation_guidance](Data_citati
 
 ## Data
 Regarding the data, enough information should be provided
-- to accurately describe the data so that somebody who doesn't have knowledge of the data can understand its principal (and salient) characteristics (INFORMATION);
-- to be able to acquire the data (whether by download, by contract, by application process, etc.) (ACCESSIBILITY);
-- to assure the reader (and the AEA Data Editor) that the data is available for a sufficiently long period of time (PERSISTENCE).
+- to accurately describe the data so that somebody who doesn't have knowledge of the data can understand its principal (and salient) characteristics (**INFORMATION**);
+- to be able to acquire the data (whether by download, by contract, by application process, etc.) (**ACCESSIBILITY**);
+- to assure the reader (and the AEA Data Editor) that the data is available for a sufficiently long period of time (**PERSISTENCE**).
 
 For details, see [Requested_information_data](Requested_information_data.md).
 
 
 ## Programs
-We strongly suggest
-- a clear documentation of all code (within or through a README)
-- provision of a master script ("master do file", "make file") and a description of how to run or invoke the master script
+We **strongly suggest**
+- a clear documentation of all code (within the code/script files themselves, and through a README)
+- provision of a master script ("master do file", "make file") and a description of how to run or invoke the master script in the README
 - identification of all pre-requisites (data, code, programs, software, possibly operating system)
-- (optionally, but useful) a log file - it will help potential replicators to know how to long to expect the programs to run
+- (optionally, but useful) a record of how long the code sequence is expected to run - it will help potential replicators to know how to long to expect the programs to run
 
 For details, see [Requested_information_code](Requested_information_code.md).
 
 ## Data and Code Hosting
 The American Economic Association has made supplementary materials available on
-its website since 2006. As the global popular and scientific web-accessible
-infrastructure has matured, other possibilities have opened up. Some clarification is in order.
+its website since 2006. As the  popular and scientific web-accessible
+global infrastructure has matured, other possibilities have opened up. We comment on important features to consider when depositing code and data.
 
 ### Principles
 A code and data repository (or "archive") should satisfy a few criteria:
