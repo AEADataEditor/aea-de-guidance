@@ -30,3 +30,54 @@ A variety of (unfortunately) commonly used web-accessible locations are not acce
 - [Github](https://github.com), because a project's owner can delete a git repository at any time (but see [this page](https://guides.github.com/activities/citable-code/) on how to leverage Zenodo to enable proper archiving of code and software);
 - Google pages, university and personal faculty web pages - they can all be deleted by the owner or by the employer (the university) without regards to archival characteristics of its contents (but talk to your university library - they may have a way to facilitate archiving of web pages - and investigate the [Wayback Machine](https://archive.org/) for a similar purpose);
 - Dropbox, Box.com, and similar cloud-based data and file sharing services - again, they can all be deleted at short notice, or when payment stops
+
+## Challenges in Hosting of Data and Code at Restricted-Access Data Centers
+Users of restricted-access data centers (RADC, such as [FSRDCs](https://www.census.gov/fsrdc),  [CASD](https://www.casd.eu/), etc.) face certain challenges in the handling of data and code as described in this document:
+
+- researchers (end-users) may not be able to provide DOI or similar persistent identifiers for some data
+- researchers may not be able to discern the presrvation policy for certain data sets
+- researchers may not be able to remove all code from the center, or such removal is subject to restrictions
+- data citation guidance may be lacking, or may not be obvious (see [Data Citation Guidance](Data_citation_guidance.md) for general guidance)
+
+### A few guidelines
+
+- Request as much code as the RADC  will allow the researcher to remove. Subsequently handle it equivalently to the [general code guidance](Requested_information_code.md), but make special note (placeholders, explanatory text) of any redacted information.
+- In addition, some RADC may provide the ability to deposit code internally and confidentially. Use such interal repositories, and make a note of their location in the publicly deposited code or in supplementary documents.
+
+### Self-generated repositories
+If a RADC has at least an archival or backup policy of sufficient length (e.g., 10 or more years), but does not offer a formal repository, then the following procedure allows users
+- As before, request as much code as is feasible, and deposit it in a public repository (e.g., openICPSR, Dataverse, Zenodo). **Don't publish it yet.**
+- If possible at such repositories, pre-register a `DOI`
+  - At Zenodo: click the appropriation request button, and a `DOI` will be assigned, e.g., _10.5281/zenodo.`NNNNN`_.
+  - At openICPSR: projects are called `openicpsr-NNNNN`. The `DOI` is derived from the project number as _10.3886/E`NNNNN`V1_.
+- In the RADC, create a two-level directory with the name of the `DOI`.
+- Move both data (following guidelines outlined [here](Requested_information_code.md)) and **all** code (not just the confidential part) to subdirectories. The resulting directory structure will look something like this:
+```
+/some/path/project/10.5281/zenodo.NNNNN/:
+      data/original/rawdata.dta
+      data/derived/analysis.dta
+      programs/01_cleaning.do
+      programs/02_analysis.do
+```
+- Confirm with the RADC's administrative staff how long project files are kept as archives or in backup (often 5-10 years)
+- Add a statement to the public README.md (and to article materials).
+A sample statement and license is noted below, adapted from  [Vilhuber and McKinney (2014)](https://ideas.repec.org/p/cen/wpaper/14-26.html) and [Vilhuber (2018)](https://ideas.repec.org/p/cen/wpaper/18-27r.html):
+
+```
+The data used for this paper were prepared in the U.S. Census Bureau’s
+secure computing facilities under an authorized project using the Research
+Data Center network. The exact analysis files have been fully archived
+so that the programming sequence submitted in compliance with the [JOURNAL]’s
+editorial policy can be run in its entirety, except for the component that
+extracts the analysis sample from the underlying confidential databases.
+
+I grant any researchers with appropriate Census-approved project permission
+to use my exact research files provided that those files were among the
+ones that they requested when the approval was obtained (a Census Bureau
+requirement). These files can be found by searching for the DOI of [this archive/ this article] amongst backups/archives made in [month of archive].
+
+I authorize the editorial staff of the [JOURNAL] to provide my statement
+of cooperation to any researcher who requests it, as well as to the U.S.
+Census Bureau or any agency cooperating with the Census Bureau in supervising
+research that uses the restricted-access data that I have used.
+```
