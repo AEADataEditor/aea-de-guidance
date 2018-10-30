@@ -39,11 +39,17 @@ and provides a few examples, with some additional modifiers:
     UNF:5:obNHHq1gtV400a4T+Xrp9g== Murray Research Archive [Distributor]
     V2 [Version]
 
-Finally, the AEA style guide  suggests
+Finally, the [AEA style guide](https://www.aeaweb.org/journals/policies/sample-references)  suggests
 
     Leiss, Amelia. 1999. ``Arms Transfers to Developing Countries, 1945--1968.''
     Inter-University Consortium for Political and Social Research, Ann Arbor, MI.
     ICPSR05404-v1. doi:10.3886/ICPSR05404 (accessed February 8, 2011).
+
+> This may be adjusted. An alternate citation may be
+
+    Leiss, Amelia. 1999. ``Arms Transfers to Developing Countries, 1945--1968.''
+    Inter-University Consortium for Political and Social Research, Ann Arbor, MI.
+    ICPSR05404-v1. https://doi.org/10.3886/ICPSR05404.
 
 ### Software
 Some examples for specific software:
