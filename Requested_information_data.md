@@ -1,6 +1,19 @@
-## Suggested Information for Data
+## Requested Information for Data
+We request the following information from all articles:
+
+- Data Description: detailed description of all data, including input data: name, location, characteristics
+- Data Access: complete description of how the data can be accessed
+- Data Persistence: how long will the data continue to exist in the form the author used it
+
+Details follow.
+
+## Guidance on Providing the Information
 ### Data description
--  Please describe all data, including input data.
+- Data citation:
+  - This must include the official name of the dataset, as well as the name of the creator
+  - It must include the location of the data - download site, physical archive, etc.
+  - It must include the date the data was created
+- Statistical characteristics of the data
 - This description of data is often called "metadata"
   - At a minimum, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics) through a codebook.
   - If confidentiality protection is a concern, talk to your data provider. You may be able to apply simple count and fraction rounding rules (see [code in this Github repository](https://github.com/simsong/drb_rounder)), or remove some summary statistics (e.g., max/min or specific quantiles).
