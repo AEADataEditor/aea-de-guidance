@@ -1,5 +1,5 @@
 # Requested information for data and code replication package
-This is a draft document. Please provide comments through issues in this Github project.
+This is a draft document. Please provide comments by creating a [new issue](https://github.com/AEADataEditor/aea-de-guidance/issues/new) in this Github project.
 
 ## Readings
 The following readings might be useful for structuring project, code, and data. It is useful to consult these at an early stage of the project, as subsequent adjustments will be small and incremental, rather than large and disruptive.
