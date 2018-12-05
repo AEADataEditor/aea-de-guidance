@@ -23,9 +23,14 @@ Details follow.
 
 ### Practical guidance: Data description
 
-It doesn't need to be complicated, but should be complete. See
+It doesn't need to be complicated, but should be complete. For more extensive descriptions, best practices, and possible support, see
 - ICSPR, "[Guide to Social Science Data Preparation and Archiving: Phase 3: Data Collection and File Creation](https://www.icpsr.umich.edu/icpsrweb/content/deposit/guide/chapter3quant.html)"
 - [DataONE Primer on Data Management Best Practices](http://www.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf)
+- [Yale Institution for Social and Policy Studies](https://isps.yale.edu/research/data/deposit)
+- [Cornell Institute for Social and Economic Research](https://ciser.cornell.edu/research/results-reproduction-r-squared-service/)
+
+Other services may be available at your own institution. Some services may charge a fee, or only be available to researchers affiliated with that institution.
+
 
 
 #### Stata
