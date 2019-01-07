@@ -1,7 +1,10 @@
 ## Requested Information for Data
 We request the following information from all articles:
 
-- Data Description: detailed description of all data, including input data: name, location, characteristics
+- Data Description: detailed description of all data, including input data: 
+  - name of data set
+  - location of data set
+  - characteristics of data set: **At a minimum**, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics).
 - Data Access: complete description of how the data can be accessed
 - Data Persistence: how long will the data continue to exist in the form the author used it
 
@@ -15,7 +18,8 @@ Details follow.
   - It must include the date the data was created
 - Statistical characteristics of the data
 - This description of data is often called "metadata"
-  - At a minimum, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics) through a codebook.
+  - **At a minimum**, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics) through a codebook.
+  - If this information is already provided in the article or an online appendix, the README should point to it ("For summary statistics of variables, see Table 1 in the paper"). Note however that the human-readable variable name (e.g. "Earnings") still needs to be mapped to the name in the dataset, if different (e.g., "var31a")
   - If confidentiality protection is a concern, talk to your data provider. You may be able to apply simple count and fraction rounding rules (see [code in this Github repository](https://github.com/simsong/drb_rounder)), or remove some summary statistics (e.g., max/min or specific quantiles).
 -  Where multiple versions of the data exist, describe the version of the data used by the author.
   -  If possible, provide a Digital Object Identifier.
