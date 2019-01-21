@@ -12,3 +12,12 @@ If you use Github, Bitbucket, openICPSR, Dataverse, etc. for your code and/or da
 
 ## If none of the above apply
 If you use none of the methods above, or you prefer to provide us with a physical copy, then provision by ZIP file is fine, assuming the files are not too large. Please contact us if you encounter problems.
+
+## If your data is not public-use
+- We would still like to obtain a copy of your code (see above)
+- You should include in the article or README the access procedures so that a new user can attempt to access the data
+- You should provide in that description, or privately to the Data Editor, an estimate of how long such procedures may take
+- You should provide privately to the Data Editor whether you are able to add a third-party to your research protocol
+  - This can be a member of your research institution who was not involved in the research.
+  - This can be a member of the AEA Data Editor's team, 
+- We will provide your Editor with an assessment of whether our team or a trusted third party can conduct a reproducibility exercise in a timely fashion. 
