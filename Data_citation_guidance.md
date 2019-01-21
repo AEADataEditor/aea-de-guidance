@@ -1,5 +1,7 @@
 ## Guidance on Data Citation
 
+Official guidance of the AEA is available at https://www.aeaweb.org/journals/policies/sample-references. The guidance provided here is in addition, and may be the basis for future official guidance.
+
 ### Data Citations
 Properly referencing data goes beyond just reproducibility - it is also proper scientific writing style. In the same way that we use bibliographic references to "printed" resources, we should also be using such references for data resources, to give and receive credit where credit is due. Not referencing an article or book is at best an oversight, and at worst plagiarism - and the same should apply to data objects. Numerous guides and tutorials exist:
 
