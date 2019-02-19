@@ -45,11 +45,12 @@ Users of restricted-access data centers (RADC, such as [FSRDCs](https://www.cens
 - In addition, some RADC may provide the ability to deposit code internally and confidentially. Use such interal repositories, and make a note of their location in the publicly deposited code or in supplementary documents.
 
 ### Self-generated repositories
-If a RADC has at least an archival or backup policy of sufficient length (e.g., 10 or more years), but does not offer a formal repository, then the following procedure allows users
+If a RADC has at least an archival or backup policy of sufficient length (e.g., 10 or more years), but does not offer a formal repository, then the following procedure allows users to find and request code and data
 - As before, request as much code as is feasible, and deposit it in a public repository (e.g., openICPSR, Dataverse, Zenodo). **Don't publish it yet.**
 - If possible at such repositories, pre-register a `DOI`
   - At Zenodo: click the appropriation request button, and a `DOI` will be assigned, e.g., _10.5281/zenodo.`NNNNN`_.
   - At openICPSR: projects are called `openicpsr-NNNNN`. The `DOI` is derived from the project number as _10.3886/E`NNNNN`V1_.
+  - If you already have a DOI assigned to your manuscript or (published) paper, you can _alternatively_ use that (see [10.1093/restud/rdw057](https://doi.org/10.1093/restud/rdw057) for an excellent example).
 - In the RADC, create a two-level directory with the name of the `DOI`.
 - Move both data (following guidelines outlined [here](Requested_information_code.md)) and **all** code (not just the confidential part) to subdirectories. The resulting directory structure will look something like this:
 ```
@@ -60,24 +61,4 @@ If a RADC has at least an archival or backup policy of sufficient length (e.g., 
       programs/02_analysis.do
 ```
 - Confirm with the RADC's administrative staff how long project files are kept as archives or in backup (often 5-10 years)
-- Add a statement to the public README.md (and to article materials).
-A sample statement and license is noted below, adapted from  [Vilhuber and McKinney (2014)](https://ideas.repec.org/p/cen/wpaper/14-26.html) and [Vilhuber (2018)](https://ideas.repec.org/p/cen/wpaper/18-27r.html):
-
-```
-The data used for this paper were prepared in the U.S. Census Bureau’s
-secure computing facilities under an authorized project using the Research
-Data Center network. The exact analysis files have been fully archived
-so that the programming sequence submitted in compliance with the [JOURNAL]’s
-editorial policy can be run in its entirety, except for the component that
-extracts the analysis sample from the underlying confidential databases.
-
-I grant any researchers with appropriate Census-approved project permission
-to use my exact research files provided that those files were among the
-ones that they requested when the approval was obtained (a Census Bureau
-requirement). These files can be found by searching for the DOI of [this archive/ this article] amongst backups/archives made in [month of archive].
-
-I authorize the editorial staff of the [JOURNAL] to provide my statement
-of cooperation to any researcher who requests it, as well as to the U.S.
-Census Bureau or any agency cooperating with the Census Bureau in supervising
-research that uses the restricted-access data that I have used.
-```
+- Add a statement to the public README.md (and to article materials). See [Sample RADC Statement 1](sample_radc_statement1.md) and [Sample RADC Statement 2](sample_radc_statement2.md).
