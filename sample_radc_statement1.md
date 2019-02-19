@@ -11,7 +11,8 @@ extracts the analysis sample from the underlying confidential databases.
 I grant any researchers with appropriate Census-approved project permission
 to use my exact research files provided that those files were among the
 ones that they requested when the approval was obtained (a Census Bureau
-requirement). These files can be found by searching for the DOI of [this archive/ this article] amongst backups/archives made in [month of archive].
+requirement). These files can be found by searching for the DOI of 
+[this archive/ this article] amongst backups/archives made in [month of archive].
 
 I authorize the editorial staff of the [JOURNAL] to provide my statement
 of cooperation to any researcher who requests it, as well as to the U.S.
