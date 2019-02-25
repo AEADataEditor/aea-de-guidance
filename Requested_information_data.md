@@ -3,7 +3,7 @@ We request the following information from all articles:
 
 - Data Description: detailed description of all data, including input data: 
   - name of data set
-  - location of data set
+  - (original and current) location of data set
   - characteristics of data set: **At a minimum**, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics).
 - Data Access: complete description of how the data can be accessed
 - Data Persistence: how long will the data continue to exist in the form the author used it
@@ -13,9 +13,11 @@ Details follow.
 ## Guidance on Providing the Information
 ### Data description
 - Data citation:
-  - This must include the official name of the dataset, as well as the name of the creator
-  - It must include the location of the data - download site, physical archive, etc.
-  - It must include the date the data was created
+  - This must include the official name of the dataset, as well as the name of the creator (including if the article's author is the creator)
+  - It must include the location of the data - download site, physical archive, etc. 
+    - If the data is original to the article, then this will be an integral part of the replication archive
+    - If the data was acquired elsewhere, this should be the ORIGINAL location of the data
+  - It must include the date the data was created or downloaded
   -  If possible, provide a Digital Object Identifier (DOI). You can generate a citation from the DOI using https://www.doi2bib.org/.
 - Statistical characteristics of the data
 - This description of data is often called "metadata"
