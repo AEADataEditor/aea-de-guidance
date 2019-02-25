@@ -50,6 +50,7 @@ We **encourage** you
 - to also make programs that create the analysis data ("cleaning programs") available
 
 ## Citing Data and Code
+All data should be cited, as per [AEA guidelines](https://www.aeaweb.org/journals/policies/sample-references).
 For a discussion with some suggestions, see [Data_citation_guidance](Data_citation_guidance.md).
 
 ## Data
