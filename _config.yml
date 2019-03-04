@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: AEA Data and Code Guidance
+description: Guidance for authors wishing to create data and code supplements, and for replicators.
+logo: assets/thumbnail_website_logo.jpg
+show_downloads: true
