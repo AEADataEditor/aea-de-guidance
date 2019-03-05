@@ -4,9 +4,9 @@ This is a draft document. Please provide comments by creating a [new issue](http
 ## Readings
 The following readings might be useful for structuring project, code, and data. It is useful to consult these at an early stage of the project, as subsequent adjustments will be small and incremental, rather than large and disruptive.
 
-- Project Tier https://www.projecttier.org/
-- Wilson G. et al (2016) "Good enough practices for scientific computing" https://arxiv.org/pdf/1609.00037.pdf
-- Gentzkow M, Shapiro JM. Code and Data for the Social Sciences: A Practitioner’s Guide; 2014. Available from: http://web.stanford.edu/~gentzkow/research/CodeAndData.pdf.
+- Project Tier [https://www.projecttier.org/](https://www.projecttier.org/)
+- Wilson G. et al (2016) "Good enough practices for scientific computing" [arXiv 1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
+- Gentzkow M, Shapiro JM. Code and Data for the Social Sciences: A Practitioner’s Guide; 2014. Available from: [http://web.stanford.edu/~gentzkow/research/CodeAndData.pdf](http://web.stanford.edu/~gentzkow/research/CodeAndData.pdf).
 
 ## Some concepts
 We will refer to a (simplified) data structure as described below. Real-life data structures are often more complex, and the distinctions made in the simplified example should be adapted accordingly.
