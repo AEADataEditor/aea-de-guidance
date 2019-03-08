@@ -5,12 +5,12 @@ This page describes how to provide materials to the Data Editor when requested t
 > Until further notice, **final code** should be provided as per Instructions at the official [AEA Data Availability Policy page](https://www.aeaweb.org/journals/policies/data-availability-policy) and/or as per instructions from the AEA Editorial office.
 
 ## Materials to provide
-- Draft manuscript
-- Any relevant appendices
-- README
-- Code for all tables, figures, and in-text numbers of the manuscript
-- Data for the above, if available
-- Information on how to access the data, if not
+- [ ] Draft manuscript
+- [ ] Any relevant appendices
+- [ ] README
+- [ ] Code for all tables, figures, and in-text numbers of the manuscript
+- [ ] Data for the above, if available
+- [ ] Information on how to access the data, if not
 
 ## If you use online drives
 If you use Dropbox, Google Drive, OneDrive, etc., then you can share a folder with the AEA Data Editor. We may request you to share it with the assigned replicator as well. Please contact the Data Editor for the address(es) to share with. 
