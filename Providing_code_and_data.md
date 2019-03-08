@@ -2,7 +2,7 @@
 
 This page describes how to provide materials to the Data Editor when requested to do so by your Journal Editor. 
 
-Until further notice, **final code** should be provided as per Instructions at the official [AEA Data Availability Policy page](https://www.aeaweb.org/journals/policies/data-availability-policy) and/or as per instructions from the AEA Editorial office.
+> Until further notice, **final code** should be provided as per Instructions at the official [AEA Data Availability Policy page](https://www.aeaweb.org/journals/policies/data-availability-policy) and/or as per instructions from the AEA Editorial office.
 
 ## Materials to provide
 - Draft manuscript
