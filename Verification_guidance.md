@@ -25,14 +25,14 @@ This document describes
       - [ ] No social security numbers, credit card numbers, etc.
       - [ ] No addresses or precise geo-locations (GPS numbers) 
 - for each listed table, figure, in-text number
-  [ ] can you identify the piece of code responsible for generating that number or figure
-  [ ] does the code produce an identifiable output that contains those numbers or figures? 
+  - [ ] can you identify the piece of code responsible for generating that number or figure
+  - [ ] does the code produce an identifiable output that contains those numbers or figures? 
 - conduct a code verification, if data is available
-  [ ] create a directory containing only the programs and data provided
-  [ ] if not already contained within the existing code, create a config file ([sample Stata config file](https://gist.github.com/larsvilhuber/6bcf4ff820285a1f1b9cfff2c81ca02b), and call it from all to-be-run programs
-  [ ] install all identified requirements 
-  [ ] run all code as per instructions in the README or the code
-  [ ] identify all error messages
-  [ ] identify all outputs as per the README and the list of tables/figures/in-text numbers
-  [ ] compare the output to the tables/figures/numbers in the manuscript.
+  - [ ] create a directory containing only the programs and data provided
+  - [ ] if not already contained within the existing code, create a config file ([sample Stata config file](https://gist.github.com/larsvilhuber/6bcf4ff820285a1f1b9cfff2c81ca02b), and call it from all to-be-run programs
+  - [ ] install all identified requirements 
+  - [ ] run all code as per instructions in the README or the code
+  - [ ] identify all error messages
+  - [ ] identify all outputs as per the README and the list of tables/figures/in-text numbers
+  - [ ] compare the output to the tables/figures/numbers in the manuscript.
 
