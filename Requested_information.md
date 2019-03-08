@@ -30,6 +30,8 @@ We **require** that
   - you should cite the data in your main manuscript
   - you should cite data separately in your online appendix
 - you make analysis programs available
+- you provide a README that describes the data acquisition and how to run the analysis process
+- you make every effort to provide as much data as possible in an openly accessible fashion
 - you make every effort to support reproducibility of your analysis
 - you make every effort to transparently describe the creation of your analysis data
 
@@ -65,6 +67,7 @@ For details, see [Requested_information_data](Requested_information_data.md).
 ## Programs
 We **strongly suggest**
 - a clear documentation of all code (within the code/script files themselves, and through a README)
+  - it should be clear from the code (and/or the README) where to find the information contained in **each table, figure, and in-text number**.
 - provision of a master script ("master do file", "make file") and a description of how to run or invoke the master script in the README
 - identification of all pre-requisites (data, code, programs, software, possibly operating system)
 - (optionally, but useful) a record of how long the code sequence is expected to run - it will help potential replicators to know how to long to expect the programs to run
