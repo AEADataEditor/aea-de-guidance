@@ -8,7 +8,7 @@ a {
   color: $base-color;
 }
 
-a:hover,a:focus {
+a:hover, a:focus {
   color: $base-color;
   font-weight: normal;
   text-decoration: darken($color: $base-color, 10% ) 
