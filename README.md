@@ -1,4 +1,4 @@
-# Guidance on various topics by the AEA Data Editor
+# Unofficial guidance on various topics by the AEA Data Editor
 
 ## The DRAFT proposed new Data and Code Availability Policy
 
