@@ -2,13 +2,16 @@
 ---
 
 @import "{{ site.theme }}";
+
+$base-color: #924046;
 a {
-  color: #924046;
+  color: $base-color;
 }
 
-a :hover {
-  color: #924046;
-  font-weight: bold 
+a:hover,a:focus {
+  color: $base-color;
+  font-weight: normal;
+  text-decoration: darken($color: $base-color, 10% ) 
 }
 
 body {
