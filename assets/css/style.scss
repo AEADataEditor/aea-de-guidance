@@ -11,7 +11,7 @@ a {
 a:hover, a:focus {
   color: $base-color;
   font-weight: normal;
-  text-decoration: darken($color: $base-color, 10% ) 
+  text-decoration: darken($base-color, 10% ) 
 }
 
 body {
