@@ -1,7 +1,7 @@
 ## Requested Information for Data
 We request the following information from all articles:
 
-- Data Description: detailed description of all data, including input data: 
+- Data Description: detailed description of all data, including input data:
   - name of data set
   - (original and current) location of data set
   - characteristics of data set: **At a minimum**, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics).
@@ -14,7 +14,7 @@ Details follow.
 ### Data description
 - Data citation:
   - This must include the official name of the dataset, as well as the name of the creator (including if the article's author is the creator)
-  - It must include the location of the data - download site, physical archive, etc. 
+  - It must include the location of the data - download site, physical archive, etc.
     - If the data is original to the article, then this will be an integral part of the replication archive
     - If the data was acquired elsewhere, this should be the ORIGINAL location of the data
   - It must include the date the data was created or downloaded
@@ -93,9 +93,7 @@ The description of data access should provide enough information so that an unin
 #### Practical guidance: data access
 While non-academic data providers may not always consider reproducibility when you sign a contract with them, we have found numerous such providers which are open to at least the idea of "reproducibility checking" or replication. Examples of agreements which allow third-parties to access confidential data for the purpose of replication, see f.i. [supplementary materials](https://www.aeaweb.org/aer/data/oct2013/20110834_data.zip) to [Barseghyan et al (2013)](https://doi.org/10.1257/aer.103.6.2499).
 
-Some guidance on licensing of data (and software):
-- [Cornell's Research Data Management Service Group](https://data.research.cornell.edu/content/intellectual-property)
-- Stodden, Victoria. "[Enabling Reproducible Research: Open Licensing For Scientific Innovation](http://web.stanford.edu/~vcs/papers/ijclp-STODDEN-2009.pdf)", *International Journal of Communications Law and Policy*, Issue 13, 2009.
+For additional guidance on licensing, see [Licensing-Guidance.md](Licensing-Guidance.md).
 
 ### Data persistence
 Data should remain available for a sufficiently long time.
@@ -111,7 +109,7 @@ A "data provider" in this sense can be a public repository where the data can be
 The author may also be the data provider, for instance, because the author conducted the survey used in the article. However, in many cases, the data provider may not be a data archive (see  [Requested_information_hosting](Requested_information_hosting.md)).
 
 #### Practical guidance: data provider and data archives
-If the data provider is not an archive (i.e., the data persistence is insufficient, and might go away), you should investigate depositing the data at a data archive.
+If the data provider is not an archive (i.e., the data persistence is insufficient, and data might go away), you should investigate depositing the data at a data archive.
 
 
 ### Planning Ahead
