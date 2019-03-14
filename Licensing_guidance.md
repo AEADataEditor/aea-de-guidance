@@ -21,7 +21,7 @@ third parties) or more lenient licenses (CC0 license for own code), with a third
 
 #### Dual-license Example
 
-We provide an example of a dual-license setup, suitable for use by depositors to the AEA Data and Code Repository (see [LICENSE-template.txt](LICENSE-template.txt)). It combines
+We provide an example of a dual-license setup, suitable for use by depositors to the AEA Data and Code Repository (see [LICENSE-template.txt](licenses/LICENSE-template.txt)). It combines
 - [![License: Modified BSD](https://img.shields.io/badge/License-BSD-lightgrey.svg)](https://opensource.org/licenses/BSD-3-Clause) [Modified BSD License](https://opensource.org/licenses/BSD-3-Clause), applies to all code, scripts, programs, and SOFTWARE
 - [![License: CC BY 4.0](https://img.shields.io/badge/License%20-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/) [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/), applies to databases, images, tables, text, and any other objects
 
