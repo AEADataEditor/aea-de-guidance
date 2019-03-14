@@ -93,7 +93,7 @@ The description of data access should provide enough information so that an unin
 #### Practical guidance: data access
 While non-academic data providers may not always consider reproducibility when you sign a contract with them, we have found numerous such providers which are open to at least the idea of "reproducibility checking" or replication. Examples of agreements which allow third-parties to access confidential data for the purpose of replication, see f.i. [supplementary materials](https://www.aeaweb.org/aer/data/oct2013/20110834_data.zip) to [Barseghyan et al (2013)](https://doi.org/10.1257/aer.103.6.2499).
 
-For additional guidance on licensing, see [Licensing Guidance](Licensing_Guidance.md). See [Requested_information_hosting](Requested_information_hosting.md) for more details on data repositories.
+For additional guidance on licensing, see [Licensing Guidance](Licensing_Guidance.md). 
 
 ### Data persistence
 Data should remain available for a sufficiently long time.
