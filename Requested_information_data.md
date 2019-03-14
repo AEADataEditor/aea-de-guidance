@@ -58,7 +58,7 @@ In R, the [dataMaid](https://cran.r-project.org/web/packages/dataMaid/index.html
 library(dataMaid)
 makeCodebook(my_input_data)
 ```
-See [code/03_codebook_dataMaid.md](code/03_codebook_dataMaid.md) for an example.
+See [code/03_codebook_dataMaid](code/03_codebook_dataMaid.md) for an example.
 
 #### SAS
 
@@ -68,7 +68,7 @@ proc contents;
 proc means;
 run;
 ```
-See [code/04_codebook_SAS.md](code/04_codebook_SAS.md) for an example.
+See [code/04_codebook_SAS](code/04_codebook_SAS.md) for an example.
 
 #### More elaborate methods
 However, if you have the ability to do a more robust data description, you should. See a [self-citing example](https://www2.ncrn.cornell.edu/ced2ar-web/codebooks/synlbd/v/v2).
@@ -93,7 +93,7 @@ The description of data access should provide enough information so that an unin
 #### Practical guidance: data access
 While non-academic data providers may not always consider reproducibility when you sign a contract with them, we have found numerous such providers which are open to at least the idea of "reproducibility checking" or replication. Examples of agreements which allow third-parties to access confidential data for the purpose of replication, see f.i. [supplementary materials](https://www.aeaweb.org/aer/data/oct2013/20110834_data.zip) to [Barseghyan et al (2013)](https://doi.org/10.1257/aer.103.6.2499).
 
-For additional guidance on licensing, see [Licensing-Guidance.md](Licensing-Guidance.md).
+For additional guidance on licensing, see [Licensing-Guidance](Licensing-Guidance.md).
 
 ### Data persistence
 Data should remain available for a sufficiently long time.
