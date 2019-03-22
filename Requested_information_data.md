@@ -19,6 +19,7 @@ Details follow.
     - If the data was acquired elsewhere, this should be the ORIGINAL location of the data
   - It must include the date the data was created or downloaded
   -  If possible, provide a Digital Object Identifier (DOI). You can generate a citation from the DOI using https://www.doi2bib.org/.
+  - For more detailed information, see [Data citation guidance](Data_citation_guidance.md).
 - Statistical characteristics of the data
 - This description of data is often called "metadata"
   - **At a minimum**, all variables that are used in the paper should be well-described (variable/column labels, value labels, summary statistics) through a codebook.
