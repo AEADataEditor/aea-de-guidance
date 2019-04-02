@@ -6,13 +6,14 @@
 When depositing in the AEA Code and Data Repository, a license needs to be chosen. If not chosen through the menu, a license file (typically named `LICENSE.txt` or `LICENSE.md`) needs to be provided.
 
 ### Some guidance on licensing of databases and software:
+
 - [Cornell's Research Data Management Service Group](https://data.research.cornell.edu/content/intellectual-property)
 - Stodden, Victoria. "[Enabling Reproducible Research: Open Licensing For Scientific Innovation](http://web.stanford.edu/~vcs/papers/ijclp-STODDEN-2009.pdf)", *International Journal of Communications Law and Policy*, Issue 13, 2009.
 
 For the purpose of replicability, the AEA will insist on an open license that allows for replication by researchers unconnected to the original parties, to the extent allowed by other agreements and the law.
   - For data-only repositories, we suggest the [![License: CC BY 4.0](https://img.shields.io/badge/License%20-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/) [Creative Commons Attribution 4.0 International Public License](http://creativecommons.org/licenses/by/4.0/) or the more liberal
 [![License: CC0 1.0](https://img.shields.io/badge/License%20-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication]
-  - For code-only repositories, we suggest the [![License: Modified BSD](https://img.shields.io/badge/License-BSD-lightgrey.svg)](https://opensource.org/licenses/BSD-3-Clause) [3-Clause (Modified) BSD Clause](https://opensource.org/licenses/BSD-3-Clause), though other open-source licenses are equally acceptable (see [https://opensource.org/licenses](https://opensource.org/licenses)).
+  - For code-only repositories, we suggest the [![License: Modified BSD](https://img.shields.io/badge/License-BSD-lightgrey.svg)](https://opensource.org/licenses/BSD-3-Clause) [3-Clause (Modified) BSD Clause](https://opensource.org/licenses/BSD-3-Clause), though other open-source licenses are equally acceptable (see [https://opensource.org/licenses](https://opensource.org/licenses)). "Code" or "Software" is any statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result, and may include interpretive, object or source code.
 
 ### Dual-License Setup
 
