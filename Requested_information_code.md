@@ -101,6 +101,14 @@ Use the outreg55 package
   library(devtools)
   install_github("myrepo/superols")
   ```
+
+#### Versioning of packages
+You should be precise about the relevant packages. 
+
+In R, you could fix things by installing specific versions, see [Installing older versions of packages](https://support.rstudio.com/hc/en-us/articles/219949047-Installing-older-versions-of-packages).
+
+In Stata, making a distinction between Stata Journal and SSC versions can sometimes help. If the package license permits, distributing the package with the core code is also possible.
+
 ### Some facts
 Most economists in the late 2000s (through 2018) use either Stata or Matlab. Assume that replicators have not (yet) learned your preferred software if you are using something else, and provide some guidance how to use it.
 
