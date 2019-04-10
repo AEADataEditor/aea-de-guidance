@@ -23,6 +23,7 @@ If you use none of the methods above, or you prefer to provide us with a physica
 
 ## If your data is not public-use
 - We would still like to obtain a copy of your code (see above)
+- You should include enough information about the data (codebook, variable list, variable descriptions, values, summary statistics) that a person without access to the data could form an opinion about the data
 - You should include in the article or README the access procedures so that a new user can attempt to access the data
 - You should provide in that description, or privately to the Data Editor, an estimate of how long such procedures may take
 - You should provide privately to the Data Editor whether you are able to **add a third-party** to your research protocol
