@@ -12,10 +12,14 @@
 ### Additional metadata
 ![metadata of project](assets/project-metadata-icpsr.png)
   - We encourage authors to provide additional metadata, including JEL codes
-  - All authors are encouraged to define 
+  - When only code is produced, authors should choose `data type = program source code`: ![program source code](assets/project-data-type-icpsr.png)
+
+
+  - When data are provided, authors are encouraged to define 
     - the geographical scope 
     - the universe 
     - the time periods
+    - data type
   - Methodology is particularly relevant for survey or experimental data:
     - response rates, sampling rates, etc.
   - We encourage all authors to define
