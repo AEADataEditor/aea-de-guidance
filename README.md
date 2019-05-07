@@ -8,6 +8,8 @@ Please consult our [overview of past and future Data (and Code) Availability Pol
 
 Several economics and other social science data editors are collaborating on common guidance. See [https://social-science-data-editors.github.io/guidance/](https://social-science-data-editors.github.io/guidance/) for more detailed guidance.
 
+We provide [specific guidance on how to deposit data at the AEA Data and Code Repository](data-deposit-aea-guidance.md). 
+
 ## Guidance on testing replicability of code
 
 Generic guidance is provided at the [Social Science Data Editors' Guidance](https://social-science-data-editors.github.io/guidance/) website. Specific guidance for AEA journals will be provided here, if different.
