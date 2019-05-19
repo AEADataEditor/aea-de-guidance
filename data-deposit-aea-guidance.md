@@ -2,6 +2,8 @@
 
 1. Start by following [instructions provided at the Repository](https://www.openicpsr.org/openicpsr/aea/deposit-instructions).
 2. Upload files in the way you expect the files to be organized in order to run the code. It is possible to upload a ZIP file. Replicators will be downloading a ZIP file that preserves the directory structure.
+  - Please upload the README (in PDF, TXT, or MD format) as the very first file - ensuring that it can be found easily by browsers of the archive.
+  - Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.
 3. Give the data/project a title:
   - The title should be "`Data and Code for: [Title of article]`"
 ### Describe the project:
