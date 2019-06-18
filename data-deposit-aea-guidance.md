@@ -13,7 +13,9 @@
   - Identify any funding sources here - the information can be queried by some funders, and can assist with your award reporting.
 ### Additional metadata
 ![metadata of project](assets/project-metadata-icpsr.png)
-  - We encourage authors to provide additional metadata, including JEL codes
+  - Authors MUST provide JEL codes
+  - We ENCOURAGE authors to provide additional subject terms
+  - Authors MUST provide the Manuscript Number, as this will allow us to properly connect the repository with the manuscript.
   - When only code is produced, authors should choose `data type = program source code`: ![program source code](assets/project-data-type-icpsr.png)
 
 
@@ -22,6 +24,7 @@
     - the universe 
     - the time periods
     - data type
+  - This information can also be provided when only code is made available.
   - Methodology is particularly relevant for survey or experimental data:
     - response rates, sampling rates, etc.
   - We encourage all authors to define
