@@ -5,7 +5,7 @@
 Data Availability Statements
 ----------------------------
 
-> INSTRUCTIONS: Every README should contain a description of the location and accessibility of the data used in the article. These descriptions are generally referred to as "Data Availability Statements" (DAS). This should include ALL data, regardless of whether they are provided as part of the replication archive or not, and regardless of size or scope. For instance, if using deflators, the source of the deflators should be provided, for instance at the national statistical office. DAS can be complex and varied. Examples are provided [here](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html).
+> INSTRUCTIONS: Every README should contain a description of the location and accessibility of the data used in the article. These descriptions are generally referred to as "Data Availability Statements" (DAS). This should include ALL data, regardless of whether they are provided as part of the replication archive or not, and regardless of size or scope. For instance, if using deflators, the source of the deflators (e.g. at the national statistical office) should also be listed here. DAS can be complex and varied. Examples are provided [here](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html), and below.
 
 ### Example for public use data
 > The [DATA TYPE] data used to support the findings of this study have been deposited in the [NAME] repository ([DOI or OTHER PERSISTENT IDENTIFIER]). [[1](https://www.hindawi.com/research.data/#statement.templates)]
