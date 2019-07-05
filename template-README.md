@@ -17,13 +17,15 @@ Data Availability Statements
 > The data for this project are confidential, but may be obtained with Data Use Agreements with the Massachusetts Department of Elementary and Secondary Education (DESE). Researchers interested in access to the data may contact [NAME] at [EMAIL], also see www.doe.mass.edu/research/contact.html. It can take some months to negotiate data use agreements and gain access to the data. The author will assist with any reasonable replication attempts for two years following publication.
 
 ### Example for confidential Census Bureau data
-All the results in the paper use confidential microdata from the U.S. Census Bureau. To gain access to the Census microdata, follow the directions here on how to write a proposal for access to the data via a Federal Statistical Research Data Center: https://www.census.gov/ces/rdcresearch/howtoapply.html. 
+> All the results in the paper use confidential microdata from the U.S. Census Bureau. To gain access to the Census microdata, follow the directions here on how to write a proposal for access to the data via a Federal Statistical Research Data Center: https://www.census.gov/ces/rdcresearch/howtoapply.html. 
 You must request the following datasets in your proposal:
-1. Longitudinal Business Database (LBD), 2002 and 2007
-2. Foreign Trade Database – Import (IMP), 2002 and 2007
+>1. Longitudinal Business Database (LBD), 2002 and 2007
+>2. Foreign Trade Database – Import (IMP), 2002 and 2007
 [...]
 
-### Example for code during the editorial process
+(adapted from [Fort (2016)](https://doi.org/10.1093/restud/rdw057))
+
+### Example for preliminary code during the editorial process
 > Code for data cleaning and analysis is provided as part of the replication package. It is available at https://dropbox.com/link/to/code/XYZ123ABC for review. It will be uploaded to the [JOURNAL REPOSITORY] once the paper has been conditionally accepted.
 
 
