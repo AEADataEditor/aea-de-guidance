@@ -79,6 +79,8 @@ Instructions
 <hr>
 <small>
 Acknowledgements
+</small>
 
+<small>
 Some content on this page was copied from [Hindawi](https://www.hindawi.com/research.data/#statement.templates). Other content was adapted  from [Fort (2016)](https://doi.org/10.1093/restud/rdw057), Supplementary data, with the author's permission.
 </small>
