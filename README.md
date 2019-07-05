@@ -10,6 +10,7 @@ How should researchers create replicable data and program archives? How should s
 
 - Several economics and other social science data editors are collaborating on common guidance. See [https://social-science-data-editors.github.io/guidance/](https://social-science-data-editors.github.io/guidance/) for more detailed guidance.
 - The AEA migrated to a new data and code repository in July 2019. We provide [specific guidance on how to deposit data at the AEA Data and Code Repository](data-deposit-aea-guidance.md). 
+- A DRAFT [template README](template-README.md) can be used as a starting point for a data and code archive's master README. 
 
 ## Guidance on testing replicability of code
 The code and data that have been archived should be reproducible and replicable. How do we test that? 
