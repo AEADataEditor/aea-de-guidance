@@ -1,6 +1,6 @@
 # Template README and Guidance
 
-> INSTRUCTIONS: This README suggests structure and content that would be seen favorably by the AEA Data Editor. In practice, there are many variations and complications, and authors should feel free to adapt to their needs. All lines starting with `> INSTRUCTIONS` can (should) be removed from the final README. This README is in [Markdown-format](https://en.wikipedia.org/wiki/Markdown), but can just as easily be saved as `txt` (ASCII) file. Editing in Word or other word processors is fine (but overkill), as long as a PDF is submitted as well. 
+> INSTRUCTIONS: This README suggests structure and content that would be seen favorably by the AEA Data Editor. It may be easier to re-use if using the [unformatted version on Github]({{ page.path }}. In practice, there are many variations and complications, and authors should feel free to adapt to their needs. All lines starting with `> INSTRUCTIONS` can (should) be removed from the final README. This README is in [Markdown-format](https://en.wikipedia.org/wiki/Markdown), but can just as easily be saved as `txt` (ASCII) file. Editing in Word or other word processors is fine (but overkill), as long as a PDF is submitted as well. 
 
 Data Availability Statements
 ----------------------------
