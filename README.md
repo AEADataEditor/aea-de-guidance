@@ -1,6 +1,10 @@
 # "Unofficial guidance on various topics by the AEA Data Editor"
 
+
+
 These web pages provide unofficial and developing guidance on the implementation of the American Economic Association (AEA)'s Data and Code Availability Policy. We also provide links to [generic guidance](https://social-science-data-editors.github.io/guidance/) being developed by a loose collective ("guild") of data editors and people in a similar role at various social science journals.
+
+<a href="https://twitter.com/aeadata?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @aeadata</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 ## Order in which AEA authors should read these resources:
 - Start with the [official Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code) and the associated [FAQ](https://www.aeaweb.org/journals/policies/data-code/faq).
@@ -32,3 +36,8 @@ The code and data that have been archived should be reproducible and replicable.
 - Start by consulting the [FAQ](https://www.aeaweb.org/journals/policies/data-code/faq) on the AEA Website. This generally apply specifically to procedures at the AEA journals.
 - AEA-specific updates and additions will first appear on [this site](FAQ.md)
 - More general questions will have answers at the  [Social Science Data Editors FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html)
+
+
+
+## Most Recent Tweets
+<a class="twitter-timeline" href="https://twitter.com/AeaData?ref_src=twsrc%5Etfw">Tweets by AeaData</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
