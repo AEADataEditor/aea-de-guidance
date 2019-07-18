@@ -31,4 +31,4 @@ The code and data that have been archived should be reproducible and replicable.
 ## Frequently Asked Questions
 - Start by consulting the [FAQ](https://www.aeaweb.org/journals/policies/data-code/faq) on the AEA Website. This generally apply specifically to procedures at the AEA journals.
 - AEA-specific updates and additions will first appear on [this site](FAQ.md)
-- More general questions will have answers at the  [Social Science Data Editors FAQ](https://social-science-data-editors.github.io/guidance/faq.html)
+- More general questions will have answers at the  [Social Science Data Editors FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html)
