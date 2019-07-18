@@ -1,7 +1,4 @@
----
-layout: withtoc
-title: "Unofficial guidance on various topics by the AEA Data Editor"
----
+# "Unofficial guidance on various topics by the AEA Data Editor"
 
 These web pages provide unofficial and developing guidance on the implementation of the American Economic Association (AEA)'s Data and Code Availability Policy. We also provide links to [generic guidance](https://social-science-data-editors.github.io/guidance/) being developed by a loose collective ("guild") of data editors and people in a similar role at various social science journals.
 
