@@ -14,7 +14,7 @@ We are open to linking out to existing **archives** of code and data. However, G
 
 However, in principle, that does not preclude linking out to **live** code on such platforms. At present, we have no concrete plans, but we are considering various ways to make articles and their landing pages more informative.
 
-In the short term, treat a Github repo as any other URL, and cite it. You can also elaborate more freely in the README. 
+In the short term, treat a Github repo as any other URL, and cite it, in addition to [creating a proper archive from it](https://guides.github.com/activities/citable-code/). You can also elaborate more freely in the README. 
 
 ### Some econometrics papers might be accompanied by (for example) an R or Stata package (perhaps published on CRAN or SSC). What about surfacing references to associated packages more prominently?
 
