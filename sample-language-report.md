@@ -19,3 +19,7 @@ The following fragments may be used when reporting back on success or failure of
 > [REQUIRED] Please add a setup program that installs all packages as noted above. 
 
 > [SUGGESTED] Please adjust your tables to account for the noted numerical discrepancies. Use of packages that automatically write out tables is strongly encouraged.
+
+> [REQUIRED] Several required metadata elements are missing from the openICPSR deposit. Please consult our [additional deposit guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html)
+
+> [SUGGESTED] Several suggested metadata elements are missing from the openICPSR deposit. Please consult our [additional deposit guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html)
