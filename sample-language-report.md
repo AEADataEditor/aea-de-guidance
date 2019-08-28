@@ -6,7 +6,7 @@ The following fragments may be used when reporting back on success or failure of
 
 > [REQUIRED] Please add citations to the XXX data to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
-> [REQUIRED] Please provide complete code, includng for appendix tables and figures, and identify source for inline numbers.
+> [REQUIRED] Please provide complete code, including for appendix tables and figures, and identify source for inline numbers.
 
 > [REQUIRED] Please add a link to the full codebook to the README.
 
