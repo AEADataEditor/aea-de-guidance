@@ -20,6 +20,16 @@ The following fragments may be used when reporting back on success or failure of
 
 > [SUGGESTED] Please adjust your tables to account for the noted numerical discrepancies. Use of packages that automatically write out tables is strongly encouraged.
 
+## Relative to the openICPSR deposit
+
 > [REQUIRED] Several required metadata elements are missing from the openICPSR deposit. Please consult our [additional deposit guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html)
 
 > [SUGGESTED] Several suggested metadata elements are missing from the openICPSR deposit. Please consult our [additional deposit guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html)
+
+> [REQUIRED]  ZIP files should be uploaded via "Import from ZIP" instead of "Upload Files" (there should be no ZIP files visible, except in certain circumstances, like when there are too many files). Please delete the ZIP files, and re-upload using the "Import from ZIP" function.
+
+> [REQUIRED]  Please delete the `__MACOS` directory
+    
+> [REQUIRED]   Please delete empty directories
+    
+> [REQUIRED]   Please delete any redundant (obsolete) files
