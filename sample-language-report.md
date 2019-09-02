@@ -23,6 +23,8 @@ The following fragments may be used when reporting back on success or failure of
 
 > [SUGGESTED] Please adjust your tables to account for the noted numerical discrepancies. Use of packages that automatically write out tables is strongly encouraged.
 
+> [SUGGESTED] We strongly suggest using  data load statement instead of manual instructions to load data
+
 ## Relative to the openICPSR deposit
 
 > [REQUIRED] Several required metadata elements are missing from the openICPSR deposit. Please consult our [additional deposit guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html)
