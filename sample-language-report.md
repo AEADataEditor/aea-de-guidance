@@ -18,6 +18,9 @@ The following fragments may be used when reporting back on success or failure of
 
 > [REQUIRED] Please add a setup program that installs all packages as noted above. 
 
+> [REQUIRED] Please provide debugged code, addressing the issues identified in this report.
+
+
 > [SUGGESTED] Please adjust your tables to account for the noted numerical discrepancies. Use of packages that automatically write out tables is strongly encouraged.
 
 ## Relative to the openICPSR deposit
