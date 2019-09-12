@@ -4,6 +4,36 @@ title: "Frequently Asked Questions"
 ---
 ... although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order.
 
+### What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?
+
+ Generically, each openICPSR project has a number (e.g., "109622"), that might show up on the right panel:
+ ![Image of number](assets/project-number.png) 
+ Then
+
+- if the openICPSR project has not been published, then the DOI is "http://doi.org/10.3886/E" + number + "V1" (e.g. http://doi.org/10.3886/E109622V1)
+- if the openICPSR project has already been published, then the CURRENT DOI is shown on the relevant page, but if there are any revisions the Data Editor has asked for, then the to-be-cited DOI would be the next version, e.g., "http://doi.org/10.3886/E" + number + "V3" if the current version is V2 and the next version would be V3.
+
+Give it a try:
+
+<form id="myForm">
+  Project number <input type="text" name="projectid"><br>
+  Version number <input type="text" name="versionnum" value="V1"><br>
+  <input type="button" onclick="myFunction()" value="Compute DOI">
+</form>
+
+<p id="DOI"></p>
+
+<script>
+function myFunction() {
+  var str1 = "http://doi.org/10.3886/E";
+  var str2 = document.getElementById('myForm').elements[0].value
+  var str3 = document.getElementById('myForm').elements[1].value
+  var res = str1.concat(str2).concat(str3);
+  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i>" + res;
+  
+}
+</script>
+
 ### The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?
 
 [Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection -- even if only the syntax are in the repository.  It's useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.

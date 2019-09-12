@@ -18,8 +18,9 @@ Comments are welcome, please file them  as [issues](https://github.com/AEADataEd
 How should researchers create replicable data and program archives? How should such archives be structured, how documented, and where should they be located?
 
 - Several economics and other social science data editors are collaborating on common guidance. See [https://social-science-data-editors.github.io/guidance/](https://social-science-data-editors.github.io/guidance/) for more detailed guidance.
-- The AEA migrated to a new data and code repository in July 2019. We provide [specific guidance on how to deposit data at the AEA Data and Code Repository](data-deposit-aea-guidance.md). 
+- The AEA migrated to a new data and code repository in July 2019. We provide guidance in the[official Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code), the associated [FAQ](https://www.aeaweb.org/journals/policies/data-code/faq), and [additional guidance on these pages](data-deposit-aea-guidance.md). 
   - A DRAFT [template README](template-README.md) can be used as a starting point for a data and code archive's master README. 
+- Issues about licensing are complex, we suggest the [Social Science Data Editor's discussion of licensing](https://social-science-data-editors.github.io/guidance/Licensing_guidance.html). The [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea) defaults to a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC-BY) license; however, we suggest that authors choose a [hybrid license](https://social-science-data-editors.github.io/guidance/licenses/LICENSE-template.txt) when their repository contains code and software, as the CC-BY license is [not recommended for software](https://creativecommons.org/faq/#Can_I_apply_a_Creative_Commons_license_to_software.3F).
 
 ## Guidance on testing replicability of code
 The code and data that have been archived should be reproducible and replicable. How do we test that? 
