@@ -4,7 +4,7 @@ The following fragments may be used when reporting back on success or failure of
 
 > [SUGGESTED] A template README file can be found on the [AEA Data Editor Github site](https://aeadataeditor.github.io/aea-de-guidance/template-README.html).
 
-> [REQUIRED] Please add citations to the XXX data to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
+> [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
 > [REQUIRED] Please provide complete code, including for appendix tables and figures, and identify source for inline numbers.
 
