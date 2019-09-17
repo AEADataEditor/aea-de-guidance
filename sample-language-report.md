@@ -6,6 +6,8 @@ The following fragments may be used when reporting back on success or failure of
 
 > [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
+> [SUGGESTED] The default AEA bibtex style file does not display URLs in the bibliography. A workaround might be to use the slightly modified [draft style file](https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst) or the `econ` style file referenced [here](https://www.aeaweb.org/journals/policies/random-author-order). 
+
 > [REQUIRED] Please provide complete code, including for appendix tables and figures, and identify source for inline numbers.
 
 > [REQUIRED] Please add a link to the full codebook to the README.
