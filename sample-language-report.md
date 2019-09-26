@@ -46,3 +46,5 @@ The following fragments may be used when reporting back on success or failure of
 > [REQUIRED]   Please delete empty directories
     
 > [REQUIRED]   Please delete any redundant (obsolete) files
+
+> [SUGGESTED] Please ensure that the README is in the root directory, and that unnecessary directory levels are pruned from the repository.
