@@ -48,3 +48,16 @@ The following fragments may be used when reporting back on success or failure of
 > [REQUIRED]   Please delete any redundant (obsolete) files
 
 > [SUGGESTED] Please ensure that the README is in the root directory, and that unnecessary directory levels are pruned from the repository.
+
+When ready, add "jenna@aeapubs.org" to Share, and add a new entry to communication log, with subject line
+
+> Deposit for (MC number) ready to publish by AEA staff
+
+and body:
+```
+This is ready to be published, conditional on updating the related publication items.
+
+Action items:
+- Author: none
+- AEA Staff: update DOI, Vol, Iss, Year of related publication, then publish.
+```
