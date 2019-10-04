@@ -18,6 +18,8 @@ The following fragments may be used when reporting back on success or failure of
 
 > [REQUIRED] Please add a link to the full codebook to the README.
 
+> [REQUIRED] Please ensure that all variables have labels, and that values are explained (have formats/codebook/etc.)
+
 (used when dataset is primary, and raw data is not provided with the replication archive)
 
 > [SUGGESTED] Please link to codebooks for these two datasets in the README.
@@ -29,9 +31,15 @@ The following fragments may be used when reporting back on success or failure of
 > [REQUIRED] Please provide debugged code, addressing the issues identified in this report.
 
 
-> [SUGGESTED] Please adjust your tables to account for the noted numerical discrepancies. Use of packages that automatically write out tables is strongly encouraged.
+> [REQUIRED] Please adjust your tables to account for the noted numerical discrepancies, or explain (in the README) discrepancies that a replicator should expect. 
+
+> [SUGGESTED] Use of packages that automatically write out tables is strongly encouraged.
 
 > [SUGGESTED] We strongly suggest using  data load statement instead of manual instructions to load data
+
+## RCT
+
+> [REQUIRED] This is a RCT. The AEA requires that RCTs be registered, the registration number be identified in the title page footnote (and cited). For more details, see [AEA RCT policy](https://www.aeaweb.org/journals/policies/rct-registry).
 
 ## Relative to the openICPSR deposit
 
