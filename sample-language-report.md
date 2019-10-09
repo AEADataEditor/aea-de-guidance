@@ -8,6 +8,8 @@ The following fragments may be used when reporting back on success or failure of
 
 > [REQUIRED] Please ensure that a ASCII (txt), Markdown (md), or PDF version of the README are available in the data and code deposit.
 
+> [REQUIRED] Please provide this dataset
+
 > [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset.
@@ -40,6 +42,10 @@ The following fragments may be used when reporting back on success or failure of
 ## RCT
 
 > [REQUIRED] This is a RCT. The AEA requires that RCTs be registered, the registration number be identified in the title page footnote (and cited). For more details, see [AEA RCT policy](https://www.aeaweb.org/journals/policies/rct-registry).
+
+## IRB
+
+> [REQUIRED] The data collection reported in this article seems to have required IRB approval. Please provide IRB approval information in the titlepage footnote.
 
 ## Relative to the openICPSR deposit
 
