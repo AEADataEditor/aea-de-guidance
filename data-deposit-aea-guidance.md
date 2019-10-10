@@ -1,7 +1,7 @@
 ## Guidance on how to deposit data at the AEA Data and Code Repository
 
 1. Start by following [instructions provided at the Repository](https://www.openicpsr.org/openicpsr/aea/deposit-instructions).
-2. Upload files in the way you expect the files to be organized in order to run the code. It is possible to upload a ZIP file. Replicators will be downloading a ZIP file that preserves the directory structure.
+2. Upload files in the way you expect the files to be organized in order to run the code. It is possible to IMPORT a ZIP file. Replicators will be downloading a ZIP file that preserves the directory structure.
   - Please upload the README (in PDF, TXT, or MD format) as the very first file - ensuring that it can be found easily by browsers of the archive.
   - Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.
 3. Give the data/project a title:
@@ -34,3 +34,6 @@
 Authors should add a placeholder here for their planned publication. The AEA editorial office will update these fields as additional information (publication year, volume, issue, DOI) become known.
 - Authors can also link back to working papers or related publications that have or will use this (same!) data. 
 - Future functionality will automatically list articles (including articles by third parties) that cite the data.
+
+### Sundry other items
+- When importing a ZIP file, MacOS users will see that a folder called "__MACOSX" was created. PLEASE DELETE THIS FOLDER (a request has been filed with ICPSR as of Q3 2019 to fix this issue).
