@@ -8,6 +8,8 @@ The following fragments may be used when reporting back on success or failure of
 
 > [REQUIRED] Please ensure that a ASCII (txt), Markdown (md), or PDF version of the README are available in the data and code deposit.
 
+> [REQUIRED] Please provide this dataset
+
 > [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset.
@@ -17,6 +19,8 @@ The following fragments may be used when reporting back on success or failure of
 > [REQUIRED] Please provide complete code, including for appendix tables and figures, and identify source for inline numbers.
 
 > [REQUIRED] Please add a link to the full codebook to the README.
+
+> [REQUIRED] Please ensure that all variables have labels, and that values are explained (have formats/codebook/etc.)
 
 (used when dataset is primary, and raw data is not provided with the replication archive)
 
@@ -29,9 +33,19 @@ The following fragments may be used when reporting back on success or failure of
 > [REQUIRED] Please provide debugged code, addressing the issues identified in this report.
 
 
-> [SUGGESTED] Please adjust your tables to account for the noted numerical discrepancies. Use of packages that automatically write out tables is strongly encouraged.
+> [REQUIRED] Please adjust your tables to account for the noted numerical discrepancies, or explain (in the README) discrepancies that a replicator should expect. 
+
+> [SUGGESTED] Use of packages that automatically write out tables is strongly encouraged.
 
 > [SUGGESTED] We strongly suggest using  data load statement instead of manual instructions to load data
+
+## RCT
+
+> [REQUIRED] This is a RCT. The AEA requires that RCTs be registered, the registration number be identified in the title page footnote (and cited). For more details, see [AEA RCT policy](https://www.aeaweb.org/journals/policies/rct-registry).
+
+## IRB
+
+> [REQUIRED] The data collection reported in this article seems to have required IRB approval. Please provide IRB approval information in the titlepage footnote.
 
 ## Relative to the openICPSR deposit
 
