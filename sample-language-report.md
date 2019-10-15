@@ -28,7 +28,7 @@ The following fragments may be used when reporting back on success or failure of
 
 (used when datasets are of secondary importance)
 
-> [REQUIRED] Please add a setup program that installs all packages as noted above. 
+> [REQUIRED] Please add a setup program that installs all packages as noted above. Please specify all necessary commands. An example of a setup file can be found at https://github.com/gslab-econ/template/blob/master/config/config_stata.do
 
 > [REQUIRED] Please provide debugged code, addressing the issues identified in this report.
 
