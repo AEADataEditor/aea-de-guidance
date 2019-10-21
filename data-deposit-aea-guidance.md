@@ -13,18 +13,23 @@
   - Identify any funding sources here - the information can be queried by some funders, and can assist with your award reporting.
 ### Additional metadata
 ![metadata of project](assets/project-metadata-icpsr.png)
-  - Authors **MUST** provide JEL codes
+**Click on each **+** to open the related section:**
+#### Scope of project
+![scope of project](assets/project-scope-of-project-icpsr.png)
   - We ENCOURAGE authors to provide additional subject terms
-  - Authors **MUST** provide the Manuscript Number, as this will allow us to properly connect the repository with the manuscript.
-  - When only code is produced, authors should choose `data type = program source code`: ![program source code](assets/project-data-type-icpsr.png)
-
-
+  - Authors **MUST** provide JEL codes (under "Scope of Project")
+  - Authors **MUST** provide the **Manuscript Number**, as this will allow us to properly connect the repository with the manuscript.
   - When data are provided, authors are ENCOURAGED to define 
     - the geographical scope 
     - the universe 
     - the time periods
     - data type
   - This information can also be provided when only code is made available.
+  - When only code is produced, authors should choose `data type = program source code`: ![program source code](assets/project-data-type-icpsr.png)
+#### Methodology
+  ![methodology section](assets/project-methodology-icpsr.png)
+  
+
   - Methodology is particularly relevant for survey or experimental data:
     - response rates, sampling rates, etc.
   - We ENCOURAGE all authors to define
