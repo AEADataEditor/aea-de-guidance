@@ -13,7 +13,7 @@
   - Identify any funding sources here - the information can be queried by some funders, and can assist with your award reporting.
 ### Additional metadata
 ![metadata of project](assets/project-metadata-icpsr.png)
-**Click on each **+** to open the related section:**
+**Click on each + to open the related section:**
 #### Scope of project
 ![scope of project](assets/project-scope-of-project-icpsr.png)
   - We ENCOURAGE authors to provide additional subject terms
