@@ -20,10 +20,10 @@
   - Authors **MUST** provide JEL codes (under "Scope of Project")
   - Authors **MUST** provide the **Manuscript Number**, as this will allow us to properly connect the repository with the manuscript.
   - When data are provided, authors are ENCOURAGED to define 
-    - the geographical scope 
-    - the universe 
-    - the time periods
-    - data type
+      - the geographical scope 
+      - the universe 
+      - the time periods
+      - data type
   - This information can also be provided when only code is made available.
   - When only code is produced, authors should choose `data type = program source code`: ![program source code](assets/project-data-type-icpsr.png)
 #### Methodology
