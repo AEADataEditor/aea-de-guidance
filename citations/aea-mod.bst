@@ -286,17 +286,21 @@ FUNCTION {format.address.only}
 FUNCTION {format.doi}
 { doi empty$
     { "" }
-    { "\url{https://doi.org/"  doi * "} " * }
+    { "\url{https://doi.org/"  doi * "}" * }
     if$
 }
 
 FUNCTION {format.url}
 { url empty$
     { "" }
-    { urldate empty$
-       { "\url{"  url * "}" * }
-       { "\url{"  url * "} (accessed " * urldate * ")" * }
-       if$
+    { doi empty$
+        { urldate empty$
+            { "\url{"  url * "}" * }
+            { "\url{"  url * "} (accessed " * urldate * ")" * }
+            if$
+        }
+        { "" }
+        if$
     }
     if$
 }
