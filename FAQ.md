@@ -2,7 +2,7 @@
 layout: withtoc
 title: "Frequently Asked Questions"
 ---
-... although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order.
+... although some are not frequently asked, but might nevertheless be useful. Below questions and answers in random order. Should you have other questions, please [create a new issue on Github](https://github.com/AEADataEditor/aea-de-guidance/issues/new), ask the question on [Twitter](https://twitter.com/aeadata), or send an email to the [AEA Data Editor](mailto:dataeditor@aeapubs.org).
 
 ### What is the DOI of my openICPSR deposit? I have not yet published it, but am asked to add a citation to it in my manuscript?
 
