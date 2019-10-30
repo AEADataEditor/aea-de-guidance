@@ -1,4 +1,4 @@
-# Sample Language that may be used in the REPLICATON report
+# Sample Language that may be used in the REPLICATION report
 
 The following fragments may be used when reporting back on success or failure of a reproduction attempt. They usually identify lack of some key component. They should be added to the completed [REPLICATION.md](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md)
 
