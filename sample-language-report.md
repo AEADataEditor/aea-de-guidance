@@ -65,11 +65,11 @@ The following fragments may be used when reporting back on success or failure of
 
 When ready, add "jenna@aeapubs.org" to Share, and add a new entry to communication log, with subject line
 
-> Deposit for (MC number) ready to publish by AEA staff
+> Data and Code Deposit for (MC number) accepted
 
 and body:
 ```
-This is ready to be published, conditional on updating the related publication items.
+This data and code deposit is ready to be published, conditional on updating the related publication items.
 
 Action items:
 - Author: none
