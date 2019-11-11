@@ -69,7 +69,7 @@ When ready, add "jenna@aeapubs.org" to Share, and add a new entry to communicati
 
 and body:
 ```
-This data and code deposit is ready to be published, conditional on updating the related publication items.
+This data and code deposit is accepted.
 
 Action items:
 - Author: none
