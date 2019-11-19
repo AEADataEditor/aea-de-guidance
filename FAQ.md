@@ -46,6 +46,29 @@ You should feel free to reorganize, but you should ensure when we run the reorga
 
 Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamics setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should feel to simplify the final setup to make it easy for anybody to run this particular project, once.
 
+> [CAVEAT] As of November 2019, a **bug** in the openICPSR upload process renames files with "spaces" to "dashes". `Master Great Master.do` becomes `Master-Great-Master.do`. We will endeavor to address this during the reproducibility verification, but if possible, authors should avoid using spaces in file names. A bug report has been filed.
+
+### What is that __MACOSX folder, which seems to contain a second copy of all the  replication files (I am not sure why this folder exists)
+
+[MAC USERs ONLY] We are also not sure, but it is a standard feature of ZIP files created on Mac OSX systems. They are a hassle to remove from the archive (a **feature request** to do this automatically has been filed). Here's a quick fix that helps all parties involved (adapted from this [source](https://wpguru.co.uk/2013/10/how-to-remove-__macosx-from-zip-archives/)):
+
+1. Create your ZIP file as usual
+2. Open the Terminal App
+3. Start typing `zip -d ` (note space)
+4. Drag the ZIP file onto the Terminal
+5. Complete the command line with ` "__MACOSX*"` and hit enter.
+
+The whole thing should look like this:
+```
+$ zip -d /Users/myname/Workspace/Folder/myzip.zip "__MACOSX*"
+deleting: __MACOSX/
+deleting: __MACOSX/myzip/
+deleting: __MACOSX/myzip/._Proof_hi.pdf
+deleting: __MACOSX/myzip/._README.pdf
+deleting: __MACOSX/._myzip
+```
+You can now upload the file to openICPSR using the "Import from ZIP" functionality.
+
 ### The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?
 
 [Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection -- even if only the syntax are in the repository.  It's useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.
