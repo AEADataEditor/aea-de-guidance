@@ -16,7 +16,7 @@ The following fragments may be used when reporting back on success or failure of
 
 > [SUGGESTED] The default AEA bibtex style file does not display URLs in the bibliography. A workaround might be to use the slightly modified [draft style file](https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst) or the `econ` style file referenced [here](https://www.aeaweb.org/journals/policies/random-author-order). 
 
-> [REQUIRED] Please provide complete code, including for appendix tables and figures, and identify source for inline numbers.
+> [REQUIRED] Please provide complete code, including for construction of the analysis data from raw data, and for appendix tables and figures, and identify source for inline numbers.
 
 > [REQUIRED] Please add a link to the full codebook to the README.
 
@@ -32,6 +32,7 @@ The following fragments may be used when reporting back on success or failure of
 
 > [REQUIRED] Please provide debugged code, addressing the issues identified in this report.
 
+> [SUGGESTED] Please specify hardware requirements, and duration (execution time) for the last run, to allow replicators to assess the computational requirements.
 
 > [REQUIRED] Please adjust your tables to account for the noted numerical discrepancies, or explain (in the README) discrepancies that a replicator should expect. 
 
