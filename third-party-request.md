@@ -20,6 +20,6 @@
 
 - [ ] Share openICPSR deposit with the email on file for the replication service
 - [ ] Mark the JIRA ticket as outsourced
-- [ ] Use the subject line `[[AEAREP-XXX] Third party verification request [MANUSCRIPT NUMBER]](mailto:somebody@here.com?subject=[AEAREP-XXX]%20fThird%20fparty%20fverification%20frequest%20f[MANUSCRIPT%20fNUMBER])`
+- [ ] Use the subject line [[AEAREP-XXX] Third party verification request [MANUSCRIPT NUMBER]](mailto:somebody@here.com?subject=[AEAREP-XXX]%20fThird%20fparty%20fverification%20frequest%20f[MANUSCRIPT%20fNUMBER])
 - [ ] Attach the manuscript and the README provided by the authors
 - [ ] CC dataeditor-queue@aeapubs.org
