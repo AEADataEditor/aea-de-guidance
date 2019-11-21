@@ -35,11 +35,11 @@ The [Data Citation Principles](https://doi.org/10.25490/a97f-egyk) note that (em
 
 ## Generic Guidance
 
-The AEA follows the Chicago Manual of Style (CMOS), with several [additions on the AEA website](https://www.aeaweb.org/journals/policies/sample-references). As the [CMOS states](https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch14/psec014.html), one of the criteria for a useful citation is conveying authority and permanence:
+The AEA follows the Chicago Manual of Style (CMOS), with several [additions on the AEA website](https://www.aeaweb.org/journals/policies/sample-references). As the [CMOS states](https://www.chicagomanualofstyle.org/book/ed17/part3/ch14/psec014.html), one of the criteria for a useful citation is conveying authority and permanence:
 
 > Electronic content presented without formal ties to a publisher or sponsoring body has the authority equivalent to that of unpublished or self-published material in other media.
 
-[They also note](https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch14/psec014.html) that 
+[They also note](https://www.chicagomanualofstyle.org/book/ed17/part3/ch14/psec014.html) that 
 
 > Authors should note that anything posted on the internet is “published” in the sense of copyright and must be treated as such for the purposes of complete citation and clearance of permissions, if relevant.
 
@@ -59,17 +59,17 @@ Google. 2017. “Privacy Policy.” Privacy & Terms. Last modified April 17, 201
 
 ### Online databases
 
-CMOS has a [recommendation for online databases](> https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch14/psec257.html):
+CMOS has a [recommendation for online databases](> https://www.chicagomanualofstyle.org/book/ed17/part3/ch14/psec257.html):
 
-> NASA/IPAC Extragalactic Database (object name IRAS F00400+4059; accessed April 6, 2016). http://ned.ipac.caltech.edu.proxy.library.cornell.edu/.
+> NASA/IPAC Extragalactic Database (object name IRAS F00400+4059; accessed April 6, 2016). http://ned.ipac.caltech.edu/.
 
 which would be cited in the text as `NASA/IPAC Extragalactic Database`.
 
 ### Data distributed as supplementary data
 
-The [CMOS provides examples](https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch14/psec187.html) of how to cite supplementary materials that are attached to a specific article:
+The [CMOS provides examples](https://www.chicagomanualofstyle.org/book/ed17/part3/ch14/psec187.html) of how to cite supplementary materials that are attached to a specific article:
 
-> Suárez-Rodríguez, M. and C. Macías Garcia. 2014. "There Is No Such a Thing as a Free Cigarette: Lining Nests with Discarded Butts Brings Short-Term Benefits, but Causes Toxic Damage." *Journal of Evolutionary Biology* 27, no. 12 (December 2014): 2719–26, https://doi-org.proxy.library.cornell.edu/10.1111/jeb.12531, data deposited at Dryad Digital Repository, https://doi-org.proxy.library.cornell.edu/10.5061/dryad.4t5rt.
+> Suárez-Rodríguez, M. and C. Macías Garcia. 2014. "There Is No Such a Thing as a Free Cigarette: Lining Nests with Discarded Butts Brings Short-Term Benefits, but Causes Toxic Damage." *Journal of Evolutionary Biology* 27, no. 12 (December 2014): 2719–26, https://doi.org/10.1111/jeb.12531, data deposited at Dryad Digital Repository, https://doi.org/10.5061/dryad.4t5rt.
 
 The [AEA guidance](https://www.aeaweb.org/journals/policies/sample-references) also provides an example, which links to the article landing page:
 
@@ -115,7 +115,7 @@ In many cases, the data are not distributed by the creator. This means the *dist
 
 ### Dates
 
-In some cases, it isn't clear when the dataset was *published*, though it may be clear what time period the dataset covers. One way to address this may be by [using the "n.d." abbreviation for the date of publication](https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch15/psec050.html):
+In some cases, it isn't clear when the dataset was *published*, though it may be clear what time period the dataset covers. One way to address this may be by [using the "n.d." abbreviation for the date of publication](https://www.chicagomanualofstyle.org/book/ed17/part3/ch15/psec050.html):
 
 > Standard and Poor's (S&P). n.d. *Compustat-Capital IQ (1982-2017)*. Wharton Research Data Services. Accessed April 6, 2018. https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/sp-global-market-intelligence/
 
@@ -144,10 +144,10 @@ or
 
 ### Offline access mechanism
 
-Many datasets are available only under license, memorandum, contract, etc., and do not have a formal online presence. This is quite similar to traditional offline archives, for instance manuscript collections. For such collections, [CMOS suggests](https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch15/psec054.html):
+Many datasets are available only under license, memorandum, contract, etc., and do not have a formal online presence. This is quite similar to traditional offline archives, for instance manuscript collections. For such collections, [CMOS suggests](https://www.chicagomanualofstyle.org/book/ed17/part3/ch15/psec054.html):
 
 > Kallen, Horace. *Papers*. YIVO Institute for Jewish Research, New York.
-> [Merriam, Charles E. *Papers*. Special Collections Research Center, box 26, folder 17. University of Chicago Library.](https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch14/psec229.html)
+> [Merriam, Charles E. *Papers*. Special Collections Research Center, box 26, folder 17. University of Chicago Library.](https://www.chicagomanualofstyle.org/book/ed17/part3/ch14/psec229.html)
 
 and usage in the text as
 
@@ -159,7 +159,7 @@ Similar citations can be constructed for offline databases:
 
 ### No formal access mechanism
 
-In some cases (not infrequently), access to data is through informal means. The [CMOS allows for citation of such information](https://www-chicagomanualofstyle-org.proxy.library.cornell.edu/book/ed17/part3/ch15/psec053.html), without inclusion in the references. 
+In some cases (not infrequently), access to data is through informal means. The [CMOS allows for citation of such information](https://www.chicagomanualofstyle.org/book/ed17/part3/ch15/psec053.html), without inclusion in the references. 
 
 > (A. P. Møller, unpublished data; C. R. Brown and M. B. Brown, unpublished data)
 
