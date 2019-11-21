@@ -59,7 +59,7 @@ Google. 2017. “Privacy Policy.” Privacy & Terms. Last modified April 17, 201
 
 ### Online databases
 
-CMOS has a [recommendation for online databases](> https://www.chicagomanualofstyle.org/book/ed17/part3/ch14/psec257.html):
+CMOS has a [recommendation for online databases](https://www.chicagomanualofstyle.org/book/ed17/part3/ch14/psec257.html):
 
 > NASA/IPAC Extragalactic Database (object name IRAS F00400+4059; accessed April 6, 2016). http://ned.ipac.caltech.edu/.
 
