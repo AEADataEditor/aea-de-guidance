@@ -12,7 +12,7 @@ This protocol describes how third parties can, at the request of the AEA Data Ed
 
 ## What or Who Is a Third-party Replicator
 
-The third-party replicator is somebody not affiliated with the AEA editorial offices (third-party), who has access to the (confidential or restricted) data used in the author's paper, and who 
+The third-party replicator is somebody not affiliated with the AEA editorial offices (third-party), who has access to the (public-use, confidential or restricted) data used in the author's paper, and who 
 
 - is not involved with the author's research project
 - has disclosed any conflicts of interest
@@ -27,3 +27,20 @@ The third-party replicator is somebody not affiliated with the AEA editorial off
 - Write a [report](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md)
 - Send the report to the AEA Data Editor
 - Report any interactions with the author in the course of conducting the reproducibility exercise (help, assistance, clarifications)
+
+## Template email 
+> Dear [REPLICATOR],
+> 
+> please prepare a reproducibility report (see below) for the following manuscript, code, and data:
+> 
+> Manuscript: Attached.
+> 
+> README: Attached.
+> 
+> Code and data: [CODELOCATION]
+>
+> Instructions on how to [access pre-publication openICPSR deposits](https://github.com/labordynamicsinstitute/replicability-training/blob/master/openICPSR_training.md) are available.
+>
+> Please file your report via reply-all to this email, within the next 10 days.
+> 
+> Thank you very much in advance.
