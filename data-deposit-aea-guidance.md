@@ -41,4 +41,4 @@ Authors should add a placeholder here for their planned publication. The AEA edi
 - Future functionality will automatically list articles (including articles by third parties) that cite the data.
 
 ### Sundry other items
-- When importing a ZIP file, MacOS users will see that a folder called "__MACOSX" was created. PLEASE DELETE THIS FOLDER (a request has been filed with ICPSR as of Q3 2019 to fix this issue).
+- When importing a ZIP file, MacOS users will see that a folder called "__MACOSX" was created. PLEASE DELETE THIS FOLDER (a request has been filed with ICPSR as of Q3 2019 to fix this issue). To prevent this folder from being uploaded, please [see our FAQ on this topic](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#what-is-that-__macosx-folder-which-seems-to-contain-a-second-copy-of-all-the--replication-files-i-am-not-sure-why-this-folder-exists) for detailed instructions.
