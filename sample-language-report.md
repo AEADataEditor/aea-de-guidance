@@ -99,7 +99,7 @@ or if especially valuable
 
 > [SUGGESTED] Please ensure that the README is in the root directory, and that unnecessary directory levels are pruned from the repository.
 
-When ready, add "jenna@aeapubs.org" to Share, and add a new entry to communication log, with subject line
+When ready, remove any replicator email from  "Share", and add a new entry to communication log, with subject line
 
 > Data and Code Deposit for (MC number) accepted
 
