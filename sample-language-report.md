@@ -62,7 +62,7 @@ or if especially valuable
 
 > [SUGGESTED] Please specify hardware requirements, and duration (execution time) for the last run, to allow replicators to assess the computational requirements.
 
-> [SUGGESTED] Use of packages that automatically write out tables and figures is strongly encouraged.
+> [SUGGESTED] Use of packages or commands that automatically write out tables and figures is strongly encouraged.
 
 > [SUGGESTED] We strongly suggest using  data load statement instead of manual instructions to load data
 
