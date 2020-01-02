@@ -21,6 +21,8 @@ or if especially valuable
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset. 
 
+> [REQUIRED] Please provide a clear description of access modality and location for this dataset. In particular, please provide evidence that you have the rights/license to redistribute the original and derived datasets.
+
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset.  Please specify how long the data will be preserved in the restricted-access location.
 
 > [REQUIRED] Please specify how long the data will be preserved in the restricted-access location.
@@ -98,6 +100,12 @@ or if especially valuable
 > [REQUIRED]   Please delete any redundant (obsolete) files
 
 > [SUGGESTED] Please ensure that the README is in the root directory, and that unnecessary directory levels are pruned from the repository.
+
+### When the openICPSR was already (erroneously) published
+
+> IMPORTANT NOTE: When updating the openICPSR deposit, do **not** press "Re-Publish". We are able to view all files prior to publishing. Once updates are made, and verified by us, the new version of the deposit can be published. 
+
+### When ready to publish
 
 When ready, remove any replicator email from  "Share", and add a new entry to communication log, with subject line
 
