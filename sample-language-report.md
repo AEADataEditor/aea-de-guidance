@@ -19,6 +19,8 @@ or if especially valuable
 
 > [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
+> [REQUIRED] Data is original (authors are data creators). Please cite the own data supplement, as per the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references) and [additional guidance](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#how-do-i-cite-my-own-data-and-code-supplement).
+
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset. 
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset. In particular, please provide evidence that you have the rights/license to redistribute the original and derived datasets.
