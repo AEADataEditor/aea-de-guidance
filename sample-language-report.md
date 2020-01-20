@@ -17,9 +17,9 @@ or if especially valuable
 
 > [STRONGLY SUGGESTED] Please provide the cleaned  dataset as part of the archive, or a separate upload to an archive (Zenodo, Dataverse, ICPSR). In the latter case, cite it from there. See examples at https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html
 
-> [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
-
 > [REQUIRED] Data is original (authors are data creators). Please cite the own data supplement, as per the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references) and [additional guidance](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#how-do-i-cite-my-own-data-and-code-supplement).
+
+> [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset. 
 
@@ -70,7 +70,7 @@ or if especially valuable
 
 > [SUGGESTED] We strongly suggest using  data load statement instead of manual instructions to load data
 
-> [STRONGLY SUGGESTED] Please set a random seed to allow for pseudo-random results to be exactly reproduced.
+> [REQUIRED] Please set a random seed to allow for pseudo-random results to be exactly reproduced.
 
 ## Results
 
@@ -91,7 +91,7 @@ or if especially valuable
 
 > [SUGGESTED] Several suggested metadata elements are missing from the openICPSR deposit. Please consult our [additional deposit guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html)
 
-> [REQUIRED]  ZIP files should be uploaded via "Import from ZIP" instead of "Upload Files" (there should be no ZIP files visible, except in certain circumstances, like when there are too many files). Please delete the ZIP files, and re-upload using the "Import from ZIP" function.
+> [REQUIRED]  ZIP files should be uploaded to openICPSR via "Import from ZIP" instead of "Upload Files" (there should be no ZIP files visible, except in rare approved circumstances). Please delete the ZIP files, and re-upload using the "Import from ZIP" function.
 
 > [STRONGLY SUGGESTED] Please add the Github repository, or its archived equivalent, as a "Related Publication"
 
