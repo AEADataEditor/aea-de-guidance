@@ -4,6 +4,7 @@ The following fragments may be used when reporting back on success or failure of
 
 > The article uses restricted-access data. Access to the data cannot be obtained in a timely fashion, a reproduction is not attempted. The report contains information on data description, and identifies whether all tables and figures can be identified in the code. 
 
+> Thank you for an excellent reproducible replication archive. We have a few additional, relatively minor issues, in order to bring the replication archive into compliance with our [Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code).
 ## README
 
 > [SUGGESTED] A template README file can be found on the [AEA Data Editor Github site](https://aeadataeditor.github.io/aea-de-guidance/template-README.html).
@@ -72,6 +73,8 @@ or if especially valuable
 
 > [REQUIRED] Please set a random seed to allow for pseudo-random results to be exactly reproduced.
 
+> [REQUIRED] Please provide code that creates all figures and tables without manual editing of parameters, for instance by using function calls, loops, or other mechanisms. The README should still provide instructions to replicators on how to further modify such parameters.
+
 ## Results
 
 > [REQUIRED] Please adjust your tables to account for the noted numerical discrepancies, or explain (in the README) discrepancies that a replicator should expect. 
@@ -102,6 +105,10 @@ or if especially valuable
 > [REQUIRED]   Please delete any redundant (obsolete) files
 
 > [SUGGESTED] Please ensure that the README is in the root directory, and that unnecessary directory levels are pruned from the repository.
+
+When there is evidence of a differing license in the deposit, there must be a "LICENSE.txt" file present.
+
+> [REQUIRED] Please create a separate file called "LICENSE.txt" and add the text from the bottom of the README. This is necessary to let openICPSR recognize that the deposit is not subject to the standard CC-BY license.
 
 ### When the openICPSR was already (erroneously) published
 
