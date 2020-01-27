@@ -118,7 +118,7 @@ When there is evidence of a differing license in the deposit, there must be a "L
 
 When ready, remove any replicator email from  "Share", and add a new entry to communication log, with subject line
 
-> Data and Code Deposit for (MC number) accepted
+> AEAREP-xxx Data and Code Deposit for (MC number) accepted
 
 and body:
 ```
