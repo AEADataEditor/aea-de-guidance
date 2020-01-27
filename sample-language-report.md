@@ -28,6 +28,12 @@ or if especially valuable
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset.  Please specify how long the data will be preserved in the restricted-access location.
 
+> [REQUIRED] Please provide a clear description of access modality and location for this dataset. Please verify that your license allows you to redistribute Haver Analytics data.
+For Haver Analytics, provide the "mnemonic" name. If a permission to redistribute these data has been obtained, store it within the openICPSR repository.
+
+> [REQUIRED] Please provide a clear description of access modality and location for this dataset. For Bloomberg data, provide the "ticker". If a permission to redistribute these data has been obtained, store it within the openICPSR repository.
+
+
 > [REQUIRED] Please specify how long the data will be preserved in the restricted-access location.
 
 > [SUGGESTED] The default AEA bibtex style file does not display URLs in the bibliography. A workaround might be to use the slightly modified [draft style file](https://github.com/AEADataEditor/aea-de-guidance/blob/master/citations/aea-mod.bst) or the `econ` style file referenced [here](https://www.aeaweb.org/journals/policies/random-author-order). 
