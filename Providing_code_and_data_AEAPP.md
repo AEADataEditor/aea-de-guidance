@@ -94,7 +94,9 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 </form>
 
 <p id="DOI"></p>
+<blockquote>
 <p id="citation"></p>
+</blockquote>
 
 <script>
 function myFunction() {
