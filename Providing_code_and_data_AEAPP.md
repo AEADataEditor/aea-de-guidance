@@ -44,7 +44,7 @@ We ask that you fill out sufficient metadata upon deposit to make the deposit fi
 
 The following elements are **required**:
 
-- [ ] Title (Suggested: "*Replication data and code for: (NAME OF PAPER)*")
+- [ ] Title (Suggested: "*Data and code for: (NAME OF PAPER)*")
 - [ ] "Principal Investigators" (=Authors; these need not be in the same order)
 - [ ] JEL Classification (can be the same as article)
 - [ ] Manuscript Number (your P&P manuscript number as assigned by the editorial office)
@@ -66,6 +66,51 @@ The following elements are suggested for certain types of data, and may not appl
 - [ ] Data Type(s) 
 - [ ] Data Source 
 - [ ] Units of Observation 
+
+## 
+
+## Citing Your Deposit
+
+At present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.
+
+- Each openICPSR project has a number (e.g., "109622"), that might show up on the right panel:
+ ![Image of number](assets/project-number.png) 
+- if the openICPSR project has not been published, then the DOI will be "http://doi.org/10.3886/E" + number + "V1" (e.g. http://doi.org/10.3886/E109622V1)
+- if the project has already been published before, and you are updating it, then the "V1" will be incremented. See [our FAQ](FAQ.md)
+- You should then cite your deposit as follows (see [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references)):
+
+> **Romer, Christina D., and David H. Romer**. 2010. "Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks." *American Economic Association* [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1.
+
+- Give it a try:
+
+<form id="myForm">
+<table>
+ <tr><td>Article title:</td> <td> <input type="text" name="title"></td></tr>
+  <tr><td>Authors:</td> <td> <input type="text" name="title"></td></tr>
+  <tr><td>Project number:</td> <td> <input type="text" name="projectid"></td></tr>
+  <tr><td>Version number:</td> <td> <input type="text" name="versionnum" value="V1"></td></tr>
+  <tr><td></td> <td><input type="button" onclick="myFunction()" value="Compute DOI"></td></tr>
+  </table>
+</form>
+
+<p id="DOI"></p>
+<p id="citation"></p>
+
+<script>
+function myFunction() {
+  var doipre = "http://doi.org/10.3886/E";
+  var titlepre = "Data and code for:";
+  var str0 = document.getElementById('myForm').elements[0].value;
+  var authors = document.getElementById('myForm').elements[1].value;
+  var str2 = document.getElementById('myForm').elements[2].value;
+  var str3 = document.getElementById('myForm').elements[3].value;
+  var title = titlepre.concat(str0);
+  var doi = doipre.concat(str2).concat(str3);
+  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. %22%0A" + title + "%22%0A. <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
+  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i>" + doi;
+  
+}
+</script>
 
 ## Review by AEA
 
