@@ -12,13 +12,13 @@ This page describes how to provide code and data to be linked to manuscripts in 
 
 >    [Instructions](https://www.openicpsr.org/openicpsr/aea/deposit-instructions) on how to deposit materials at the AEA Data and Code Repository are provided at openICPSR, with additional instructions available [here](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html).
 
-## Materials to provide
+### Materials to provide
 - [ ] README in TXT or PDF format (see our [template README](https://aeadataeditor.github.io/aea-de-guidance/template-README.html) for guidance on content)
 - [ ] Code for all tables, figures, and in-text numbers of the manuscript
 - [ ] Data for the above, if available
 - [ ] Information on how to access the data, if not
 
-## Ideal structure
+### Ideal structure
 
 Your deposit should have
 - no redundant directories: the first thing you should see is the README and any subdirectories
@@ -36,11 +36,11 @@ LICENSE.txt
 ```
 (the `LICENSE.txt` is optional if you want to adopt one of the standard openICPSR licenses).
 
-## Additional Information to Provide upon Deposit
+### Additional Information to Provide upon Deposit
 
 We ask that you fill out sufficient metadata upon deposit to make the deposit findable, and useful. This is described in more detail at [our supplemental guidance page](hdata-deposit-aea-guidance.md).
 
-### Required elements
+#### Required elements
 
 The following elements are **required**:
 
@@ -49,7 +49,7 @@ The following elements are **required**:
 - [ ] JEL Classification (can be the same as article)
 - [ ] Manuscript Number (your P&P manuscript number as assigned by the editorial office)
 
-### Highly recommended
+#### Highly recommended
 
 The following elements are highly recommended for better inclusion in search engines:
 
@@ -57,7 +57,7 @@ The following elements are highly recommended for better inclusion in search eng
 - [ ] Geographic coverage (e.g, "United States", "Florida, U.S.", "Indonesia", ...)
 - [ ] Time period(s)  (e.g., "1982-2008")
 
-### Suggested
+#### Suggested
 
 The following elements are suggested for certain types of data, and may not apply to all types of data:
 
@@ -67,9 +67,9 @@ The following elements are suggested for certain types of data, and may not appl
 - [ ] Data Source 
 - [ ] Units of Observation 
 
-## 
+### 
 
-## Citing Your Deposit
+### Citing Your Deposit
 
 At present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.
 
@@ -81,7 +81,7 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 
 > **Romer, Christina D., and David H. Romer**. 2010. "Replication data for: The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks." *American Economic Association* [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E112357V1.
 
-### Give it a try:
+#### Give it a try:
 
 <form id="myForm">
 <table>
@@ -114,6 +114,6 @@ function myFunction() {
 }
 </script>
 
-## Review by AEA
+### Review by AEA
 
 AEA Staff will review the metadata and structure of the deposit, and may provide feedback. AEA Staff will not manipulate, modify, or otherwise change data, code, text, or metadata. 
