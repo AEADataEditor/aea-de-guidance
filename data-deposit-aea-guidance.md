@@ -78,7 +78,7 @@ prog_directory/
 README.pdf
 LICENSE.txt
 ```
-(the `LICENSE.txt` is optional if you want to adopt one of the standard openICPSR licenses).
+(the `LICENSE.txt` is optional if you want to adopt one of the standard openICPSR licenses upon publication. See [our licensing guidance](Licensing_guidance.md) for other options).
 
 
 ### Additional metadata
