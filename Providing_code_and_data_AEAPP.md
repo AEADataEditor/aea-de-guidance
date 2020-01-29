@@ -67,7 +67,6 @@ The following elements are suggested for certain types of data, and may not appl
 - [ ] Data Source 
 - [ ] Units of Observation 
 
-### 
 
 ### Citing Your Deposit
 
