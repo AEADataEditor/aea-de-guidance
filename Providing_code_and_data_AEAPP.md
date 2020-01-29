@@ -106,7 +106,7 @@ function myFunction() {
   var str3 = document.getElementById('myForm').elements[3].value;
   var title = titlepre.concat(str0);
   var doi = doipre.concat(str2).concat(str3);
-  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. %22%0A" + title + "%22%0A. <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
+  document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. %22" + title + "%22 <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
   document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i>" + doi;
   
 }
