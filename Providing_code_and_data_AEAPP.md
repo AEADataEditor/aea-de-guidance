@@ -75,7 +75,7 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 - Each openICPSR project has a number (e.g., "109622"), that might show up on the right panel:
 
  ![Image of number](assets/project-number.png) 
- 
+
 - if the openICPSR project has not been published, then the DOI will be "http://doi.org/10.3886/E" + number + "V1" (e.g. **http://doi.org/10.3886/E109622V1**)
 - if the project has already been published before, and you are updating it, then the "V1" will be incremented. See [our FAQ](FAQ.md)
 - You should then cite your deposit as follows (see [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references)):
@@ -95,9 +95,10 @@ At present (2020), the openICPSR repository does not display the Digital Object 
 </form>
 
 <p id="DOI"></p>
-<blockquote>
+<table>
+<tr><td>
 <p id="citation"></p>
-</blockquote>
+</td></tr></table>
 
 <script>
 function myFunction() {
@@ -110,7 +111,7 @@ function myFunction() {
   var title = titlepre.concat(str0);
   var doi = doipre.concat(str2).concat(str3);
   document.getElementById("citation").innerHTML = "<b>" + authors + "</b>. 2020. \"" + title + "\" <i>American Economic Association</i> [publisher], Inter-university Consortium for Political and Social Research [distributor]. " + doi;
-  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i>" + doi;
+  document.getElementById("DOI").innerHTML = "<i>Your DOI will be: </i> <b>" + doi + "</b>";
   
 }
 </script>
