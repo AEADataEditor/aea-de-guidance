@@ -50,9 +50,17 @@ The following elements are suggested for certain types of data, and may not appl
 #### Uploading
 Upload files in the way you expect the files to be organized in order to run the code. 
 
+> DO NOT UPLOAD A ZIP FILE - IMPORT IT!
+
+![screenshot of upload and import options](assets/upload-import-icpsr.png)
+
 - It is possible to **IMPORT a ZIP file** (do **NOT** upload a ZIP file - no ZIP files should be visible in the deposit). Replicators will be downloading a ZIP file that preserves the directory structure.
+  - A well prepared ZIP file has NO folder in the root
+  - OSX users should [see our FAQ on this topic](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#what-is-that-__macosx-folder-which-seems-to-contain-a-second-copy-of-all-the--replication-files-i-am-not-sure-why-this-folder-exists)
 - Please upload the README (in PDF, TXT, or MD format - no Word documents!) as the very first file - ensuring that it can be found easily by browsers of the archive.
 - Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.
+  - Even better if it is part of your ZIP file that you import.
+  - There should be no duplicate README files in the repository
 
 #### Ideal structure
 
