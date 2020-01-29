@@ -73,7 +73,9 @@ The following elements are suggested for certain types of data, and may not appl
 At present (2020), the openICPSR repository does not display the Digital Object Identifier (DOI) that will be associated with your deposit. However, it can be deduced easily.
 
 - Each openICPSR project has a number (e.g., "109622"), that might show up on the right panel:
+
  ![Image of number](assets/project-number.png) 
+ 
 - if the openICPSR project has not been published, then the DOI will be "http://doi.org/10.3886/E" + number + "V1" (e.g. **http://doi.org/10.3886/E109622V1**)
 - if the project has already been published before, and you are updating it, then the "V1" will be incremented. See [our FAQ](FAQ.md)
 - You should then cite your deposit as follows (see [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references)):
