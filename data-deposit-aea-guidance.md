@@ -15,7 +15,7 @@ The following elements are **required**:
 - [ ] Title (Suggested: "*Data and code for: (NAME OF PAPER)*")
 - [ ] "Principal Investigators" (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: "Independent Researcher")
 - [ ] JEL Classification (can be the same as article)
-- [ ] Manuscript Number (your P&P manuscript number as assigned by the editorial office, e.g., "PandP-2019-0000")
+- [ ] Manuscript Number (your Manuscript Central tracking number as assigned by the editorial office, e.g., "AER-2019-0000")
 
 #### Highly recommended
 
