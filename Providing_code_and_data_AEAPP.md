@@ -47,7 +47,7 @@ The following elements are **required**:
 - [ ] Title (Suggested: "*Data and code for: (NAME OF PAPER)*")
 - [ ] "Principal Investigators" (=Authors; these need not be in the same order)
 - [ ] JEL Classification (can be the same as article)
-- [ ] Manuscript Number (your P&P manuscript number as assigned by the editorial office)
+- [ ] Manuscript Number (your P&P manuscript number as assigned by the editorial office, e.g., "PandP-2019-0000")
 
 #### Highly recommended
 
