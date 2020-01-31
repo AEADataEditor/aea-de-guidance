@@ -16,7 +16,10 @@ The following fragments may be used when reporting back on success or failure of
 
 or if especially valuable
 
-> [STRONGLY SUGGESTED] Please provide the cleaned  dataset as part of the archive, or a separate upload to an archive (Zenodo, Dataverse, ICPSR). In the latter case, cite it from there. See examples at https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html
+> [STRONGLY SUGGESTED] Please provide the cleaned  dataset as part of the archive, or a separate upload to an archive (Zenodo, Dataverse, ICPSR). In the latter case, cite it from there. See examples at https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html, guidance at https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html
+
+Note:
+- openICPSR can handle files larger than 2GB, but you will need to request an increase in the quota from the Data Editor. Please specify total (uncompressed) data size and project number, and email dataeditor@aeapubs.org.
 
 > [REQUIRED] Data is original (authors are data creators). Please cite the own data supplement, as per the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references) and [additional guidance](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#how-do-i-cite-my-own-data-and-code-supplement).
 
