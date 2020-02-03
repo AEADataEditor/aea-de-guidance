@@ -62,6 +62,7 @@ Upload files in the way you expect the files to be organized in order to run the
 - Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.
   - Even better if it is part of your ZIP file that you import.
   - There should be no duplicate README files in the repository
+- If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than 2GB, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.
 
 #### Ideal structure
 
