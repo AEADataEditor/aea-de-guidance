@@ -125,7 +125,7 @@ When there is evidence of a differing license in the deposit, there must be a "L
 
 ### When the only changes are needed are code/data
 
-To address these changes, do not resubmit to Scholar One. Communicate via the openICPSR Project Communication log once the changes are implemented.
+The manuscript is accepted, the author should address the remaining issue in the openICPSR repository.  To address these changes, do not resubmit to Scholar One. Communicate via the openICPSR Project Communication log once the changes are implemented.
 
 ### When ready to publish
 
