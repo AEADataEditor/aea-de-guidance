@@ -141,3 +141,10 @@ Action items:
 - Author: none
 - AEA Staff: update DOI, Vol, Iss, Year of related publication, then publish.
 ```
+### When AEA P&P is assessed for compliance
+
+Subject: Required changes
+
+Content: Please see the attached compliance report for this data deposit. Additional guidance and checklist available at https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html
+
+(and attach the compliance report generated from the form)
