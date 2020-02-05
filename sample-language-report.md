@@ -123,6 +123,10 @@ When there is evidence of a differing license in the deposit, there must be a "L
 
 > IMPORTANT NOTE: When updating the openICPSR deposit, do **not** press "Re-Publish". We are able to view all files prior to publishing. Once updates are made, and verified by us, the new version of the deposit can be published. 
 
+### When the only changes are needed are code/data
+
+To address these changes, do not resubmit to Scholar One. Communicate via the openICPSR Project Communication log once the changes are implemented.
+
 ### When ready to publish
 
 When ready, remove any replicator email from  "Share", and add a new entry to communication log, with subject line
