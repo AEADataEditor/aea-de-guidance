@@ -14,6 +14,7 @@ The following elements are **required**:
 
 - [ ] Title (Suggested: "*Data and code for: (NAME OF PAPER)*")
 - [ ] "Principal Investigators" (=Authors; these need not be in the same order). Please ensure that all authors have affiliations (if not affiliated: "Independent Researcher")
+- [ ] Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)
 - [ ] JEL Classification (can be the same as article)
 - [ ] Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., "AER-2019-0000")
 
@@ -61,6 +62,7 @@ Upload files in the way you expect the files to be organized in order to run the
 - Please upload the README to the root of the repository - any data and code can be in subdirectories, but it is easier to find the README if it is not in subdirectories.
   - Even better if it is part of your ZIP file that you import.
   - There should be no duplicate README files in the repository
+- If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than 2GB, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.
 
 #### Ideal structure
 
