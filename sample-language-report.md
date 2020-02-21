@@ -72,6 +72,9 @@ For Haver Analytics, provide the "mnemonic" name. If a permission to redistribut
 
 > [REQUIRED] Please add a setup program that installs all packages as noted above. Please specify all necessary commands. An example of a setup file can be found at https://github.com/labordynamicsinstitute/paper-template/blob/master/programs/global-libraries.R
 
+> [REQUIRED] Please provide a `requirements.txt` file  to   install all Python dependencies  as noted above. Please specify all necessary commands (a link to the `pip freeze` reference
+https://pip.pypa.io/en/stable/reference/pip_freeze/ may suffice).
+
 > [REQUIRED] Please provide debugged code, addressing the issues identified in this report.
 
 > [SUGGESTED] Please specify hardware requirements, and duration (execution time) for the last run, to allow replicators to assess the computational requirements.
