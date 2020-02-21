@@ -17,6 +17,7 @@ The following elements are **required**:
 - [ ] Abstract (Suggested: The abstract from the article and/or a note that this is data and/or code accompanying the article)
 - [ ] JEL Classification (can be the same as article)
 - [ ] Manuscript Number (your Scholar One tracking number as assigned by the editorial office, e.g., "AER-2019-0000")
+- [ ] README is in PDF or TXT format (Markdown OK)
 
 #### Highly recommended
 
