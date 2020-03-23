@@ -98,10 +98,11 @@ LICENSE.txt
   - Authors **MUST** provide JEL codes (under "Scope of Project")
   - Authors **MUST** provide the **Manuscript Number**, as this will allow us to properly connect the repository with the manuscript.
   - When data are provided, authors are ENCOURAGED to define 
-      - the geographical scope 
-      - the universe 
-      - the time periods
-      - data type
+      - the geographical scope(s)
+      - the time period(s)
+      - the universe(s)
+      - data type(s)
+  - Most fields are repeatable, please enter as many values as needed. For instance, if subsets of the data cover different periods (e.g., `1999-2019` and `2004-2019`). Just click "add value" next to the time period field for each time period.
   - This information can also be provided when only code is made available.
   - When only code is produced, authors should choose `data type = program source code`: ![program source code](assets/project-data-type-icpsr.png)
 
