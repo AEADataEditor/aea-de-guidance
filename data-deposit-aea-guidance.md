@@ -6,6 +6,11 @@ title: Guidance on how to deposit data at the AEA Data and Code Repository
 ### General guidelines
 Start by following [instructions provided at the Repository](https://www.openicpsr.org/openicpsr/aea/deposit-instructions).
 
+### Warning
+
+<img src="assets/warningSmall.png" height="20" alt="Warning sign"> Do NOT press the Publish button at any time during this process!
+<img src="assets/publish-button.png" height="40" alt="Publish button">
+
 ### Checklist
 
 #### Required elements
@@ -180,4 +185,5 @@ function myFunction() {
 
 - Always IMPORT a ZIP file - never "Upload" a ZIP file.
 - When importing a ZIP file, MacOS users will see that a folder called "__MACOSX" was created. PLEASE DELETE THIS FOLDER (a request has been filed with ICPSR as of Q3 2019 to fix this issue). To prevent this folder from being uploaded, please [see our FAQ on this topic](https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#what-is-that-__macosx-folder-which-seems-to-contain-a-second-copy-of-all-the--replication-files-i-am-not-sure-why-this-folder-exists) for detailed instructions.
-
+- <img src="assets/warningSmall.png" height="20" alt="Warning sign"> Do NOT press the Publish button at any time during this process!
+<img src="assets/publish-button.png" height="40" alt="Publish button">
