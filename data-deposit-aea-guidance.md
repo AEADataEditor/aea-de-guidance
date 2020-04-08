@@ -3,6 +3,13 @@ layout: withtoc
 title: Guidance on how to deposit data at the AEA Data and Code Repository
 ---
 
+### Prior to upload
+
+Please verify:
+- [ ] your manuscript includes data citations (we provide summary [guidance here](https://www.aeaweb.org/journals/policies/sample-references), and some [additional guidance here](addtl-data-citation-guidance.md))
+- [ ] you have prepared a README that provides all the relevant information, as per our [template README](template-README.md).
+- [ ] your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.
+
 ### General guidelines
 Start by following [instructions provided at the Repository](https://www.openicpsr.org/openicpsr/aea/deposit-instructions).
 
