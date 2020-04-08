@@ -17,6 +17,8 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[noaction]')"
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: install wkhtml
+      run: sudo apt-get install wkhtmltopdf
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
@@ -24,11 +26,18 @@ jobs:
     - name: Create directory
       run: "[[ -d templates ]] || mkdir templates "
 
-  # Runs a set of commands using the runners shell
-    - name: Run docker for PDF
+    # Runs a single command using the runners shell
+    - name: Create temp directory
+      run: "[[ -d temp ]] || mkdir temp "
+
+    # Runs a set of commands using the runners shell
+    - name: Run docker for HTML 
       uses: docker://pandoc/latex:2.9
       with:
-          args: "template-README.md --standalone -t html5                          -o templates/README.pdf --metadata pagetitle=README "
+          args: "template-README.md --standalone -t html5                          -o temp/README.html --metadata pagetitle=README "
+    - name: Convert HTML to PDF
+      run: "wkthmltopdf temp/README.html templates/README.pdf"
+      
     - name: Run docker for Docx
       uses: docker://pandoc/latex:2.9
       with:
