@@ -26,15 +26,15 @@ jobs:
 
   # Runs a set of commands using the runners shell
     - name: Run docker for PDF
-      uses: docker://pandoc/html5:2.9
+      uses: docker://pandoc/latex:2.9
       with:
           args: "--standalone -t html5 -o templates/README.pdf --metadata pagetitle='Template README' template-README.md"
     - name: Run docker for Docx
-      uses: docker://pandoc/html5:2.9
+      uses: docker://pandoc/latex:2.9
       with:
           args: "--standalone -t docx -o templates/README.docx template-README.md"
     - name: Run docker for latex
-      uses: docker://pandoc/html5:2.9
+      uses: docker://pandoc/latex:2.9
       with:
           args: "--standalone -t latex --template=default.latex -o templates/README.tex template-README.md"
     - name: Add files
