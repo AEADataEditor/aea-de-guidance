@@ -28,11 +28,11 @@ jobs:
     - name: Run docker for PDF
       uses: docker://pandoc/latex:2.9
       with:
-          args: "template-README.md --standalone -t html5 -o templates/README.pdf --metadata pagetitle='Template README' "
+          args: "template-README.md --standalone -t html5                          -o templates/README.pdf --metadata pagetitle=README "
     - name: Run docker for Docx
       uses: docker://pandoc/latex:2.9
       with:
-          args: "template-README.md --standalone -t docx -o templates/README.docx "
+          args: "template-README.md --standalone -t docx                           -o templates/README.docx "
     - name: Run docker for latex
       uses: docker://pandoc/latex:2.9
       with:
