@@ -36,7 +36,7 @@ jobs:
       with:
           args: "template-README.md --standalone -t html5                          -o temp/README.html --metadata pagetitle=README "
     - name: Convert HTML to PDF
-      run: "wkthmltopdf temp/README.html templates/README.pdf"
+      run: "wkhtmltopdf temp/README.html templates/README.pdf"
       
     - name: Run docker for Docx
       uses: docker://pandoc/latex:2.9
