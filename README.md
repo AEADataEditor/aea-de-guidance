@@ -53,3 +53,5 @@ The code and data that have been archived should be reproducible and replicable.
 
 ## Most Recent Tweets
 <a class="twitter-timeline" href="https://twitter.com/AeaData?ref_src=twsrc%5Etfw">Tweets by AeaData</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+&copy; 2020 American Economic Association, Lars Vilhuber [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
