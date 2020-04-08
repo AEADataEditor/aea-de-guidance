@@ -37,7 +37,10 @@ jobs:
           args: "template-README.md --standalone -t html5                          -o temp/README.html --metadata pagetitle=README "
     - name: Convert HTML to PDF
       run: "/usr/bin/xvfb-run /usr/bin/wkhtmltopdf temp/README.html templates/README.pdf"
-      
+    # Runs a single command using the runners shell
+    - name: Remove temp directory
+      run: "rm -rf temp "
+    # Convert to other formats
     - name: Run docker for Docx
       uses: docker://pandoc/latex:2.9
       with:
