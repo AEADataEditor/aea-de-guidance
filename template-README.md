@@ -97,20 +97,25 @@ Portions of the code were last run on a **12-node AWS R3 cluster, consuming 20,0
 
 Instructions
 ------------
-> INSTRUCTIONS: The first two sections ensure that the data and software necessary to conduct the replication have been collected. This section then describes a human-readable instruction to conduct the replication. This may be simple, or may involve many complicated steps. It should be a simple list, no excess prose. Examples follow.
+> INSTRUCTIONS: The first two sections ensure that the data and software necessary to conduct the replication have been collected. This section then describes a human-readable instruction to conduct the replication. This may be simple, or may involve many complicated steps. It should be a simple list, no excess prose. Strict linear sequence. If more than 4-5 manual steps, please wrap a master program/Makefile around them, in logical sequences. Examples follow.
 
-1. Run `programs/00_setup.do`, which will create all output directories. 
+- Edit `programs/config.do` to adjust the default path
+- Run `programs/00_setup.do` once on a new system to set up the working environment. 
+- Download the data files referenced above. Each should be stored in the prepared subdirectories of `data/`, in the format that you download them in. Do not unzip. Scripts are provided in each directory to download the public-use files. Confidential data files requested as part of your FSRDC project will appear in the `/data` folder. No further action is needed on the replicator's part.
+- Run `programs/01_master.do` to run all steps in sequence.
+
+### Details
+
+- `programs/00_setup.do`: will create all output directories, install needed ado packages. 
    - If wishing to update the ado packages used by this archive, change the parameter `update_ado` to `yes`. However, this is not needed to successfully reproduce the manuscript tables. 
-2. Download the data files referenced above. Each should be stored in the prepared subdirectories of `data/`, in the format that you download them in. Do not unzip. Scripts are provided in each directory to download the public-use files. 
-   - Confidential data files requested as part of your FSRDC project will appear in the `/data` folder. No further action is needed on the replicator's part.
-3. Run the programs in `programs/01_dataprep`. 
+- `programs/01_dataprep`:  
    - These programs were last run at various times in 2018. 
    - Order does not matter, all programs can be run in parallel, if needed. 
    - A `programs/01_dataprep/master.do` will run them all in sequence, which should take about 2 hours.
-4. Run the program `programs/02_analysis/master.do`.
+- `programs/02_analysis/master.do`.
    - If running programs individually, note that ORDER IS IMPORTANT. 
    - The programs were last run top to bottom on July 4, 2019.
-5. Run the program `programs/03_appendix/master-appendix.do`. The programs were last run top to bottom on July 4, 2019.
+- `programs/03_appendix/master-appendix.do`. The programs were last run top to bottom on July 4, 2019.
 
 List of tables and programs
 ---------------------------
