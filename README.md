@@ -5,14 +5,19 @@ These  web pages provide unofficial and developing guidance on the implementatio
 
 <a href="https://twitter.com/aeadata?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @aeadata</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-## Order in which AEA authors should read these resources:
-1. Start with the **[official Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code)**
-2. Look for general guidance at the **[Social Science Data Editors pages](https://social-science-data-editors.github.io/guidance/)**
-3. Read the **[AEA's FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)**
-4. Look for any guidance specific to the AEA at the **[Unofficial AEA Data and Code Guidance](https://aeadataeditor.github.io/aea-de-guidance/)**
-5. Last but not least, have a look at the **[draft FAQ on this site](FAQ.md)**
+---
+
+## Order in which AEA authors should read these resources
+
+> 1. Start with the **[official Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code)**
+> 2. Look for general guidance at the **[Social Science Data Editors pages](https://social-science-data-editors.github.io/guidance/)**
+> 3. Read the **[AEA's FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)**
+> 4. The **[Unofficial AEA Data and Code Guidance](https://aeadataeditor.github.io/aea-de-guidance/)** provides guidance specific to the AEA
+> 5. Have a look at the **[draft FAQ on this site](FAQ.md)** for thorny issues
 
 Comments are welcome, please file them  as [issues](https://github.com/AEADataEditor/aea-de-guidance/issues) in our Github repo.
+
+---
 
 ## Guidance on creating replicable data and program archives
 
@@ -28,21 +33,37 @@ Data citation is critical for documenting data provenance, and the AEA requires 
 - Some particularly thorny issues can be found [on this website](addtl-data-citation-guidance.md).
 
 ## Guidance on depositing in the AEA Data and Code Repository
-The AEA migrated to a new data and code repository in July 2019. We provide guidance 
-- in the [official Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code), 
+
+The AEA migrated to a new data and code repository in July 2019. See
+
+- the [official Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code), 
 - the associated [FAQ](https://www.aeaweb.org/journals/policies/data-code/faq),  
 - [detailed additional guidance on these pages](data-deposit-aea-guidance.md), and the [draft FAQ on this site](FAQ.md)
 
 ## Guidance on testing replicability of code
+
 The code and data that have been archived should be reproducible and replicable. How do we test that?
 
 - Generic guidance is provided at the [Social Science Data Editors' Guidance](https://social-science-data-editors.github.io/guidance/) website. 
 - At the AEA,
-  - we use [this template](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md) to guide our replicators. 
+  - we use **[this template](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md)** to guide our replicators. 
     - [Example 1](sample-report.md)
-  - When we cannot access some part of the data and/or code ourselves, we may ask others to conduct a reproducibility exercise for us. 
+  - We assess 
+    - software availability
+    - data availability
+    - code availability and clarity
+    - needed computational resources
+    - time needed to acquire or use all of the above, and conduct the reproducibility check
+  - When some of the conditions are not met with our own resources, we may ask others to conduct a reproducibility exercise for us. 
     - Our [PROTOCOL](protocol-3rd-party-replication.md) is outlined here.
     - [Sample report 1](sample-report-3rd-1.md)
+    - We may ask others to do so because
+      - They are experts
+      - They have access to the software
+      - They have access to the data
+      - They have access to computational resources needed
+  - No reproducibility check is discarded out of hand
+      - 
 
 ## Frequently Asked Questions
 - Start by consulting the [FAQ](https://www.aeaweb.org/journals/policies/data-code/faq) on the AEA Website. This generally apply specifically to procedures at the AEA journals.
