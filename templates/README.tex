@@ -400,15 +400,37 @@ INSTRUCTIONS: The first two sections ensure that the data and software
 necessary to conduct the replication have been collected. This section
 then describes a human-readable instruction to conduct the replication.
 This may be simple, or may involve many complicated steps. It should be
-a simple list, no excess prose. Examples follow.
+a simple list, no excess prose. Strict linear sequence. If more than 4-5
+manual steps, please wrap a master program/Makefile around them, in
+logical sequences. Examples follow.
 \end{quote}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\begin{itemize}
 \tightlist
 \item
-  Run \texttt{programs/00\_setup.do}, which will create all output
-  directories.
+  Edit \texttt{programs/config.do} to adjust the default path
+\item
+  Run \texttt{programs/00\_setup.do} once on a new system to set up the
+  working environment.
+\item
+  Download the data files referenced above. Each should be stored in the
+  prepared subdirectories of \texttt{data/}, in the format that you
+  download them in. Do not unzip. Scripts are provided in each directory
+  to download the public-use files. Confidential data files requested as
+  part of your FSRDC project will appear in the \texttt{/data} folder.
+  No further action is needed on the replicator's part.
+\item
+  Run \texttt{programs/01\_master.do} to run all steps in sequence.
+\end{itemize}
+
+\hypertarget{details}{%
+\subsubsection{Details}\label{details}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{programs/00\_setup.do}: will create all output directories,
+  install needed ado packages.
 
   \begin{itemize}
   \tightlist
@@ -418,20 +440,7 @@ a simple list, no excess prose. Examples follow.
     not needed to successfully reproduce the manuscript tables.
   \end{itemize}
 \item
-  Download the data files referenced above. Each should be stored in the
-  prepared subdirectories of \texttt{data/}, in the format that you
-  download them in. Do not unzip. Scripts are provided in each directory
-  to download the public-use files.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Confidential data files requested as part of your FSRDC project will
-    appear in the \texttt{/data} folder. No further action is needed on
-    the replicator's part.
-  \end{itemize}
-\item
-  Run the programs in \texttt{programs/01\_dataprep}.
+  \texttt{programs/01\_dataprep}:
 
   \begin{itemize}
   \tightlist
@@ -445,7 +454,7 @@ a simple list, no excess prose. Examples follow.
     sequence, which should take about 2 hours.
   \end{itemize}
 \item
-  Run the program \texttt{programs/02\_analysis/master.do}.
+  \texttt{programs/02\_analysis/master.do}.
 
   \begin{itemize}
   \tightlist
@@ -455,9 +464,9 @@ a simple list, no excess prose. Examples follow.
     The programs were last run top to bottom on July 4, 2019.
   \end{itemize}
 \item
-  Run the program \texttt{programs/03\_appendix/master-appendix.do}. The
-  programs were last run top to bottom on July 4, 2019.
-\end{enumerate}
+  \texttt{programs/03\_appendix/master-appendix.do}. The programs were
+  last run top to bottom on July 4, 2019.
+\end{itemize}
 
 \hypertarget{list-of-tables-and-programs}{%
 \subsection{List of tables and
