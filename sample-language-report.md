@@ -25,6 +25,12 @@ Note:
 
 > [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references).
 
+Optionally:
+
+- In particular, FRED provides a data citation at the bottom of each of its pages, e.g., for the CPI AUCNS, 
+
+> U.S. Bureau of Labor Statistics, Consumer Price Index for All Urban Consumers: All Items in U.S. City Average [CPIAUCNS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/CPIAUCNS, May 7, 2020. 
+
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset. 
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset. In particular, please provide evidence that you have the rights/license to redistribute the original and derived datasets.
