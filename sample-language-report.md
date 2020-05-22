@@ -7,7 +7,7 @@ The following fragments may be used when reporting back on success or failure of
 > Thank you for an excellent reproducible replication archive. We have a few additional, relatively minor issues, in order to bring the replication archive into compliance with our [Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code).
 ## README
 
-> [SUGGESTED] A template README file can be found on the [AEA Data Editor Github site](https://aeadataeditor.github.io/aea-de-guidance/template-README.html).
+> [SUGGESTED] A recommended README template for replication packages in economics can be found on the [Social Science Data Editor Github site](https://social-science-data-editors.github.io/guidance/template-README.html).
 
 > [REQUIRED] Please ensure that a ASCII (txt), Markdown (md), or PDF version of the README are available in the data and code deposit.
 
