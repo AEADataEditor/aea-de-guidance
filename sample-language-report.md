@@ -135,7 +135,7 @@ When there is evidence of a differing license in the deposit, there must be a "L
 
 ### When the only changes are needed are code/data
 
-The manuscript is accepted, the author should address the remaining issue in the openICPSR repository.  To address these changes, do not resubmit to Scholar One. Communicate via the openICPSR Project Communication log once the changes are implemented.
+> Details in the full report, which you will receive via Manuscript Central shortly. The manuscript is accepted, the author should address the remaining issue in the openICPSR repository. Once completed, do not resubmit to Manuscript Central. Please use the openICPSR Project Communication log, specifying AEAREP-xxx.
 
 ### When ready to publish
 
@@ -144,17 +144,18 @@ When ready, remove any replicator email from  "Share", and add a new entry to co
 > AEAREP-xxx Data and Code Deposit for MCNumberXXX accepted
 
 and body:
-```
-This data and code deposit is accepted.
 
-Action items:
-- Author: none
-- AEA Staff: update DOI, Vol, Iss, Year of related publication, then publish.
-```
+> This data and code deposit is accepted.
+>
+> Action items:
+> - Author: none
+> - AEA Staff: update DOI, Vol, Iss, Year of related publication, then publish.
+
+
 ### When AEA P&P is assessed for compliance
 
-Subject: Required changes
+> Subject: Required changes
 
-Content: Please see the attached compliance report for this data deposit. Additional guidance and checklist available at https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html
+> Content: Please see the attached compliance report for this data deposit. Additional guidance and checklist available at https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html
 
 (and attach the compliance report generated from the form)
