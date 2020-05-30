@@ -107,6 +107,10 @@ https://pip.pypa.io/en/stable/reference/pip_freeze/ may suffice).
 
 > [REQUIRED] The data collection reported in this article seems to have required IRB approval. Please provide IRB approval information in the titlepage footnote.
 
+## If no ICPSR deposit
+
+> [REQUIRED] We note that you provided data during the R&R phase through Dropbox. When the paper is conditionally accepted, your code will need to be uploaded to openICPSR. Please preserve the same directory structure as we observed on Dropbox. Import all ZIP files, unless discussed/authorized otherwise by the Data Editor.
+
 ## Relative to the openICPSR deposit
 
 > [REQUIRED] Several required metadata elements are missing from the openICPSR deposit. Please consult our [additional deposit guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html)
