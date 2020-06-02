@@ -149,12 +149,13 @@ When ready, remove any replicator email from  "Share", and add a new entry to co
 
 and body:
 
-> This data and code deposit is accepted.
->
-> Action items:
-> - Author: none
-> - AEA Staff: update DOI, Vol, Iss, Year of related publication, then publish.
+```
+This data and code deposit is accepted.
 
+ Action items:
+ - Author: none
+ - AEA Staff: update DOI, Vol, Iss, Year of related publication, then publish.
+```
 
 ### When AEA P&P is assessed for compliance
 
