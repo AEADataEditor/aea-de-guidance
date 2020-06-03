@@ -36,7 +36,7 @@ How should researchers create replicable data and program archives? How should s
 ## Guidance on data citation
 Data citation is critical for documenting data provenance, and the AEA requires data citations. But data citations can also be hard. 
 - General guidance can be found on the [Social Science Data Editor's page on the topic](https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html)
-- Some particularly thorny issues can be found [on this website](addtl-data-citation-guidance.md).
+  - Some particularly thorny issues can be found [on this website](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html.
 
 ## Guidance on depositing in the AEA Data and Code Repository
 
