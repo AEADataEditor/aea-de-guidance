@@ -42,7 +42,7 @@ Data citation is critical for documenting data provenance, and the AEA requires 
 
 ---
 
-[detailed guidance](data-deposit-aea-guidance.md)
+> **[Detailed guidance](data-deposit-aea-guidance.html)**
 
 ---
 
