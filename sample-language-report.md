@@ -109,7 +109,7 @@ https://pip.pypa.io/en/stable/reference/pip_freeze/ may suffice).
 
 ## If no ICPSR deposit
 
-> [REQUIRED] We note that you provided data during the R&R phase through Dropbox. When the paper is conditionally accepted, your code will need to be uploaded to openICPSR. Please preserve the same directory structure as we observed on Dropbox. Import all ZIP files, unless discussed/authorized otherwise by the Data Editor.
+> [REQUIRED] We note that you provided data during the R&R phase through Dropbox. When the paper is conditionally accepted, your code will need to be uploaded to openICPSR. Please preserve the same directory structure as we observed in this round. Import all ZIP files, unless discussed/authorized otherwise by the Data Editor. Please follow [our guidance](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html#checklist).
 
 ## Relative to the openICPSR deposit
 
