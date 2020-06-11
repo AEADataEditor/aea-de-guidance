@@ -6,7 +6,7 @@
 
 Dear XXX,
  
-please prepare a reproducibility report (see below) for the following manuscript, code, and data:
+Could I ask you to conduct a reproducibility check of a manuscript for us? If yes, please prepare a reproducibility report (see below) for the following manuscript, code, and data:
  
 > Manuscript: Attached.
 
