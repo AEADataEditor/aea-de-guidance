@@ -2,19 +2,25 @@
 
 ## Prepare email
 
-> Dear XXX,
-> 
-> please prepare a reproducibility report (see below) for the following manuscript, code, and data:
-> 
-> > Manuscript: Attached.
-> > README: Attached.
-> > Code and data: (URL)
->
-> Instructions on [how to access pre-publication openICPSR](https://github.com/labordynamicsinstitute/replicability-training/blob/master/openICPSR_training.md) are available.
-> 
-> Please file your report via reply-all to this email, within the next 10 days.
-> 
-> Thank you very much in advance.
+---
+
+Dear XXX,
+ 
+please prepare a reproducibility report (see below) for the following manuscript, code, and data:
+ 
+> Manuscript: Attached.
+
+> README: Attached.
+
+> Code and data: (URL)
+
+Instructions on [how to access pre-publication openICPSR](https://github.com/labordynamicsinstitute/replicability-training/blob/master/openICPSR_training.md) are available.
+ 
+Please file your report via reply-all to this email, within the next 10 days.
+ 
+Thank you very much in advance.
+
+---
 
 ## Steps for journal
 
