@@ -34,9 +34,11 @@ Optionally:
 > U.S. Bureau of Labor Statistics, Consumer Price Index for All Urban Consumers: All Items in U.S. City Average [CPIAUCNS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/CPIAUCNS, May 7, 2020. 
 
 
-> [REQUIRED] Please provide a clear description of access modality and location for this dataset. In particular, please provide evidence that you have the rights/license to redistribute the original and derived datasets.
+> [REQUIRED] Please provide a clear description of access modality and location for this dataset. In particular, please provide evidence that you have the rights to redistribute the original and derived datasets.
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset.  Please specify how long the data will be preserved in the restricted-access location.
+
+> [REQUIRED] Please provide a clear description of access modality and location for this dataset, including a description of which variables and options need to be selected from the URL provided.  
 
 > [REQUIRED] Please provide a clear description of access modality and location for this dataset. Please verify that your license allows you to redistribute Haver Analytics data.
 For Haver Analytics, provide the "mnemonic" name. If a permission to redistribute these data has been obtained, store it within the openICPSR repository.
@@ -128,6 +130,18 @@ https://pip.pypa.io/en/stable/reference/pip_freeze/ may suffice).
 > [REQUIRED]   Please delete any redundant (obsolete) files
 
 > [SUGGESTED] Please ensure that the README is in the root directory, and that unnecessary directory levels are pruned from the repository.
+
+When authors are redistributing data or code from other authors that is not published and was obtained via personal correspondence. 
+
+> [REQUIRED] Please create a "LICENSE" file in the repository, collecting the various permissions and licenses. A simple concatenation is fine. Paraphrasing is fine. Providing copies of the email correspondence in addition to the LICENSE file is fine. 
+
+An example of a license file might start as follows:
+
+```
+Permission to redistribute data from Bateman and Munro (2005) was granted by Ian Bateman on May 26, 2019.
+
+```
+
 
 When there is evidence of a differing license in the deposit, there must be a "LICENSE.txt" file present.
 
