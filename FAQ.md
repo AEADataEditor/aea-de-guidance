@@ -65,13 +65,11 @@ The Data and Code Availability Policy   says:
 
 You should feel free to reorganize, but you should ensure when we run the reorganized files, they produce the **same results that are reported in the paper**. Or put differently, the numbers in the paper should be produced by the reorganized files. We are not trying to reproduce your historical path to the paper, only the current state of the paper.
 
-Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamics setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should feel to simplify the final setup to make it easy for anybody to run this particular project, once.
-
-> [CAVEAT] As of November 2019, a **bug** in the openICPSR upload process renames files with "spaces" to "dashes". `Master Great Master.do` becomes `Master-Great-Master.do`. We will endeavor to address this during the reproducibility verification, but if possible, authors should avoid using spaces in file names. A bug report has been filed.
+Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamic setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should attempt to simplify the final setup to make it easy for anybody to run this particular project, once.
 
 ### What is that __MACOSX folder, which seems to contain a second copy of all the  replication files (I am not sure why this folder exists)
 
-[MAC USERs ONLY] We are also not sure, but it is a standard feature of ZIP files created on Mac OSX systems. They are a hassle to remove from the archive (a **feature request** to do this automatically has been filed). Here's a quick fix that helps all parties involved (adapted from this [source](https://wpguru.co.uk/2013/10/how-to-remove-__macosx-from-zip-archives/)):
+[MAC USERs ONLY] We are also not sure, but it is a standard feature of ZIP files created on Mac OSX systems using the graphical user interface. Here's a quick fix that helps all parties involved (adapted from this [source](https://wpguru.co.uk/2013/10/how-to-remove-__macosx-from-zip-archives/)):
 
 1. Create your ZIP file as usual
 2. Open the Terminal App
@@ -90,9 +88,34 @@ deleting: __MACOSX/._myzip
 ```
 You can now upload the file to openICPSR using the "Import from ZIP" functionality.
 
+We should note that these folders do not show up in the public view of the repository once it is published. So while it is probably OK to leave them, it is better to remove them.
+
 ### The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?
 
 [Answer from ICPSR] I think it still makes sense to complete as much metadata as possible.  There are syntax files specific to the data available through a restricted-use agreement.  The metadata are for increasing findability of the data collection -- even if only the syntax are in the repository.  It's useful to know the data analyzed with the syntax are about a specific geographic coverage  for a specific time period.
+
+### I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?
+
+First, all sharing - whether privately with us, or publicly through the data publication process - should be in compliance with all IRB rules, data use agreements, etc. We will never ask you to share data that you do not have the right to share with us or anybody else.
+
+Second, there is a difference between sharing with us, and publishing the data. We can accept private data sharing for the purpose of replication, conduct our reproducibility checks, and delete the data provided. You are in control of the publication of any data (though it has happened that we have had to point out to authors that they do not, in fact, have the rights to publish data that they were going to publish). 
+
+Third, the inability to publish the data does not absolve you from creating an archive of the data as it was used for the article. This archive, for private/confidential/proprietary data, should remain private - on your own systems, or appropriate university archives. But it must exist, so that you can reliably answer queries from authors in future years.
+
+How should you proceed? 
+
+The best way to think of this is as a set of layers. Your working directory **WD**, from which you derived the tables and figures in the paper, is composed of confidential data **CD**, non-confidential data **NCD**, and programs/code **P** (and possibly temporary files **TF**). So **WD** = **CD** + **NCD** + **P** + **TF**. For the purpose of replication archives, you should create **two** archives:
+
+- *A.zip* : contains **NCD** and **P**
+- *B.zip* : contains **CD**
+
+You should then test: create an empty directory, unpack the two archives, and verify that they are sufficient:
+
+> (unzip *A.zip*) + (unzip *B.zip*) == **NCD** + **P** + **CD** == **WD** - **TF**
+
+You should then import *A.zip* into the openICPSR archive, and ensure that *B.zip* is properly and securely archived, in compliance with all rules that you are subject to. 
+
+You can provide *B.zip* to us for publication, but *B.zip* would not be published.
 
 ### We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?
 
