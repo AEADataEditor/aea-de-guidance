@@ -115,7 +115,7 @@ You should then test: create an empty directory, unpack the two archives, and ve
 
 You should then import *A.zip* into the openICPSR archive, and ensure that *B.zip* is properly and securely archived, in compliance with all rules that you are subject to. 
 
-You can provide *B.zip* to us for publication, but *B.zip* would not be published.
+You can provide *B.zip* to us for the purpose of replication, but *B.zip* would not be published.
 
 ### We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?
 
