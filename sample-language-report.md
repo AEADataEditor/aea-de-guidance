@@ -16,7 +16,7 @@ The following fragments may be used when reporting back on success or failure of
 
 or if especially valuable
 
-> [STRONGLY SUGGESTED] Please provide the cleaned  dataset as part of the archive, or a separate upload to an archive (Zenodo, Dataverse, ICPSR). In the latter case, cite it from there. See examples at https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html, guidance at https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html
+> [STRONGLY SUGGESTED] Please provide the cleaned  dataset as part of the archive, or a separate upload to an archive (Zenodo, Dataverse, ICPSR). In the latter case, cite it from there. See examples at [https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html), guidance at [https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html](https://social-science-data-editors.github.io/guidance/sample-depositing-data-for-greater-good.html)
 
 Note:
 - openICPSR can handle files larger than 30GB, but you will need to request an increase in the quota from the Data Editor. Please specify total (uncompressed) data size and project number, and email dataeditor@aeapubs.org.
@@ -77,12 +77,12 @@ For Haver Analytics, provide the "mnemonic" name. If a permission to redistribut
 
 > [REQUIRED] Please provide a mapping of programs to figures/tables, or add comments to the code that identify where each figure/table is produced.
 
-> [REQUIRED] Please add a setup program that installs all packages as noted above. Please specify all necessary commands. An example of a setup file can be found at https://github.com/gslab-econ/template/blob/master/config/config_stata.do
+> [REQUIRED] Please add a setup program that installs all packages as noted above. Please specify all necessary commands. An example of a setup file can be found at [https://github.com/gslab-econ/template/blob/master/config/config_stata.do](https://github.com/gslab-econ/template/blob/master/config/config_stata.do)
 
-> [REQUIRED] Please add a setup program that installs all packages as noted above. Please specify all necessary commands. An example of a setup file can be found at https://github.com/labordynamicsinstitute/paper-template/blob/master/programs/global-libraries.R
+> [REQUIRED] Please add a setup program that installs all packages as noted above. Please specify all necessary commands. An example of a setup file can be found at [https://github.com/labordynamicsinstitute/paper-template/blob/master/programs/global-libraries.R](https://github.com/labordynamicsinstitute/paper-template/blob/master/programs/global-libraries.R)
 
-> [REQUIRED] Please provide a `requirements.txt` file  to   install all Python dependencies  as noted above. Please specify all necessary commands (a link to the `pip freeze` reference
-https://pip.pypa.io/en/stable/reference/pip_freeze/ may suffice).
+> [REQUIRED] Please provide a `requirements.txt` file  to   install all Python dependencies  as noted above. Please specify all necessary commands (a link to the `[pip freeze](https://pip.pypa.io/en/stable/reference/pip_freeze/)` reference
+ may suffice).
 
 > [REQUIRED] Please provide debugged code, addressing the issues identified in this report.
 
