@@ -5,6 +5,9 @@ The following fragments may be used when reporting back on success or failure of
 > The article uses restricted-access data. Access to the data cannot be obtained in a timely fashion, a reproduction is not attempted. The report contains information on data description, and identifies whether all tables and figures can be identified in the code. 
 
 > Thank you for an excellent reproducible replication archive. We have a few additional, relatively minor issues, in order to bring the replication archive into compliance with our [Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code).
+
+> The replication package is accepted, pending one issue which can be addressed during copy-editing prior to publication. Since this only affects the README/code deposit/online appendix, this requires no further re-submission to Manuscript Central - a note will be added to the openICPSR repo, and publication is contingent on making the change.
+
 ## README
 
 > [SUGGESTED] A recommended README template for replication packages in economics can be found on the [Social Science Data Editor Github site](https://social-science-data-editors.github.io/guidance/template-README.html).
