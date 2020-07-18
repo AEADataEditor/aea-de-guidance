@@ -28,7 +28,7 @@ Note:
 
 > [REQUIRED] Please add data citations to the article. Guidance on how to cite data is provided in the [AEA Sample References](https://www.aeaweb.org/journals/policies/sample-references) and in [additional guidance](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html#confidential-databases).
 
-> [REQUIRED] Please provide a clear description of access modality and location for this dataset. Some examples are given [on this website](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html). 
+> [REQUIRED] Please provide a clear description of access modality and source location for this dataset. Some examples are given [on this website](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html). 
 
 Optionally:
 
@@ -37,16 +37,16 @@ Optionally:
 > U.S. Bureau of Labor Statistics, Consumer Price Index for All Urban Consumers: All Items in U.S. City Average [CPIAUCNS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/CPIAUCNS, May 7, 2020. 
 
 
-> [REQUIRED] Please provide a clear description of access modality and location for this dataset. In particular, please provide evidence that you have the rights to redistribute the original and derived datasets.
+> [REQUIRED] Please provide a clear description of access modality and source location for this dataset. In particular, please provide evidence that you have the rights to redistribute the original and derived datasets.
 
-> [REQUIRED] Please provide a clear description of access modality and location for this dataset.  Please specify how long the data will be preserved in the restricted-access location.
+> [REQUIRED] Please provide a clear description of access modality and source location for this dataset.  Please specify how long the data will be preserved in the restricted-access location.
 
-> [REQUIRED] Please provide a clear description of access modality and location for this dataset, including a description of which variables and options need to be selected from the URL provided.  
+> [REQUIRED] Please provide a clear description of access modality and source location for this dataset, including a description of which variables and options need to be selected from the URL provided.  
 
-> [REQUIRED] Please provide a clear description of access modality and location for this dataset. Please verify that your license allows you to redistribute Haver Analytics data.
+> [REQUIRED] Please provide a clear description of access modality and source location for this dataset. Please verify that your license allows you to redistribute Haver Analytics data.
 For Haver Analytics, provide the "mnemonic" name. If a permission to redistribute these data has been obtained, store it within the openICPSR repository.
 
-> [REQUIRED] Please provide a clear description of access modality and location for this dataset. For Bloomberg data, provide the "ticker". If a permission to redistribute these data has been obtained, store it within the openICPSR repository.
+> [REQUIRED] Please provide a clear description of access modality and source location for this dataset. For Bloomberg data, provide the "ticker". If a permission to redistribute these data has been obtained, store it within the openICPSR repository.
 
 
 > [REQUIRED] Please specify how long the data will be preserved in the restricted-access location.
