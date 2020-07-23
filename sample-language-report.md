@@ -63,6 +63,10 @@ For Haver Analytics, provide the "mnemonic" name. If a permission to redistribut
 
 (used when datasets are of secondary importance)
 
+If data are provided in Numbers of Mathematica files: 
+
+> [REQUIRED] Please provide this dataset in a preferred archive-ready format (CSV, TXT). If the data files also contain code (e.g. data & figure in a Numbers file), extract the data, save it separately as a CSV file, and add this to the repository (in addition to the original file).  
+
 #### PSID not allowed
 
 
