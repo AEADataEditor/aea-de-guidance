@@ -13,11 +13,6 @@ Please verify:
 ### General guidelines
 Start by following [instructions provided at the Repository](https://www.openicpsr.org/openicpsr/aea/deposit-instructions).
 
-### Warning
-
-<img src="assets/warningSmall.png" height="20" alt="Warning sign"> Do NOT press the Publish button at any time during this process!
-<img src="assets/publish-button.png" height="40" alt="Publish button">
-
 ### Checklist
 
 #### Required elements
@@ -134,11 +129,21 @@ LICENSE.txt
 
 ![related publications](assets/project-related-icpsr.png)
 
-Authors should add a placeholder here for their planned publication. The AEA editorial office will update these fields as additional information (publication year, volume, issue, DOI) become known.
 
 - Authors can also link back to working papers or related publications that have or will use this (same!) data. 
 - Future functionality will automatically list articles (including articles by third parties) that cite the data.
 
+Authors do not need to add  their (forthcoming) publication here. The AEA editorial office will add the bibliographic information prior to publication.
+
+### Submitting to the Data Editor
+
+Once you are satisfied that all data files are present, are complete, and all metadata is satisfactory, including all required elements filled out, you should **submit** the deposit, by changing the **status** of the deposit:
+
+![submit project](assets/project-submit.png)
+
+Choose "Submit to AEA" under "Change Status".
+
+Should you have forgotten something, you can "recall" the submission. 
 
 ### Citing Your Deposit
 
@@ -193,5 +198,4 @@ function myFunction() {
 
 ### Sundry other items
 
-- <img src="assets/warningSmall.png" height="20" alt="Warning sign"> Do NOT press the Publish button at any time during this process!
-<img src="assets/publish-button.png" height="40" alt="Publish button">
+Once the replication package has been published, should you need to make updates, you can "Create a new version". This will be published subject to the revision policy of the AEA (soon).
