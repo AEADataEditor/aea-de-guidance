@@ -147,9 +147,9 @@ Second, it is possible to submit such packages to various journals, where they a
 ### Do you support Docker/ Jupyter/ etc.?
 
 The generic answer is yes. The key is to make it clear in the README how to run the software. Most economists know how to run Stata, Matlab, and probably figure out how to run R or Julia even if it is not their native programming environment. For software that is less standard (GIS, SQL databases, Docker, Jupyter notebooks, cloud-based compute clusters), we suggest pointing to (citing) an introductory tutorial on the web in the README, and providing a barebones set of instructions on how to get started.
-The picture below illustrates what software can be considered to be "common" amongst economists (credit: Patrick Baylis, [doi.org/10.5281/zenodo.1456185](http://doi.org/10.5281/zenodo.1456185)).
+The picture below illustrates what software can be considered to be "common" amongst economists:
 
-![software usage](assets/aer_programs_by_year.png)
+![software usage](assets/figure_software_years_pct.png)
 
 ### I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?
 
