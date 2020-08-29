@@ -1,6 +1,6 @@
 ---
 title: Step by step guidance
-layout: mermaid
+layout: withtoc
 ---
 
 The following steps outline what you should expect after conditional acceptance of your manuscript, in compliance with the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/policies/data-code):
