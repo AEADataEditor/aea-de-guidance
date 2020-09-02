@@ -67,28 +67,6 @@ You should feel free to reorganize, but you should ensure when we run the reorga
 
 Such restructuring may also be appropriate if you have a very sophisticated reproducible setup in your lab or group. A replicator does not need all sorts of fancy dynamic setup scripts that are very relevant in a lab, but unnecessarily complicate the process for a replicator. You should attempt to simplify the final setup to make it easy for anybody to run this particular project, once.
 
-### What is that __MACOSX folder, which seems to contain a second copy of all the  replication files (I am not sure why this folder exists)
-
-[MAC USERs ONLY] We are also not sure, but it is a standard feature of ZIP files created on Mac OSX systems using the graphical user interface. Here's a quick fix that helps all parties involved (adapted from this [source](https://wpguru.co.uk/2013/10/how-to-remove-__macosx-from-zip-archives/)):
-
-1. Create your ZIP file as usual
-2. Open the Terminal App
-3. Start typing `zip -d ` (note space)
-4. Drag the ZIP file onto the Terminal
-5. Complete the command line with ` "__MACOSX*"` and hit enter.
-
-The whole thing should look like this:
-```
-$ zip -d /Users/myname/Workspace/Folder/myzip.zip "__MACOSX*"
-deleting: __MACOSX/
-deleting: __MACOSX/myzip/
-deleting: __MACOSX/myzip/._Proof_hi.pdf
-deleting: __MACOSX/myzip/._README.pdf
-deleting: __MACOSX/._myzip
-```
-You can now upload the file to openICPSR using the "Import from ZIP" functionality.
-
-We should note that these folders do not show up in the public view of the repository once it is published. So while it is probably OK to leave them, it is better to remove them.
 
 ### The paper uses confidential data, covering [geography] for period [2001-2015]. The repository only contains code. Should the repository metadata be filled out for the data characteristics, even if the repository only has code?
 
@@ -96,6 +74,7 @@ We should note that these folders do not show up in the public view of the repos
 
 ### I use confidential data. I am allowed to provide the data to the Data Editor for the purpose of replication, but you are not allowed to publish the data. How do I proceed?
 
+[Moved to main FAQ](https://www.aeaweb.org/journals/policies/data-code/faq) 
 First, all sharing - whether privately with us, or publicly through the data publication process - should be in compliance with all IRB rules, data use agreements, etc. We will never ask you to share data that you do not have the right to share with us or anybody else.
 
 Second, there is a difference between sharing with us, and publishing the data. We can accept private data sharing for the purpose of replication, conduct our reproducibility checks, and delete the data provided. You are in control of the publication of any data (though it has happened that we have had to point out to authors that they do not, in fact, have the rights to publish data that they were going to publish). 
@@ -119,6 +98,7 @@ You can provide *B.zip* to us for the purpose of replication, but *B.zip* would 
 
 ### We already use git/svn/GitHub/GitLab/BitBucket/etc. Do you facilitate integration of existing version-controlled code to the AEA repo? Or even planned functionality for linking out directly to such projects where they can be found online?
 
+[Moved to main FAQ](https://www.aeaweb.org/journals/policies/data-code/faq) 
 We are open to linking out to existing **archives** of code and data. However, GitLab & Co. are not archives! See the relevant section on [Social Science Data Editors pages](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#not-acceptable).
 
 Thus, in all cases, a proper archive needs to be created from the git repository. There are various ways:
@@ -153,6 +133,7 @@ The picture below illustrates what software can be considered to be "common" amo
 
 ### I have been told by the Data Editor to remove PSID data from my submitted materials. What do I do?
 
+[Moved to main FAQ](https://www.aeaweb.org/journals/policies/data-code/faq) 
 Per the [PSID website](https://psidonline.isr.umich.edu/Guide/FAQ.aspx?Type=8), authors are not allowed to post extracts of their data online. The reason is that any user needs to agree to the PSID terms of use before being given access to the data. However, the PSID has provided authors with the ability to deposit their data extracts and/or [their derived data in a repository](https://www.openicpsr.org/openicpsr/psid), precisely for the purpose of allowing for sharing in compliance with their [Terms of use](http://simba.isr.umich.edu/U/CondUse.aspx). 
 
 Somewhat confusingly for some users, [this PSID repository](https://www.openicpsr.org/openicpsr/psid) is also hosted at openICPSR, just as the AEA repository. However, the two repositories do not have the same Terms of Use, and are distinct.
@@ -175,3 +156,35 @@ In order to comply with the [PSID Terms of use](http://simba.isr.umich.edu/U/Con
     The collection of data used in this study was partly supported by the National Institutes of Health under grant number R01 HD069609 and R01 AG040213, and the National Science Foundation under award numbers SES 1157698 and 1623684.
 
 - PSID also wants you to send copies of the manuscript to them, or add the DOI of your AEA article to their bibliography. Please do so, supporting them!
+
+### Aligning AEA RCT Registry and AEA Data and Code Repository
+
+The [AEA RCT registry](https://www.socialscienceregistry.org) has a field that codes whether data associated with a registration is publicly available. Many authors will have this coded as "non public" prior to the publication of the replication package. When the replication package is about to be published on the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea), this field needs to be updated. Only the authors of the registry can update this field. Steps to follow:
+
+- Log in to the [AEA RCT registry](https://www.socialscienceregistry.org) and select your registration
+- Change the field to "public" / "published"
+- [Compute the DOI](#what-is-the-doi-of-my-openicpsr-deposit-i-have-not-yet-published-it-but-am-asked-to-add-a-citation-to-it-in-my-manuscript) of your forthcoming replication package publication and enter the resulting DOI in the URL field. 
+    - **Do not use** the URL of the openICPSR project in the browser address bar!
+
+[EXTRA] You should also record the RCT DOI as a related publication of your deposit on the  [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea):
+
+- The RCT registry will show the DOI of your registration at the bottom of its public page. [Example](https://www.socialscienceregistry.org/trials/156):
+
+![RCT DOI](assets/aearct-doi-citation.png)
+
+- You can then enter that DOI (e.g., `10.1257/rct.156-1.1`) into the "Related Publication" field of the deposit on the AEA Data and Code Repository:
+
+![Entering related publication](assets/project-related-icpsr.png)
+
+- Choose the "Import via DOI" button:
+
+![Selecting import via DOI](assets/project-related-icpsr-modal1.png)
+
+- Fill in the DOI (e.g., `10.1257/rct.156-1.1`) and press "Import":
+
+![Importing via DOI](assets/project-related-icpsr-modal2.png)
+
+- Select "`is supplemented by`" and press "Save and Apply"
+
+![Selecting relationship](assets/project-related-icpsr-modal3.png)
+
