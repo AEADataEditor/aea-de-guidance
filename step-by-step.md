@@ -7,7 +7,7 @@ The following steps outline what you should expect after conditional acceptance 
 
 1. [Prepare your data and code replication package](preparing-for-data-deposit.md) (including data citations and provenance information)
 2. [Provide metadata and upload the replication package](data-deposit-aea.md), for verification and subsequently publication.
-3. Submit the [Data and Code Availability Form](/assets/DataCodeAvailabilityForm_20200602.docx) together with your manuscript native files as instructed, and as per guidelines at your journal (for example, [AER guidelines](https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide)).
+3. Submit the [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability) together with your manuscript native files as instructed, and as per guidelines at your journal (for example, [AER guidelines](https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide)).
 4. The editorial office assigns the manuscript to the AEA Data Editor.
 5. The AEA Data Editor team downloads materials, [conducts reproducibility checks](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) , writes [report](https://github.com/AEADataEditor/replication-template/blob/master/REPLICATION.md).
 6. The report is communicated to the editorial office and the Editor of the journal.
