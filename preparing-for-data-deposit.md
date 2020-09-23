@@ -107,13 +107,15 @@ Ideally, once you have prepared your replication package, you should re-run the 
 
 - Wherever possible, we strongly encourage running in batch (non-interactive) mode.
 
-## Next step
+## Preparing to upload
 
 Once you are done preparing your replication package, you should upload it:
 
 - if you have received a conditional acceptance, your replication  package **must** be in a trusted repository. The default trusted repository is the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/search/aea/studies). Other trusted repositories are acceptable (see [list](https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories)), but replication packages should meet the [display guidelines](guidelines-other-repositories.md). 
-- if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see [this FAQ](https://www.aeaweb.org/journals/data/faq)).
+- if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see [this FAQ](https://www.aeaweb.org/journals/data/faq#restricted)).
 - if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it **must** be made available on a trusted repository - other methods are then no longer acceptable.
+
+## Final checklist
 
 Before proceeding, do check:
 
@@ -121,6 +123,8 @@ Before proceeding, do check:
 - [ ] you have prepared a README that provides all the relevant information, as per the [README template](https://social-science-data-editors.github.io/guidance/template-README.html) 
 - [ ] your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.
 - [ ] your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.
+
+## Next step
 
 If you are ready, you can proceed to [upload to the AEA Data and Code Repository](data-deposit-aea.md).
 
