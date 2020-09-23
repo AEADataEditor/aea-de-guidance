@@ -211,5 +211,5 @@ function myFunction() {
 
 ### Ready to submit manuscript
 
-Once you have completed the deposit, you are now ready to submit the manuscript native files, together with the [Data and Code Availability Form](), as per the journal's guidelines ([AER guidelines here](https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide)).
+Once you have completed the deposit, you are now ready to submit the manuscript native files, together with the [Data and Code Availability Form](https://www.aeaweb.org/journals/forms/data-code-availability), as per the journal's guidelines ([AER guidelines here](https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide)).
 
