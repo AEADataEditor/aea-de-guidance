@@ -125,3 +125,21 @@ The [AEA RCT registry](https://www.socialscienceregistry.org) has a field that c
 
 ![Selecting relationship](assets/project-related-icpsr-modal3.png)
 
+### I was asked to modify files in my repository but I cannot upload or edit anything
+
+When you first submitted to the AEA, your deposit became locked. There are two ways it can be edited:
+
+#### You can "recall" the submission
+
+On the right, under " Change status", choose "Recall submission"
+
+![recall](assets/recall-submission-icpsr.png)
+You should then be able to upload and make changes.
+
+Once you are done, choose "Re-submit" from the same menu.
+
+#### The Data Editor staff can request revisions
+
+If you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.
+
+Again, once you are done, choose "Re-submit" from the same menu as above.
