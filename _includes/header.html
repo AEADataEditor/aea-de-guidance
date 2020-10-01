@@ -5,14 +5,10 @@
       var url = document.getElementById("thisURL");
       var year = document.getElementById("thisYear");
       var d = new Date();
-      var pageTitle = document.getElementsByTagName("h1")[0];
-      if ( )
-      var citeTitle = document.getElementById("chapTitle");
     
         year.innerHTML = d.getFullYear();
         date.innerHTML = d.toISOString().split("T")[0];
         url.innerHTML = window.location.href;
-        citeTitle.innerText = pageTitle.innerText;
     }
 window.onload=createCitation();
 </script>
