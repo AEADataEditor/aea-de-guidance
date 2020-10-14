@@ -14,7 +14,8 @@ These  web pages provide unofficial and developing guidance on the implementatio
 
 ## Additional guidance 
 
-In addition to the detailed [step-by-step guidance](step-by-step.md)], the following sites contain useful information
+In addition to the detailed [step-by-step guidance](step-by-step.md), the following sites contain useful information:
+
 > 1. Look for general guidance at the **[Social Science Data Editors pages](https://social-science-data-editors.github.io/guidance/)**
 > 2. Read the **[AEA's FAQ](https://www.aeaweb.org/journals/policies/data-code/faq)**
 > 3. Have a look at the **[draft FAQ on this site](FAQ.md)** for thorny issues
@@ -32,6 +33,7 @@ How should researchers create replicable data and program archives? How should s
 > **[README template](https://social-science-data-editors.github.io/guidance/template-README.html)** 
 
 > **[Preparing for a data and code deposit](preparing-for-data-deposit.md)**
+
 ---
 
 - **Common guidance**: Several economics and other social science data editors are collaborating this. See [https://social-science-data-editors.github.io/guidance/](https://social-science-data-editors.github.io/guidance/) for more detailed guidance. Your replication package should be able to be submitted to any journal.
