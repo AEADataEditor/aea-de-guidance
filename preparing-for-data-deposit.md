@@ -121,7 +121,7 @@ Before proceeding, do check:
 
 - [ ] your manuscript includes data citations 
 - [ ] you have prepared a README that provides all the relevant information, as per the [README template](https://social-science-data-editors.github.io/guidance/template-README.html) 
-- [ ] your data and code deposit contains all code, including code to read in raw data, even when the data cannot be provided.
+- [ ] your data and code deposit contains all code, including code to read in raw data, *even when the data cannot be provided*.
 - [ ] your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.
 
 ## Next step

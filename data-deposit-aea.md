@@ -3,13 +3,15 @@ layout: withtoc
 title: Guidance on how to deposit data at the AEA Data and Code Repository
 ---
 
-### Fill out the Metadata 
+### Start the deposit process
 
-Start by providing the metadata (descriptors) for the data and code you are uploading.
+Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea), and start the process:
+
+[![Start process](assets/icpsr-start-process.png)](https://www.openicpsr.org/openicpsr/aea)
 
 ---
 
-#### Checklist
+### Checklist for Metadata
 
 **Required**:
 
@@ -39,6 +41,10 @@ Start by providing the metadata (descriptors) for the data and code you are uplo
 - [ ] Any additional metadata elements
 
 ---
+
+
+Start by providing the metadata (descriptors) for the data and code you are uploading.
+
 
 ### Details on Filling Out Metadata
 
@@ -95,18 +101,23 @@ To fill out the required metadata elements **Subject Terms**, **JEL Classificati
 - Future functionality will automatically list articles (including articles by third parties) that cite the data.
 
 
+---
+
+### Checklist for Uploading
+
+- [ ] README is in PDF or TXT format 
+- [ ] DO NOT UPLOAD A ZIP FILE - IMPORT IT! 
+- [ ] Do not upload manuscripts, appendices, responses to editors, etc.
+- [ ] Directory structure does not contain redundant directories
+
+---
+
 ### Uploading
 
 Once the metadata is completed, authors can upload files. 
 
 Upload files in the way you expect the files to be organized in order to run the code. 
 
-#### Checklist
-
-- [ ] README is in PDF or TXT format 
-- [ ] DO NOT UPLOAD A ZIP FILE - IMPORT IT! 
-- [ ] Do not upload manuscripts, appendices, responses to editors, etc.
-- [ ] Directory structure does not contain redundant directories
 
 #### Some caveats
 
