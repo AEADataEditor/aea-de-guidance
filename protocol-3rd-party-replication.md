@@ -8,7 +8,7 @@ The AEA's [Protocol for Third-party Verifications](https://www.aeaweb.org/journa
 ## Template email 
 > Dear [REPLICATOR],
 > 
-> I would like to ask you to conduct a reproducibility verification for the American Economic Association. You have been identified as somebody with access to the right data and resources to conduct this important part of the AEA's publicatoin process. If you are willing, please prepare a reproducibility report (see below) for the following manuscript, code, and data:
+> I would like to ask you to conduct a reproducibility verification for the American Economic Association. You have been identified as somebody with access to the right data and resources to conduct this important part of the AEA's publication process. If you are willing, please prepare a reproducibility report (see below) for the following manuscript, code, and data:
 > 
 > Manuscript: Attached.
 > 
