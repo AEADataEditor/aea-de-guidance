@@ -36,7 +36,7 @@ Many repositories contain both code and databases. In that case, the repository 
 
 #### Dual-license Example
 
-We provide an example of a dual-license setup, suitable for use by depositors to the AEA's Data and Code Repository (see [LICENSE-template.txt](licenses/LICENSE-template.txt)). It combines
+We provide an example of a dual-license setup, suitable for use by depositors to the AEA's Data and Code Repository (see [LICENSE-template](LICENSE-template.md)). It combines
 - [![License: Modified BSD](https://img.shields.io/badge/License-BSD-lightgrey.svg)](https://opensource.org/licenses/BSD-3-Clause) [Modified BSD License](https://opensource.org/licenses/BSD-3-Clause), applies to all code, scripts, programs, and SOFTWARE
 - [![License: CC BY 4.0](https://img.shields.io/badge/License%20-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/) [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/), applies to databases, images, tables, text, and any other objects
 
