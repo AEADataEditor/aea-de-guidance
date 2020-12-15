@@ -3,6 +3,10 @@ layout: withtoc
 title: Guidance on how to deposit data at the AEA Data and Code Repository
 ---
 
+### Tutorial
+
+For a video tutorial on this process, see [this Youtube video](https://youtu.be/MnEl1shX18Y).
+
 ### Start the deposit process
 
 Go to the [AEA Data and Code Repository](https://www.openicpsr.org/openicpsr/aea), and start the process:
