@@ -17,7 +17,8 @@ Answer coming. Short answer: Keep track of what you do. Set up the project corre
 
 > [Adam Sacarny](https://twitter.com/asacarny/status/1346262290354614274) I strongly second this point! Knowing a bit about the Common Rule and HIPAA has saved me a lot of time. For example, sometimes the IRB requests waivers etc. that are not needed. Or sometimes you can make minor changes to make your research exempt rather than expedited…
 
-Excellent points. Longish answer during Fireside Chat.
+
+Excellent points. Longish answer during Fireplace Chat.
 
 ## Code Persistence or Code Rot
 
@@ -50,6 +51,17 @@ Good question... Efforts at [BITSS](https://bitss.github.io/ACRE/), [Carpentries
 > [John Horton](https://twitter.com/johnjhorton/status/1346263273432354816) Could AEA help credibly create “time capsule” data agreements where it will release a public dataset X years in the future? Some companies are willing to share data but not until it has lost its competitive value. A long lived institution like AEA is well positioned for this.
 
 Answer coming soon.
+
+## Accessing data
+
+
+> [Chris Conlon](https://twitter.com/conlon_chris/status/1346473098518773760) Several boilerplate data agreements that meet AEA requirements?
+
+> [Chris Conlon](https://twitter.com/conlon_chris/status/1346474319283593218) negotiate terms with some of the commonly used data ACADEMIC data providers (WRDS? Kilts?).
+
+Ongoing ([Kilts](https://marketingdata.chicagobooth.edu/Anonymous/Welcome), [German SOEP](https://www.diw.de/en/diw_02.c.238223.en/soep_conditions.html#614607), [German Scientific Use Files](https://fdz.iab.de/en/FDZ_Data_Access/FDZ_Scientific_Use_Files.aspx)). Repeatedly requesting ([DHS](https://dhsprogram.com/data/), [Afrobarometer](https://www.afrobarometer.org/)) One issue is that data providers tend to have project-specific permissions, and none have a blanket approval for replicators at academic journals (not just AEA). 
+
+Typical answer: "We have not had a request like yours. I will need to speak with the director and potentially [data provider/counsel/lawyers]." 
 
 ## Verifying papers with restricted-access data
 
