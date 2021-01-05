@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: withtoc
 title:  "A discussion about various things"
 ---
 
