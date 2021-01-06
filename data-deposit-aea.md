@@ -105,16 +105,6 @@ To fill out the required metadata elements **Subject Terms**, **JEL Classificati
 - Future functionality will automatically list articles (including articles by third parties) that cite the data.
 
 
----
-
-### Checklist for Uploading
-
-- [ ] README is in PDF or TXT format 
-- [ ] DO NOT UPLOAD A ZIP FILE - IMPORT IT! 
-- [ ] Do not upload manuscripts, appendices, responses to editors, etc.
-- [ ] Directory structure does not contain redundant directories
-
----
 
 ### Uploading
 
@@ -122,12 +112,27 @@ Once the metadata is completed, authors can upload files.
 
 Upload files in the way you expect the files to be organized in order to run the code. 
 
+---
+
+#### Checklist for Uploading
+
+- [ ] README is in PDF or TXT format 
+- [ ] DO NOT UPLOAD A ZIP FILE - IMPORT IT! 
+- [ ] Do not upload manuscripts, appendices, responses to editors, etc.
+- [ ] Directory structure does not contain redundant directories
+- [ ] Do not upload data that you do not have the rights to publish!
+
+---
 
 #### Some caveats
 
 - If the **UNCOMPRESSED** contents of the deposit (the **UNZIPPED** size of the ZIP file) are larger than **30GB**, please send an email to the AEA Data Editor to request an increase in the quota. Reasonable requests will be authorized. Size of the deposit is never a reason not to provide materials, as we have found solutions for every single case so far.
 - If you have **more than 1,000 files** in your deposit, talk to us before uploading.
 - The Import functionality can handle ZIP files, but cannot handle other compression formats (RAR,7z, etc.). Please convert to ZIP before importing. 
+
+#### Restricted-access data
+
+Do not upload data that you do not want published! Contact the AEA Data Editor if you are able to share data for reproducibility checks that cannot be published. Consult the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
 
 
 #### Tips

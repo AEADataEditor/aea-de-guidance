@@ -47,6 +47,45 @@ The AEA uses the openICPSR platform for replication packages. The platform allow
 
 The code and data should run as downloaded from openICPSR, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.
 
+A simple template might be
+```
+README.pdf
+data/
+   raw/
+      cps0001.dat
+   analysis/
+      combined_data.dta
+      combined_data.csv
+      combined_data_codebook.pdf
+code/
+  01_create/
+      01_readcps.R
+      02_readfred.R
+  02_analysis/
+      01_table1-5.R
+      02_figures1-4.R
+results/
+  table1.tex
+  table2.tex
+  ...
+  figure1.pdf
+  figure2.pdf
+```
+
+If your paper uses restricted-access data, clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:
+
+```
+data/
+   raw/
+      cps0001.dat
+   confidential/
+      ssa.csv
+   conf_analysis/
+      confidential_combined.dta
+```
+
+Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the [Sharing restricted-access data with the AEA Data Editor](sharing-restricted-data.md) page.
+
 ### No manual modifications
 
 The replication package should reproduce the tables and figures, as well as any in-text numbers, by **running code without manual intervention**. 
@@ -60,7 +99,9 @@ While running a small number of distinct programs separately  is acceptable (in 
 When the replication package relies on confidential data that cannot be shared, authors will have to
 
 - prepare a confidential (partial) replication package, to be archived wherever the confidential data is kept (see [this FAQ](https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved))
+  - this would contain the contents of `data/confidential` and possibly `data/conf_analysis` from the example above.
 - prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls
+  - this would contain the contents of `data/raw`, `data/analysis`, `code/`, and for reference, `results/` from the example above.
 - ensure that replicators have detailed instructions on how to combine the two packages 
 - specify  which (if any) of the results in their paper can be reproduced without the confidential data. 
 
@@ -72,7 +113,7 @@ The [Social Science Editors' FAQ](https://social-science-data-editors.github.io/
 
 ### Considering the replicator
 
-The replicator of your package is likely to be less qualified than you are. 
+The replicator of your package is likely to be less qualified than you are. After all, you are publishing something novel.
 
 You should assume
 
@@ -96,10 +137,16 @@ You should NOT assume
 - that the replicator has any of your packages/modules/etc. installed
   - provide a setup program to install these (not manual instructions). 
   - provide copies of such packages/modules when the package repository does not allow you to specify a version 
+  - provide a container/ Docker image/ VM that comprises all the necessary software and libraries
 - that the replicator will run the software the same way you do
   - some software can be run in different ways (interactive, batch, etc.) and may behave differently depending on how it s run. 
   - For instance, Stata will change the working directory to that of the program being run in batch mode, but not if running interactively
   - For instance, running R code using Rstudio may behave differently than running it with `rscript`
+
+For less frequently used software, provide a URL where the software can be obtained. 
+  - essentially, if not listed in the figure above, provide information on how to obtain software
+  - if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.
+  - as of 2021, the AEA Data Editor has access to the software on [this list](https://ciser.cornell.edu/computing/computing-account-software/), and any open-source (free) software that can be installed on Windows, Linux, and macOS.
 
 ## Re-run your replication package
 
