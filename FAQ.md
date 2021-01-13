@@ -163,3 +163,9 @@ Updating the repository is actually very easy, and updates likes these are exact
 
 6) In most cases, the article will remain linked to the V1 deposit ("version of record"), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).
 
+### I have a paper that uses data from 14 different sources. How do I comply with requirement for data citations and fit within page limits? (for instance in Papers and Proceedings).
+
+We understand  page limits, here are possible workarounds, in decreasing order of preference: 
+
+- refer to an (online) appendix for the details, and have an appendix-only bibliography (may not be an option for Papers and Proceedings)
+- refer to the README in the deposit, which has a bibliography like a real paper (see the [README template](https://social-science-data-editors.github.io/template_README/))
