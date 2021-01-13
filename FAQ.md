@@ -125,7 +125,7 @@ The [AEA RCT registry](https://www.socialscienceregistry.org) has a field that c
 
 ![Selecting relationship](assets/project-related-icpsr-modal3.png)
 
-### I was asked to modify files in my repository but I cannot upload or edit anything
+### I was asked to modify files in my repository (not yet published) but I cannot upload or edit anything
 
 When you first submitted to the AEA, your deposit became locked. There are two ways it can be edited:
 
@@ -143,3 +143,23 @@ Once you are done, choose "Re-submit" from the same menu.
 If you received a notice via the openICPSR communication log requesting revisions, you should be able to make modifications as outlined in the request. You should be all set.
 
 Again, once you are done, choose "Re-submit" from the same menu as above.
+
+### I was wondering whether (and how) I can update the published repository for our paper. I was contacted by a researcher who is doing a replication ... couple of minor issues ... forgotten to include two auxiliary datasets in the repository without which one of the programs does not run successfully.
+
+First off, excellent initiative. Our team cannot always conduct a full replication (not all data may be accessible, not enough time, no access to the software). We appreciate it when others are able to do that work, and when authors then correct the replication package.
+
+Updating the repository is actually very easy, and updates likes these are exactly why we moved to the openICPSR repository for this. We have a policy how changes are then recorded, see [https://www.aeaweb.org/journals/data/policy-revisions](https://www.aeaweb.org/journals/data/policy-revisions).
+
+
+1) Log back onto your openICPSR deposit. If you don't remember, simply click on the "Share Data" link on openICPSR, and it will show you your deposits.
+
+2) You *may* need to click on "Create new version" - depends on when the deposit was initially created (applies for all deposits made after July 2020).
+
+3) Update the README as [per the policy]((https://www.aeaweb.org/journals/data/policy-revisions)). Authors should list the files added, any changes made to the programs, and ideally the reason why. No more than a paragraph.
+
+4) Once you updated all files (remember to update the README), choose "Submit to AEA" in "Change Status".
+
+5) The AEA Data Editor will review that the criteria of the Revision Policy are satisfied, but conduct no other checks.
+
+6) In most cases, the article will remain linked to the V1 deposit ("version of record"), but anybody navigating there will see a banner indicating that a more recent version exists (the V2 deposit).
+
