@@ -1,3 +1,5 @@
+(save as "LICENSE.txt" as part of your deposit)
+
 ```
 Modified BSD License (https://opensource.org/licenses/BSD-3-Clause)
 - applies to all code, scripts, programs, and SOFTWARE.  
